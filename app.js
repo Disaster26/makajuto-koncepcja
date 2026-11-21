@@ -44,6 +44,23 @@ burger.addEventListener("click",function(){menu(!b.classList.contains("menu-open
 $$("#mnav a").forEach(function(a){a.addEventListener("click",function(){menu(false)})});
 addEventListener("keydown",function(e){if(e.key==="Escape")menu(false)});
 
+/* ---- wszystkie kategorie (rozwijane menu na komputerze) ---- */
+var mmB=$("#mmBtn"),mm=$("#mm");
+if(mmB&&mm){
+  var mmSet=function(open){if(open)mm.removeAttribute("hidden");else mm.setAttribute("hidden","");mmB.setAttribute("aria-expanded",open?"true":"false")};
+  var mmPick=function(i){$$(".mm-t",mm).forEach(function(t){t.classList.toggle("on",t.getAttribute("data-mm")===i)});$$(".mm-p",mm).forEach(function(p){if(p.getAttribute("data-mmp")===i)p.removeAttribute("hidden");else p.setAttribute("hidden","")})};
+  mmB.addEventListener("click",function(e){e.stopPropagation();mmSet(mm.hasAttribute("hidden"))});
+  $$(".mm-t",mm).forEach(function(t){
+    var i=t.getAttribute("data-mm");
+    t.addEventListener("mouseenter",function(){mmPick(i)});
+    t.addEventListener("focus",function(){mmPick(i)});
+    t.addEventListener("click",function(e){if(!t.classList.contains("on")){e.preventDefault();mmPick(i)}else mmSet(false)});
+  });
+  $$(".mm-right a",mm).forEach(function(a){a.addEventListener("click",function(){mmSet(false)})});
+  d.addEventListener("click",function(e){if(!mm.hasAttribute("hidden")&&!mm.contains(e.target))mmSet(false)});
+  addEventListener("keydown",function(e){if(e.key==="Escape"&&!mm.hasAttribute("hidden")){mmSet(false);mmB.focus()}});
+}
+
 /* ---- wyszukiwarka ---- */
 var sb=$("#sbtn"),sr=$("#search");
 sb.addEventListener("click",function(){var on=!sr.classList.contains("on");sr.classList.toggle("on",on);sb.setAttribute("aria-expanded",on?"true":"false");if(on)$("input",sr).focus()});
