@@ -109,7 +109,7 @@ lb.addEventListener("touchend",function(e){var dx=e.changedTouches[0].clientX-tx
 
 /* ---- formularz (podgląd, bez wysyłki) ---- */
 var f=$("#form");
-f.addEventListener("submit",function(e){e.preventDefault();var ok=true;$$("[required]",f).forEach(function(x){var v=x.value.trim();var bad=!v||(x.type==="email"&&!/^\S+@\S+\.\S+$/.test(v));x.setAttribute("aria-invalid",bad?"true":"false");x.style.borderColor=bad?"#CC0000":"";if(bad&&ok){x.focus();ok=false}});if(ok){f.classList.add("sent");f.reset()}});
+if(f)f.addEventListener("submit",function(e){e.preventDefault();var ok=true;$$("[required]",f).forEach(function(x){var v=x.value.trim();var bad=!v||(x.type==="email"&&!/^\S+@\S+\.\S+$/.test(v));x.setAttribute("aria-invalid",bad?"true":"false");x.style.borderColor=bad?"#CC0000":"";if(bad&&ok){x.focus();ok=false}});if(ok){f.classList.add("sent");f.reset()}});
 
 /* ---- mapa po przewinięciu ---- */
 var map=$("#map");

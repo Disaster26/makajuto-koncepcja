@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Oprawa MAKAJUTO z aniołem na Biblię, z suwakiem | MAKAJUTO</title>
+<meta name="description" content="Oprawa MAKAJUTO z suwakiem na Biblię „z rybką” i „dla kobiet” oraz na Pismo Święte DUŻE „z gołębicą”. Ekoskóra, tłoczony anioł, 15 kolorów. Wysyłka InPost i ORLEN Paczka.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#CC0000">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/jost-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/lora-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(fonts/jost-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(fonts/jost-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:Lora;font-weight:400 700;font-display:swap;src:url(fonts/lora-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:Lora;font-weight:400 700;font-display:swap;src:url(fonts/lora-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--red:#CC0000;--red-d:#A60000;--ink:#1D1D1F;--txt:#2E3035;--mut:#5D6068;--line:#E2E4E8;--grey:#F2F3F5;--dark:#1C1C1F;--w:1240px;--hd:64px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--hd) + 12px)}
+body{margin:0;font:400 16px/1.6 Jost,"Segoe UI",Arial,sans-serif;color:var(--txt);background:#fff;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}button{font:inherit;color:inherit;cursor:pointer}a{color:inherit}
+h1,h2,h3{font-family:Lora,Georgia,serif;color:var(--ink);font-weight:600;line-height:1.18;margin:0}
+.wrap{width:min(var(--w),100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:8px 12px}
+/* pasek */
+.strip{background:var(--red);color:#fff;font-size:13.5px;line-height:1.3}
+.strip .wrap{display:flex;justify-content:center;gap:28px;padding:7px 0}
+.strip .r{display:none}
+/* naglowek */
+.hd{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:0 12px;min-height:var(--hd);flex-wrap:wrap}
+.logo{display:block;flex:none;width:92px;color:var(--ink)}.logo svg{width:100%;height:auto;display:block}
+.burger{width:44px;height:44px;border:0;background:none;display:grid;place-content:center;gap:5px;margin-left:-8px}
+.burger i{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .2s}
+.menu-open .burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}.menu-open .burger i:nth-child(2){opacity:0}.menu-open .burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.hd-tools{margin-left:auto;display:flex;align-items:center;gap:4px}
+.ib{width:44px;height:44px;border:0;background:none;display:grid;place-items:center;border-radius:8px;position:relative;text-decoration:none}
+.ib svg{width:24px;height:24px}
+.ib:hover{background:var(--grey)}
+.cart .cnt{position:absolute;top:3px;right:2px;min-width:19px;height:19px;padding:0 4px;border-radius:50%;border:2px solid var(--red);background:#fff;color:var(--red);font:700 11px/15px Jost,sans-serif;text-align:center}
+.cart .sum{display:none}
+.search{display:none}
+.acc{display:none}
+.search.on{display:block;padding:0 0 12px;order:5;flex:0 0 100%}
+.sf{display:flex;border:2px solid var(--ink);border-radius:8px;overflow:hidden;background:#fff}
+.sf input{flex:1;min-width:0;border:0;padding:10px 14px;font:inherit;font-size:16px;outline:none}
+.sf button{border:0;background:var(--ink);color:#fff;padding:0 18px;font-weight:600}
+.nav{display:none}
+
+/* pełne kategorie: menu mobilne */
+.mcat{border-bottom:1px solid var(--line)}
+.mnav details summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:14px 4px;font-size:18px;color:var(--ink)}
+.mnav details summary::-webkit-details-marker{display:none}
+.mcat>summary span{color:var(--mut);font-size:14px;margin-left:auto;margin-right:12px}
+.mnav details>summary::after{content:"";width:8px;height:8px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg);margin:-4px 4px 0 0;transition:transform .2s;flex:none}
+.mnav details[open]>summary::after{transform:rotate(225deg);margin-top:4px}
+.mcat-in{padding:0 0 10px 4px}
+.mnav .mcat a{border:0;padding:9px 4px;font-size:16px}
+.mnav .mcat details summary{font-size:16px;padding:10px 4px;border-top:1px solid var(--line)}
+.mnav .mcat .mk1>summary{font-weight:600}
+.mnav .mcat details>details,.mnav .mcat details>a{margin-left:14px}
+.mnav .mcat .mk-all{color:var(--red);font-weight:600;font-size:15px}
+.nav .mm-btn{display:none}
+.mm{display:none}
+/* banery promocyjne */
+.bn{padding:40px 0 0}
+.bn-g{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+.ban{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:14px;min-height:150px;border-radius:12px;padding:18px 18px 18px 22px;text-decoration:none;overflow:hidden;position:relative}
+.ban>*{position:relative;z-index:1}
+.ban h3{font-size:clamp(22px,5.6vw,30px)}
+.ban p{margin:6px 0 12px;font-size:15px;line-height:1.45}
+.ban .go{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px}
+.ban .go svg{width:14px;height:14px;transition:transform .2s}
+.ban:hover .go svg{transform:translateX(3px)}
+.ban img{height:auto;max-height:150px;width:auto;max-width:120px;border-radius:4px;box-shadow:0 6px 18px rgba(0,0,0,.18);background:#fff}
+.ban-r{background:var(--red);color:#fff}.ban-r h3{color:#fff}.ban-r p{color:#FBE3E3}
+.ban-r::after{content:"";position:absolute;right:-50px;top:-26px;width:200px;height:46px;border:3px solid rgba(255,255,255,.3);border-radius:50%;transform:rotate(-10deg);z-index:0}
+.ban-d{background:var(--grey);color:var(--ink)}.ban-d p{color:var(--mut)}.ban-d .go{color:var(--red)}
+/* menu mobilne */
+.mnav{position:fixed;inset:var(--top,95px) 0 0 0;background:#fff;z-index:39;padding:8px 16px 32px;overflow:auto;transform:translateX(-100%);transition:transform .28s ease;visibility:hidden}
+.menu-open .mnav{transform:none;visibility:visible}
+.menu-open{overflow:hidden}
+.mnav a{display:flex;justify-content:space-between;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line);text-decoration:none;font-size:18px;color:var(--ink)}
+.mnav a span{color:var(--mut);font-size:14px}
+.mnav .mc{margin-top:20px;font-size:15px;line-height:1.7;color:var(--mut)}
+.mnav .mc a{display:inline;border:0;padding:0;font-size:15px;color:var(--red);font-weight:600}
+/* hero */
+.hero{position:relative;display:flex;flex-direction:column;min-height:calc(100svh - var(--top,95px));overflow:hidden;background:#fff}
+.arc{position:relative;flex:1 1 auto;min-height:190px}
+.hc{position:absolute;left:0;top:0;padding:0;border:0;background:#fff;width:var(--cw,120px);border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.12),0 8px 22px rgba(20,20,30,.16);transform:translate(var(--x,0),var(--y,0)) rotate(var(--r,0deg));transform-origin:50% 50%;opacity:0;transition:transform .7s cubic-bezier(.2,.75,.25,1),opacity .5s;will-change:transform}
+.hc img{width:100%;height:auto;border-radius:3px}
+.hc.on{opacity:1}.hc.off{display:none}
+.hc:hover{z-index:20!important}
+.hc:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.hero-in{flex:0 0 auto;text-align:center;padding:14px 16px 22px;position:relative;z-index:5}
+.halo{display:block;width:70px;height:16px;margin:0 auto 10px;border:2.5px solid var(--red);border-radius:50%}
+.hero h1{font-size:clamp(27px,7.6vw,36px);letter-spacing:-.01em;text-wrap:balance}
+.hero h1 .s{display:block;font-family:Jost,sans-serif;font-weight:500;font-size:.52em;line-height:1.3;color:var(--txt);margin-top:8px;letter-spacing:0;text-wrap:balance}
+.hero .lead{text-wrap:pretty;margin:12px auto 0;max-width:600px;font-size:15.5px;line-height:1.5;color:var(--mut)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:6px;background:var(--red);color:#fff;font-weight:600;font-size:17px;text-decoration:none;border:0;transition:background .2s}
+.btn:hover{background:var(--red-d)}
+.hero .btn{margin-top:20px}
+/* sekcje */
+.sec{padding:56px 0}
+.sec.g{background:var(--grey)}
+#o-nas{overflow:hidden}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px}
+.sh h2,.op-txt h2{font-size:clamp(25px,6.4vw,38px)}
+.sh p{margin:8px 0 0;color:var(--mut);max-width:640px}
+/* kafle kategorii */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.tile{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 8px 12px;text-align:center;position:relative;transition:border-color .2s,transform .2s}
+.tile-i{display:grid;place-items:center;aspect-ratio:1;position:relative}
+.tile-i img{position:absolute;inset:0;margin:auto;max-height:100%;max-width:100%;width:auto;height:auto}
+.tile-i::before{content:"";position:absolute;left:50%;top:-6px;width:44px;height:10px;margin-left:-22px;border:2px solid var(--red);border-radius:50%;opacity:0;transform:translateY(4px);transition:opacity .2s,transform .2s}
+.tile:hover{border-color:var(--ink)}.tile:hover .tile-i::before{opacity:1;transform:none}
+.tile-n{margin-top:8px;font-weight:600;font-size:14px;line-height:1.25;color:var(--ink)}
+.tile-c{font-size:12.5px;color:var(--mut);margin-top:2px}
+/* karuzele */
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:var(--cardw,46%);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 16px 6px;margin:0 -16px;scroll-padding:0 16px;cursor:grab}
+.track::-webkit-scrollbar{display:none}
+.track.drag{cursor:grabbing;scroll-snap-type:none}.track.drag *{pointer-events:none}
+.track>*{scroll-snap-align:start;min-width:0}
+.ctl{display:none;gap:8px}
+.ctl button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--ink);background:#fff;display:grid;place-items:center;transition:background .2s,color .2s}
+.ctl button svg{width:18px;height:18px}.ctl .p svg{transform:scaleX(-1)}
+.ctl button:hover:not(:disabled){background:var(--ink);color:#fff}
+.ctl button:disabled{opacity:.3;cursor:default}
+.bar{height:3px;background:var(--line);border-radius:3px;margin-top:16px;overflow:hidden}.bar i{display:block;height:100%;width:20%;background:var(--red);border-radius:3px;transition:transform .15s linear}
+/* karta produktu */
+.pc{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;height:100%}
+.pc-img{display:block;position:relative;aspect-ratio:4/5;border:0;padding:0;background:#fff;border-radius:6px;overflow:hidden;width:100%}
+.pc-img img{position:absolute;inset:0;margin:auto;max-height:100%;max-width:100%;width:auto;height:auto;transition:transform .35s}
+.pc-img:hover img{transform:scale(1.03)}
+.pc-t{font-family:Jost,sans-serif;font-size:15px;font-weight:600;line-height:1.3;margin:10px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--ink)}
+.pc-s{margin:3px 0 0;font-size:13px;line-height:1.35;color:var(--mut)}
+.pc-b{display:flex;align-items:baseline;justify-content:space-between;gap:6px;margin-top:auto;padding-top:10px;flex-wrap:wrap}
+.pc-p{font-size:18px;color:var(--ink)}
+.av{font-size:12.5px;color:#2C7A3F}.av0{color:var(--mut)}
+.add{margin-top:10px;min-height:42px;border:1.5px solid var(--red);background:#fff;color:var(--red);border-radius:6px;font-weight:600;transition:background .2s,color .2s}
+.add:hover,.add.ok{background:var(--red);color:#fff}
+.anioly .pc-img{aspect-ratio:415/600;background:var(--grey)}
+.anioly .pc-img img{width:100%;height:100%;object-fit:cover}
+/* intro aniolow */
+.ai{display:grid;gap:18px;margin-bottom:24px;grid-template-columns:minmax(0,1fr)}
+.ai p{margin:0;color:var(--mut)}
+.ai .facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:4px;font-size:14.5px;color:var(--ink)}
+.ai .facts b{color:var(--red)}
+/* ciemna sekcja opraw */
+.dark{background:var(--dark);color:#D9DADD}
+.dark h2{color:#fff}.dark .sh p{color:#B5B7BC}
+.dark .ctl button{background:transparent;border-color:#fff;color:#fff}.dark .ctl button:hover:not(:disabled){background:#fff;color:var(--dark)}
+.dark .bar{background:#3A3A40}
+.op{display:grid;gap:26px;grid-template-columns:minmax(0,1fr)}
+.op>*,.ai>*,.dv>*,.ab>*,.ct>*{min-width:0}
+.op-txt p{margin:0 0 14px}
+.op-sz{display:grid;gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.op-sz li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid #36363C}
+.op-sz b{color:#fff;font-weight:600}.op-sz span{white-space:nowrap;color:#fff;font-weight:600}
+.op-mark{display:flex;align-items:center;gap:14px;margin-top:22px;color:#fff}
+.op-mark svg{width:96px;flex:none}
+.op-mark p{margin:0;font-size:14px;color:#B5B7BC;line-height:1.45}
+.cov{margin:0;background:#fff;border-radius:10px;padding:10px 10px 12px;color:var(--ink)}
+.cov-i{display:block;position:relative;aspect-ratio:5/7;border:0;padding:0;background:#fff;width:100%}
+.cov-i img{position:absolute;inset:0;margin:auto;max-height:100%;max-width:100%;width:auto;height:auto}
+.cov figcaption{display:flex;justify-content:space-between;gap:8px;margin-top:8px;font-size:14px}
+.cov figcaption b{font-weight:600;text-transform:capitalize}
+.cov figcaption a{text-decoration:none}.cov figcaption a:hover b{color:var(--red)}
+.op-btn{margin-top:22px}
+.oprawy-t{--cardw:40%}
+/* dostawa */
+.dv{display:grid;gap:26px;grid-template-columns:minmax(0,1fr)}
+.tbl{width:100%;border-collapse:collapse;font-size:15.5px;background:#fff;border-radius:10px;overflow:hidden}
+.tbl caption{text-align:left;font-weight:600;color:var(--ink);padding:0 0 10px;font-size:17px}
+.tbl th,.tbl td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line)}
+.tbl th{font-weight:600;color:var(--mut);font-size:13.5px;background:#fff}
+.tbl td:last-child{text-align:right;font-weight:600;color:var(--ink);white-space:nowrap}
+.tbl tr.free td:last-child{color:var(--red)}
+.dl{list-style:none;margin:0;padding:0;background:#fff;border-radius:10px}
+.dl li{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.dl li:last-child{border:0}.dl b{color:var(--ink);font-weight:600;white-space:nowrap}
+.dl small{display:block;color:var(--mut);font-size:13px;line-height:1.35;margin-top:2px}
+.pickup{margin-top:16px;padding:16px;border-radius:10px;background:#fff;border-left:3px solid var(--red)}
+.pickup h3{font-family:Jost,sans-serif;font-size:17px}
+.pickup p{margin:6px 0 0;color:var(--mut);font-size:15px}
+/* o nas */
+.ab{display:grid;gap:28px;align-items:center;grid-template-columns:minmax(0,1fr)}
+.ab blockquote{margin:0 0 18px;font-family:Lora,Georgia,serif;font-size:clamp(22px,5.4vw,30px);line-height:1.3;color:var(--ink)}
+.ab p{margin:0 0 14px}
+.pubs{display:flex;flex-wrap:wrap;gap:8px 10px;margin:18px 0 0;padding:0;list-style:none}
+.pubs li{border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:14px;color:var(--ink)}
+.ab-g{display:flex;justify-content:center;padding:34px 0 26px;position:relative}
+.ab-g::before{content:"";position:absolute;left:50%;top:-14px;width:120px;height:26px;margin-left:-60px;border:3px solid var(--red);border-radius:50%}
+.ab-g button{border:0;padding:0;background:#fff;border-radius:3px;width:min(32%,190px);margin:0 -4%;box-shadow:0 1px 2px rgba(0,0,0,.12),0 10px 26px rgba(20,20,30,.18);transition:transform .3s}
+.ab-g button img{width:100%;height:auto;border-radius:3px}
+.ab-g button:nth-child(1){transform:rotate(-9deg) translateY(18px)}.ab-g button:nth-child(2){transform:rotate(-3deg);z-index:2}.ab-g button:nth-child(3){transform:rotate(3deg);z-index:2}.ab-g button:nth-child(4){transform:rotate(9deg) translateY(18px)}
+.ab-g button:hover{z-index:3}
+/* kontakt */
+.ct{display:grid;gap:26px;grid-template-columns:minmax(0,1fr)}
+.ci{font-size:16px;line-height:1.7}
+.ci p{margin:0 0 14px}.ci a{color:var(--red);font-weight:600;text-decoration:none}
+.ci .row{display:flex;gap:10px;align-items:flex-start}
+.ci .row svg{width:18px;height:18px;flex:none;margin-top:5px;color:var(--red)}
+.map{text-align:center;margin-top:10px;aspect-ratio:16/10;border-radius:10px;overflow:hidden;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--mut);font-size:14px}
+.map iframe{width:100%;height:100%;border:0}
+form.f{display:grid;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.f h3{font-size:22px}
+.f label{display:grid;gap:5px;font-size:14px;font-weight:600;color:var(--ink)}
+.f input,.f textarea,.f select{font:inherit;font-size:16px;font-weight:400;padding:11px 12px;border:1.5px solid #C9CCD2;border-radius:6px;background:#fff;color:var(--ink);width:100%}
+.f input:focus,.f textarea:focus,.f select:focus{outline:2px solid var(--red);outline-offset:1px;border-color:var(--red)}
+.f textarea{min-height:110px;resize:vertical}
+.f .ok{display:none;padding:12px 14px;border-radius:6px;background:#EDF7EF;color:#1F5F30;font-size:15px}
+.f.sent .ok{display:block}
+.f .btn{width:100%}
+.nl{margin-top:20px;padding:18px;border-radius:12px;background:var(--grey)}
+.nl h3{font-family:Jost,sans-serif;font-size:17px}
+.nl p{margin:4px 0 10px;font-size:14.5px;color:var(--mut)}
+.nl .sf{border-color:#C9CCD2}
+.nl .sf button{background:var(--red)}
+/* stopka */
+.ft{background:#fff;border-top:1px solid var(--line);padding:40px 0 26px;font-size:14.5px;color:var(--mut)}
+.ft-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}
+.ft h4{margin:0 0 8px;font-size:14px;color:var(--ink);font-weight:600}
+.ft ul{list-style:none;margin:0;padding:0;line-height:1.95}
+.ft a{text-decoration:none}.ft a:hover{color:var(--red)}
+.ft .fl{grid-column:1/-1}
+.ft .fl .logo{width:110px}
+.ft .fl p{margin:10px 0 0;line-height:1.6}
+.ft-b{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(18,18,22,.94);display:none;align-items:center;justify-content:center;touch-action:pan-y}
+.lb.on{display:flex}
+.lb figure{margin:0;display:flex;flex-direction:column;align-items:center;max-width:calc(100vw - 24px)}
+.lb img{max-width:calc(100vw - 24px);max-height:calc(100svh - 130px);width:auto;height:auto;border-radius:4px;background:#fff}
+.lb .cap{color:#fff;margin-top:12px;font-size:15px;text-align:center;max-width:640px;line-height:1.4;padding:0 10px}
+.lb .cnt{color:#B5B7BC;font-size:13px;margin-top:4px}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;width:48px;height:48px;border-radius:50%;display:grid;place-items:center}
+.lb button svg{width:20px;height:20px}
+.lb .x{top:12px;right:12px;font-size:28px;line-height:1}
+.lb .pv{left:10px;top:50%;margin-top:-24px}.lb .pv svg{transform:scaleX(-1)}
+.lb .nx{right:10px;top:50%;margin-top:-24px}
+/* toast */
+.toast{position:fixed;left:50%;bottom:18px;z-index:80;transform:translate(-50%,calc(100% + 40px));visibility:hidden;background:var(--ink);color:#fff;padding:12px 18px;border-radius:8px;font-size:15px;max-width:calc(100vw - 32px);transition:transform .3s;box-shadow:0 8px 26px rgba(0,0,0,.25)}
+.toast.on{transform:translate(-50%,0);visibility:visible}
+.toast b{color:#FF8A8A;font-weight:600}
+.note{font-size:13px;color:var(--mut);margin-top:14px}
+@media (min-width:560px){
+ .track{--cardw:31%}.oprawy-t{--cardw:28%}
+ .tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .ft-g{grid-template-columns:repeat(4,minmax(0,1fr))}.ft .fl{grid-column:auto}
+}
+@media (min-width:900px){
+ :root{--hd:84px}
+ .strip .wrap{justify-content:space-between}.strip .r{display:block}
+ .logo{width:132px}
+ .burger,.ib.sbtn{display:none}
+ .hd-in{flex-wrap:nowrap;height:var(--hd)}
+ .search{display:block!important;flex:1;max-width:560px;margin:0 auto;padding:0!important;order:0!important}
+ .hd-tools{margin-left:0}
+ .cart .sum{display:block;font-size:14px;font-weight:600;color:var(--ink);white-space:nowrap}
+ .cart{width:auto;padding:0 10px 0 6px;gap:8px;display:flex}
+ .cart .cnt{left:24px;right:auto;top:2px}
+ .cart .sum{margin-left:14px}
+ .acc{display:block;font-size:14px;font-weight:500;text-decoration:none;padding:0 10px;white-space:nowrap}
+ .nav{display:block;border-top:1px solid var(--line)}
+ .nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;justify-content:center}
+ .nav a{display:block;position:relative;padding:12px 13px;font-size:15px;font-weight:500;text-decoration:none;color:var(--ink);white-space:nowrap}
+ .nav a::before{content:"";position:absolute;left:50%;top:3px;width:30px;height:7px;margin-left:-15px;border:2px solid var(--red);border-radius:50%;opacity:0;transition:opacity .2s}
+ .nav a:hover::before,.nav a[aria-current]::before{opacity:1}
+ .nav a.promo{color:var(--red)}
+ .mnav{display:none}
+
+ .bn{padding:56px 0 0}
+ .bn-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+ .ban{min-height:210px;padding:26px 30px 26px 36px;gap:24px}
+ .ban h3{font-size:clamp(26px,2vw,34px)}
+ .ban p{font-size:16px;max-width:420px}
+ .ban img{max-height:180px;max-width:180px}
+ .nav .mm-btn{display:flex;align-items:center;gap:9px;border:0;background:var(--ink);color:#fff;font-size:15px;font-weight:600;padding:8px 16px;margin:5px 10px 5px 0;border-radius:6px;white-space:nowrap}
+ .nav .mm-btn i{display:grid;gap:3px}.nav .mm-btn i b{display:block;width:14px;height:2px;background:#fff;border-radius:2px}
+ .nav .mm-btn[aria-expanded=true]{background:var(--red)}
+ .nav ul{align-items:center}
+ .mm{display:block;position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid var(--line);box-shadow:0 18px 40px rgba(20,20,30,.16);z-index:45}
+ .mm[hidden]{display:none}
+ .mm-in{display:grid;grid-template-columns:270px minmax(0,1fr);max-height:calc(100vh - var(--top,130px) - 16px)}
+ .mm-left{list-style:none;margin:0;padding:12px 0;border-right:1px solid var(--line);overflow:auto}
+ .mm-t{display:flex;align-items:center;justify-content:space-between;padding:7px 18px 7px 12px;font-size:15px;color:var(--ink);text-decoration:none;border-radius:6px 0 0 6px}
+ .mm-t i{width:7px;height:7px;border-right:2px solid currentColor;border-top:2px solid currentColor;transform:rotate(45deg);opacity:.45;flex:none}
+ .mm-t.on{background:var(--grey);color:var(--red);font-weight:600}.mm-t.on i{opacity:1}
+ .mm-right{padding:18px 8px 22px 32px;overflow:auto}
+ .mm-all{display:inline-block;color:var(--red);font-weight:600;text-decoration:none;margin-bottom:14px;font-size:15px}
+ .mm-cols{list-style:none;margin:0;padding:0;columns:4 190px;column-gap:28px}
+ .mm-cols>li{break-inside:avoid;margin:0 0 14px}
+ .mm-h{font-weight:600;color:var(--ink);text-decoration:none;font-size:15px}
+ .mm-l3,.mm-l4,.mm-l5{list-style:none;margin:4px 0 0;padding:0 0 0 10px;border-left:2px solid var(--line)}
+ .mm-l3 a,.mm-l4 a{display:inline-block;padding:2px 0;font-size:14px;color:var(--mut);text-decoration:none}
+ .mm-l4{margin:2px 0 4px}
+ .mm a:hover{color:var(--red)}
+ .mm-empty{margin:0;color:var(--mut)}
+ .hero{display:block}
+ .arc{position:absolute;inset:0;min-height:0}
+ .hero-in{position:absolute;left:50%;top:var(--ty,26%);transform:translateX(-50%);width:min(620px,40vw);padding:0}
+ .hero h1{font-size:clamp(34px,3.3vw,58px)}
+ .hero .lead{font-size:clamp(16px,1.15vw,20px);margin-top:16px}
+ .halo{width:96px;height:22px;margin-bottom:18px;border-width:3px}
+ .hero .btn{margin-top:28px}
+ .sec{padding:84px 0}
+ .sh h2,.op-txt h2{font-size:clamp(32px,2.6vw,44px)}
+ .ctl{display:flex}
+ .track{--cardw:calc((100% - 4*16px)/5);gap:16px;margin:0;padding:4px 0 6px;scroll-padding:0}
+ .anioly{--cardw:calc((100% - 5*16px)/6)}
+ .tiles{grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+ .tile{padding:14px 12px 16px}
+ .ai{max-width:860px}
+ .op{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:56px;align-items:center}
+ .oprawy-t{--cardw:calc((100% - 3*16px)/4)}
+ .dv{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+ .ab{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:64px}
+ .ct{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+ .lb .pv{left:24px}.lb .nx{right:24px}
+}
+@media (min-width:1600px){.logo{width:150px}:root{--w:1440px}.anioly{--cardw:calc((100% - 6*16px)/7)}}
+@media (min-width:2200px){:root{--w:1720px}body{font-size:17px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+.bc{font-size:13.5px;color:var(--mut);padding:16px 0 4px;display:flex;flex-wrap:wrap;gap:4px 8px}
+.bc a{text-decoration:none}.bc a:hover{color:var(--red)}.bc span[aria-hidden]{opacity:.5}
+.pp-top{display:grid;gap:22px;grid-template-columns:minmax(0,1fr);padding:10px 0 8px}
+.pp-top>*,.pp-info>*{min-width:0}
+.stage{position:relative;height:min(88vw,350px);background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.st{position:absolute;inset:0;border:0;padding:18px;background:#fff;display:none;align-items:center;justify-content:center;cursor:zoom-in}
+.st.on{display:flex}
+.st img{width:auto;height:auto;max-height:100%;min-width:0;object-fit:contain}
+.zoom{position:absolute;right:10px;bottom:10px;z-index:2;pointer-events:none;font-size:12.5px;background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:20px;padding:4px 10px;color:var(--mut)}
+.thumbs{display:flex;gap:8px;margin-top:10px;overflow-x:auto;scrollbar-width:none}
+.thumbs::-webkit-scrollbar{display:none}
+.th{flex:0 0 68px;height:68px;border:1.5px solid var(--line);border-radius:8px;background:#fff;padding:4px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.th img{max-height:100%;max-width:100%;width:auto;height:auto}
+.th.on{border-color:var(--ink)}
+.brand{margin:0 0 6px;font-size:13.5px;color:var(--red);font-weight:600;letter-spacing:.02em}
+.buy h1{font-size:clamp(25px,6.4vw,34px);text-wrap:balance}
+.buy .sub{margin:8px 0 0;color:var(--mut);font-size:15.5px}
+.pr{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 16px;margin:16px 0 4px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.pr b{font-size:30px;color:var(--ink);font-weight:600}
+.pr .av{font-size:14.5px}
+.opt{border:0;margin:16px 0 0;padding:0;min-width:0}
+.opt legend{padding:0;font-weight:600;color:var(--ink);font-size:15px;margin-bottom:8px}
+.opt legend span{font-weight:400;color:var(--mut);text-transform:capitalize}
+.sz{display:grid;gap:8px;grid-template-columns:minmax(0,1fr)}
+.sz button{text-align:left;border:1.5px solid #C9CCD2;background:#fff;border-radius:8px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:15px;line-height:1.3}
+.sz button span{white-space:nowrap;font-weight:600;color:var(--ink)}
+.sz button.on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.sws{display:flex;flex-wrap:wrap;gap:8px}
+.sw{width:54px;height:66px;border:1.5px solid var(--line);border-radius:8px;background:#fff;padding:3px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.sw[hidden]{display:none}
+.sw img{max-height:100%;max-width:100%;width:auto;height:auto;border-radius:3px}
+.sw.on{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red)}
+.qr{display:flex;gap:10px;margin-top:20px}
+.qty{display:flex;align-items:center;border:1.5px solid #C9CCD2;border-radius:8px;flex:none}
+.qty button{width:42px;height:50px;border:0;background:none;font-size:20px}
+.qty input{width:38px;border:0;text-align:center;font:inherit;font-size:16px;font-weight:600;color:var(--ink);-moz-appearance:textfield}
+.qty input::-webkit-inner-spin-button{-webkit-appearance:none}
+.qr .add{flex:1;margin:0;min-height:52px;background:var(--red);color:#fff;font-size:17px}
+.qr .add:hover{background:var(--red-d)}
+.perks{list-style:none;margin:18px 0 0;padding:14px 16px;background:var(--grey);border-radius:10px;font-size:14.5px;line-height:1.5}
+.perks li{display:flex;gap:10px;padding:4px 0}
+.perks li::before{content:"";flex:none;width:12px;height:6px;margin-top:7px;border-left:2px solid var(--red);border-bottom:2px solid var(--red);transform:rotate(-45deg)}
+.pp-info{display:grid;gap:26px;grid-template-columns:minmax(0,1fr);padding:40px 0 10px}
+.desc h2,.spec h2,.rel h2{font-size:clamp(23px,5.6vw,30px);margin-bottom:6px}
+.desc h3{font-size:19px;margin:24px 0 6px}
+.desc p{margin:0 0 10px;max-width:72ch}
+.desc ul{margin:6px 0 0;padding-left:20px;max-width:72ch}
+.desc li{margin:3px 0}
+.desc strong{color:var(--ink);font-weight:600}
+.spec dl{margin:10px 0 0;background:var(--grey);border-radius:10px;padding:4px 16px}
+.spec dl div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.spec dl div:last-child{border:0}
+.spec dt{color:var(--mut)}.spec dd{margin:0;text-align:right;color:var(--ink);font-weight:500}
+.acl{margin:30px 0 0;border-top:1px solid var(--line)}
+.ac{border-bottom:1px solid var(--line)}
+.ac summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 2px;font-family:Lora,Georgia,serif;font-size:19px;font-weight:600;color:var(--ink)}
+.ac summary::-webkit-details-marker{display:none}
+.ac summary small{display:block;font-family:Jost,sans-serif;font-weight:400;font-size:13.5px;color:var(--mut);margin-top:2px}
+.ac summary::after{content:"";flex:none;width:9px;height:9px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg);margin:-5px 6px 0 0;transition:transform .2s}
+.ac[open] summary::after{transform:rotate(225deg);margin-top:4px}
+.ac-b{padding:0 2px 22px;font-size:15px;max-width:860px}
+.ac-b h3{font-family:Jost,sans-serif;font-size:16px;font-weight:600;margin:18px 0 6px}
+.ac-b h3:first-child{margin-top:0}
+.ac-b ul{margin:0;padding-left:20px}.ac-b li{margin:4px 0}
+.ac-b p{margin:0 0 8px}
+.ac-b strong{color:var(--ink);font-weight:600}
+.ac-b .src{font-size:13.5px;color:var(--mut);margin-bottom:12px}
+.prod-card{display:grid;gap:4px;background:var(--grey);border-radius:10px;padding:14px 16px;font-size:15px}
+.rel{padding:48px 0 64px}
+@media (min-width:560px){.sz{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media (min-width:900px){
+ .bc{padding-top:22px}
+ .pp-top{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:start;padding-top:14px}
+ .gal{display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;position:sticky;top:calc(var(--hd) + 56px)}
+ .thumbs{flex-direction:column;margin:0;order:-1;overflow:visible}
+ .th{flex:none;width:76px;height:76px}
+ .stage{aspect-ratio:auto;height:min(620px,calc(100vh - var(--hd) - 120px));min-height:440px}
+ .st{padding:28px}
+ .pr b{font-size:34px}
+ .pp-info{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:56px;padding-top:64px;align-items:start}
+ .spec{position:sticky;top:calc(var(--hd) + 60px)}
+ .rel{padding:72px 0 90px}
+ .rel .track{--cardw:calc((100% - 5*16px)/6)}
+ .rel .pc-img{aspect-ratio:415/600;background:var(--grey)}
+ .rel .pc-img img{width:100%;height:100%;object-fit:cover}
+}
+@media (max-width:899px){.rel .pc-img{aspect-ratio:415/600;background:var(--grey)}.rel .pc-img img{width:100%;height:100%;object-fit:cover}}
+</style>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<div class="strip"><div class="wrap"><span>Darmowa dostawa do Paczkomatów InPost od 150 zł</span><span class="r">Odbiór osobisty: Poznań, ul. Kościańska 30 lok. 3 &middot; tel. 726 733 340</span></div></div>
+<header class="hd" id="hd">
+ <div class="wrap hd-in">
+  <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button>
+  <a class="logo" href="index.html" aria-label="MAKAJUTO - strona główna"><svg viewBox="0 0 250 140" role="img" aria-label="MAKAJUTO">
+<defs><path id="luka" d="M4,24 A121,113 0 0 0 246,24"/></defs>
+<ellipse cx="125" cy="5" rx="16" ry="3.6" fill="none" stroke="#CC0000" stroke-width="2.4"/>
+<path d="M113,11 A12,12.5 0 1 0 137,11" fill="none" stroke="#1d1d1d" stroke-width="3.2" stroke-linecap="round"/>
+<g fill="#1d1d1d"><g id="ska"><path d="M40.0,12.3 L44.3,12.8 L48.5,13.5 L52.7,14.2 L56.7,15.1 L60.7,16.1 L64.6,17.2 L68.5,18.3 L72.2,19.6 L75.9,21.0 L79.5,22.5 L83.1,24.2 L86.5,25.9 L90.0,27.7 L93.3,29.6 L96.6,31.7 L99.8,33.8 L103.0,36.1 L106.1,38.4 L109.2,40.9 L112.2,43.5 L115.2,46.3 L118.1,49.1 L121.0,52.0 L123.8,55.2 L124.2,54.8 L121.9,51.3 L119.5,47.9 L117.0,44.6 L114.3,41.5 L111.5,38.5 L108.6,35.6 L105.5,32.9 L102.4,30.3 L99.1,27.9 L95.7,25.7 L92.3,23.6 L88.7,21.6 L85.1,19.9 L81.3,18.3 L77.5,16.8 L73.6,15.5 L69.6,14.5 L65.5,13.5 L61.4,12.8 L57.2,12.2 L53.0,11.8 L48.7,11.6 L44.4,11.6 L40.0,11.7Z"/><path d="M45.0,27.3 L48.5,27.7 L52.0,28.2 L55.3,28.8 L58.6,29.4 L61.7,30.0 L64.7,30.7 L67.7,31.5 L70.5,32.2 L73.2,33.1 L75.8,34.0 L78.4,34.9 L80.8,35.9 L83.1,37.0 L85.4,38.1 L87.6,39.3 L89.6,40.5 L91.6,41.8 L93.6,43.2 L95.4,44.6 L97.2,46.1 L99.0,47.7 L100.6,49.4 L102.3,51.2 L103.8,53.1 L104.2,52.9 L103.1,50.6 L101.9,48.4 L100.6,46.4 L99.1,44.4 L97.5,42.5 L95.7,40.6 L93.8,38.9 L91.8,37.4 L89.6,35.9 L87.3,34.5 L85.0,33.2 L82.5,32.1 L79.9,31.0 L77.1,30.1 L74.3,29.3 L71.4,28.6 L68.4,28.0 L65.4,27.5 L62.2,27.1 L58.9,26.8 L55.6,26.6 L52.1,26.6 L48.6,26.7 L45.0,26.7Z"/><path d="M47.0,41.2 L49.1,41.5 L51.1,41.9 L53.2,42.2 L55.1,42.6 L57.0,43.0 L58.9,43.4 L60.8,43.9 L62.6,44.4 L64.4,44.9 L66.1,45.4 L67.8,45.9 L69.5,46.5 L71.1,47.1 L72.8,47.7 L74.3,48.3 L75.9,49.0 L77.5,49.6 L79.0,50.3 L80.5,51.1 L82.0,51.8 L83.5,52.6 L84.9,53.4 L86.4,54.3 L87.8,55.2 L88.2,54.8 L87.0,53.5 L85.9,52.2 L84.7,51.0 L83.3,49.8 L82.0,48.7 L80.5,47.7 L79.0,46.7 L77.5,45.8 L75.9,44.9 L74.2,44.1 L72.5,43.4 L70.8,42.8 L69.0,42.2 L67.1,41.7 L65.3,41.3 L63.3,40.9 L61.4,40.6 L59.4,40.4 L57.4,40.3 L55.4,40.2 L53.3,40.2 L51.2,40.3 L49.1,40.6 L47.0,40.8Z"/><path d="M52.0,53.2 L53.5,53.5 L54.9,53.8 L56.3,54.1 L57.7,54.4 L59.1,54.8 L60.4,55.1 L61.7,55.5 L63.0,55.9 L64.3,56.3 L65.6,56.6 L66.9,57.1 L68.2,57.5 L69.4,57.9 L70.7,58.3 L72.0,58.8 L73.3,59.3 L74.6,59.7 L75.8,60.2 L77.2,60.7 L78.5,61.2 L79.8,61.7 L81.2,62.2 L82.5,62.6 L83.9,63.2 L84.1,62.8 L83.0,61.9 L81.8,60.9 L80.7,60.0 L79.5,59.2 L78.3,58.4 L77.1,57.6 L75.8,56.9 L74.6,56.2 L73.3,55.6 L72.0,55.0 L70.7,54.5 L69.3,54.0 L68.0,53.6 L66.6,53.2 L65.2,52.9 L63.8,52.7 L62.3,52.5 L60.9,52.3 L59.4,52.2 L58.0,52.2 L56.5,52.3 L55.0,52.4 L53.5,52.6 L52.0,52.8Z"/><path d="M58.0,64.2 L59.0,64.4 L59.9,64.7 L60.9,65.0 L61.8,65.2 L62.7,65.5 L63.6,65.8 L64.5,66.1 L65.4,66.3 L66.3,66.6 L67.2,66.9 L68.1,67.2 L69.0,67.5 L69.9,67.8 L70.8,68.1 L71.8,68.4 L72.7,68.8 L73.7,69.1 L74.6,69.4 L75.6,69.7 L76.7,70.0 L77.7,70.3 L78.7,70.6 L79.8,70.9 L80.9,71.2 L81.1,70.8 L80.2,70.2 L79.3,69.5 L78.4,68.8 L77.5,68.2 L76.6,67.6 L75.7,67.1 L74.7,66.5 L73.8,66.1 L72.9,65.6 L71.9,65.2 L71.0,64.8 L70.0,64.5 L69.0,64.2 L68.1,63.9 L67.1,63.7 L66.1,63.5 L65.1,63.4 L64.1,63.3 L63.1,63.2 L62.0,63.3 L61.0,63.3 L60.0,63.4 L59.0,63.6 L58.0,63.8Z"/><path d="M66.0,74.2 L66.6,74.3 L67.2,74.6 L67.8,74.8 L68.4,74.9 L69.0,75.1 L69.6,75.3 L70.2,75.4 L70.8,75.6 L71.4,75.7 L72.0,75.9 L72.6,76.0 L73.2,76.1 L73.8,76.2 L74.4,76.4 L75.1,76.5 L75.7,76.6 L76.3,76.7 L76.9,76.7 L77.6,76.8 L78.2,76.9 L78.9,77.0 L79.6,77.0 L80.3,77.1 L80.9,77.2 L81.1,76.8 L80.5,76.4 L79.9,76.0 L79.4,75.6 L78.8,75.3 L78.2,74.9 L77.6,74.6 L76.9,74.4 L76.3,74.1 L75.7,73.9 L75.1,73.7 L74.4,73.5 L73.8,73.4 L73.1,73.3 L72.5,73.2 L71.8,73.1 L71.2,73.1 L70.5,73.1 L69.9,73.1 L69.2,73.1 L68.6,73.2 L67.9,73.3 L67.3,73.5 L66.6,73.7 L66.0,73.8Z"/><path d="M108.8,58.0 L108.6,59.5 L108.4,61.1 L108.2,62.6 L108.1,64.2 L107.9,65.7 L107.7,67.3 L107.5,68.9 L107.3,70.5 L107.1,72.1 L106.9,73.7 L106.7,75.4 L106.6,77.0 L106.4,78.7 L106.2,80.4 L106.0,82.1 L105.8,83.8 L105.7,85.5 L105.5,87.3 L105.4,89.0 L105.2,90.8 L105.1,92.6 L105.0,94.4 L104.9,96.2 L104.8,98.0 L105.2,98.0 L105.8,96.3 L106.5,94.7 L107.1,92.9 L107.6,91.2 L108.1,89.5 L108.5,87.8 L109.0,86.1 L109.3,84.3 L109.7,82.6 L110.0,80.9 L110.2,79.2 L110.4,77.5 L110.6,75.8 L110.7,74.1 L110.8,72.4 L110.8,70.7 L110.8,69.0 L110.8,67.4 L110.6,65.8 L110.5,64.2 L110.2,62.6 L109.9,61.0 L109.6,59.5 L109.2,58.0Z"/><path d="M114.8,64.0 L114.9,65.1 L114.9,66.1 L115.0,67.1 L115.0,68.1 L115.0,69.1 L115.1,70.1 L115.1,71.1 L115.1,72.1 L115.1,73.1 L115.2,74.1 L115.2,75.1 L115.2,76.0 L115.3,77.0 L115.3,78.0 L115.3,79.0 L115.4,80.0 L115.4,81.0 L115.5,81.9 L115.5,82.9 L115.6,83.9 L115.6,84.9 L115.7,85.9 L115.8,87.0 L115.8,88.0 L116.2,88.0 L116.5,87.0 L116.8,86.1 L117.0,85.1 L117.3,84.1 L117.5,83.1 L117.6,82.1 L117.8,81.0 L117.9,80.0 L118.0,79.0 L118.0,78.0 L118.0,77.0 L118.0,76.0 L118.0,74.9 L117.9,73.9 L117.8,72.9 L117.6,71.9 L117.4,70.9 L117.2,69.9 L117.0,68.9 L116.7,67.9 L116.4,66.9 L116.0,65.9 L115.6,64.9 L115.2,64.0Z"/></g><use href="#ska" transform="translate(250,0) scale(-1,1)"/>
+<path d="M115.1,62.6 L115.4,63.2 L115.8,63.8 L116.2,64.4 L116.6,65.1 L116.9,65.7 L117.3,66.3 L117.7,66.9 L118.1,67.6 L118.4,68.2 L118.8,68.8 L119.2,69.4 L119.6,70.1 L119.9,70.7 L120.3,71.3 L120.7,71.9 L121.1,72.6 L121.4,73.2 L121.8,73.8 L122.2,74.4 L122.6,75.1 L122.9,75.7 L123.3,76.3 L123.7,76.9 L124.1,77.6 L125.9,76.4 L125.6,75.8 L125.2,75.2 L124.8,74.6 L124.4,73.9 L124.1,73.3 L123.7,72.7 L123.3,72.1 L122.9,71.4 L122.6,70.8 L122.2,70.2 L121.8,69.6 L121.4,68.9 L121.1,68.3 L120.7,67.7 L120.3,67.1 L119.9,66.4 L119.6,65.8 L119.2,65.2 L118.8,64.6 L118.4,63.9 L118.1,63.3 L117.7,62.7 L117.3,62.1 L116.9,61.4Z"/><path d="M133.1,61.4 L132.7,62.1 L132.3,62.7 L131.9,63.3 L131.6,63.9 L131.2,64.6 L130.8,65.2 L130.4,65.8 L130.1,66.4 L129.7,67.1 L129.3,67.7 L128.9,68.3 L128.6,68.9 L128.2,69.6 L127.8,70.2 L127.4,70.8 L127.1,71.4 L126.7,72.1 L126.3,72.7 L125.9,73.3 L125.6,73.9 L125.2,74.6 L124.8,75.2 L124.4,75.8 L124.1,76.4 L125.9,77.6 L126.3,76.9 L126.7,76.3 L127.1,75.7 L127.4,75.1 L127.8,74.4 L128.2,73.8 L128.6,73.2 L128.9,72.6 L129.3,71.9 L129.7,71.3 L130.1,70.7 L130.4,70.1 L130.8,69.4 L131.2,68.8 L131.6,68.2 L131.9,67.6 L132.3,66.9 L132.7,66.3 L133.1,65.7 L133.4,65.1 L133.8,64.4 L134.2,63.8 L134.6,63.2 L134.9,62.6Z"/></g>
+<text font-family="Jost,Arial,sans-serif" font-weight="300" font-size="29" fill="#CC0000"><textPath href="#luka" startOffset="50%" text-anchor="middle" textLength="318" lengthAdjust="spacing">MAKAJUTO</textPath></text>
+</svg></a>
+  <div class="search" id="search"><form class="sf" role="search" data-search><input type="search" name="q" placeholder="Czego dziś szukasz? np. anioł, Biblia, kalendarz" aria-label="Szukaj w sklepie"><button type="submit">Szukaj</button></form></div>
+  <div class="hd-tools">
+   <button class="ib sbtn" id="sbtn" type="button" aria-label="Szukaj" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5l5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+   <a class="acc" href="index.html#kontakt">Zaloguj</a>
+   <a class="ib cart" href="#" id="cart" aria-label="Koszyk"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M5 9h16l-1.4 12.2a1.6 1.6 0 0 1-1.6 1.4H8a1.6 1.6 0 0 1-1.6-1.4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9.5 11V7.6a3.5 3.5 0 0 1 7 0V11" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span class="cnt" id="cnt">0</span><span class="sum" id="sum">0,00 zł</span></a>
+  </div>
+ </div>
+ <nav class="nav" aria-label="Główne menu"><ul>
+  <li><button class="mm-btn" id="mmBtn" type="button" aria-expanded="false" aria-controls="mm"><i aria-hidden="true"><b></b><b></b><b></b></i>Wszystkie kategorie</button></li>
+  <li><a href="index.html#anioly">Karnety z aniołami</a></li>
+  <li><a href="index.html#sezon">Na święta</a></li>
+  <li><a href="index.html#oprawy">Oprawy MAKAJUTO</a></li>
+  <li><a href="index.html#kategorie">Książki</a></li>
+  <li><a href="index.html#kategorie">Kalendarze 2027</a></li>
+  <li><a href="index.html#dostawa">Dostawa</a></li>
+  <li><a href="index.html#o-nas">O nas</a></li>
+  <li><a href="index.html#kontakt">Kontakt</a></li>
+  <li><a href="index.html#sezon" class="promo">Promocje</a></li>
+ </ul></nav>
+ <div class="mm" id="mm" hidden><div class="wrap mm-in"><ul class="mm-left"><li><a href="index.html#kategorie" class="mm-t" data-mm="0">Produkty z ANIOŁAMI</a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="1">Boże Narodzenie<i aria-hidden=true></i></a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="2">Kalendarze 2027<i aria-hidden=true></i></a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="3">AUDIOBOOKI</a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="4">Codzienniki</a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="5">Czasopisma</a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="6">Dekoracje i ozdoby<i aria-hidden=true></i></a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="7">Gadżety<i aria-hidden=true></i></a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="8">Gry i zabawy<i aria-hidden=true></i></a></li><li><a href="index.html#kategorie" class="mm-t on" data-mm="9">Karnety / Kartki okolicznościowe<i aria-hidden=true></i></a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="10">Kubki<i aria-hidden=true></i></a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="11">Książki<i aria-hidden=true></i></a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="12">Muzyka<i aria-hidden=true></i></a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="13">Filmy</a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="14">Pamiątki<i aria-hidden=true></i></a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="15">Torby na zakupy</a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="16">Torby prezentowe<i aria-hidden=true></i></a></li><li><a href="index.html#kategorie" class="mm-t" data-mm="17">Zaproszenia<i aria-hidden=true></i></a></li></ul><div class="mm-right"><div class="mm-p" data-mmp="0" hidden><a href="index.html#kategorie" class="mm-all">Produkty z ANIOŁAMI: zobacz wszystko</a><p class="mm-empty">Dział bez podkategorii, wszystkie produkty na jednej liście.</p></div><div class="mm-p" data-mmp="1" hidden><a href="index.html#kategorie" class="mm-all">Boże Narodzenie: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">Karneciki do prezentów</a></li><li><a href="index.html#kategorie" class="mm-h">Karnety / Pocztówki</a></li><li><a href="index.html#kategorie" class="mm-h">Kolorowanki</a></li><li><a href="index.html#kategorie" class="mm-h">Książki</a></li><li><a href="index.html#kategorie" class="mm-h">Portfeliki prezentowe</a></li><li><a href="index.html#kategorie" class="mm-h">Zawieszki choinkowe Hallmark</a></li></ul></div><div class="mm-p" data-mmp="2" hidden><a href="index.html#kategorie" class="mm-all">Kalendarze 2027: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">EWANGELIA 2027</a></li><li><a href="index.html#kategorie" class="mm-h">Biurkowe</a></li><li><a href="index.html#kategorie" class="mm-h">Kieszonkowe</a></li><li><a href="index.html#kategorie" class="mm-h">Listkowe</a></li><li><a href="index.html#kategorie" class="mm-h">Ścienne</a></li><li><a href="index.html#kategorie" class="mm-h">Ścienne Planery</a></li><li><a href="index.html#kategorie" class="mm-h">Terminarze / Planery A5</a></li><li><a href="index.html#kategorie" class="mm-h">Terminarze / Planery B6</a></li><li><a href="index.html#kategorie" class="mm-h">Terminarze / Planery B7</a></li><li><a href="index.html#kategorie" class="mm-h">Terminarze tygodniowe</a></li></ul></div><div class="mm-p" data-mmp="3" hidden><a href="index.html#kategorie" class="mm-all">AUDIOBOOKI: zobacz wszystko</a><p class="mm-empty">Dział bez podkategorii, wszystkie produkty na jednej liście.</p></div><div class="mm-p" data-mmp="4" hidden><a href="index.html#kategorie" class="mm-all">Codzienniki: zobacz wszystko</a><p class="mm-empty">Dział bez podkategorii, wszystkie produkty na jednej liście.</p></div><div class="mm-p" data-mmp="5" hidden><a href="index.html#kategorie" class="mm-all">Czasopisma: zobacz wszystko</a><p class="mm-empty">Dział bez podkategorii, wszystkie produkty na jednej liście.</p></div><div class="mm-p" data-mmp="6" hidden><a href="index.html#kategorie" class="mm-all">Dekoracje i ozdoby: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">Hallmark ORNAMENTS</a></li><li><a href="index.html#kategorie" class="mm-h">Zawieszki ozdobne</a></li><li><a href="index.html#kategorie" class="mm-h">Zawieszki ceramiczne</a></li><li><a href="index.html#kategorie" class="mm-h">Zawieszki do prezentów Mikołaj/Boże Narodzenie</a></li></ul></div><div class="mm-p" data-mmp="7" hidden><a href="index.html#kategorie" class="mm-all">Gadżety: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">Bransoletki</a></li><li><a href="index.html#kategorie" class="mm-h">Breloki</a></li><li><a href="index.html#kategorie" class="mm-h">Długopisy, ołówki</a></li><li><a href="index.html#kategorie" class="mm-h">Herbaty</a></li><li><a href="index.html#kategorie" class="mm-h">Kufle</a></li><li><a href="index.html#kategorie" class="mm-h">Magnesy na lodówkę</a></li><li><a href="index.html#kategorie" class="mm-h">Naszyjniki</a></li><li><a href="index.html#kategorie" class="mm-h">Portfeliki prezentowe</a></li><li><a href="index.html#kategorie" class="mm-h">Pudełka na banknoty</a></li><li><a href="index.html#kategorie" class="mm-h">Pudełka z karteczkami</a></li><li><a href="index.html#kategorie" class="mm-h">Ramki na zdjęcia</a></li><li><a href="index.html#kategorie" class="mm-h">Skarbonki / Skarbboxy</a></li><li><a href="index.html#kategorie" class="mm-h">Skarpetki GiftMeSox</a></li></ul></div><div class="mm-p" data-mmp="8" hidden><a href="index.html#kategorie" class="mm-all">Gry i zabawy: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">Gry planszowe</a></li><li><a href="index.html#kategorie" class="mm-h">Gry memory</a></li></ul></div><div class="mm-p" data-mmp="9"><a href="index.html#kategorie" class="mm-all">Karnety / Kartki okolicznościowe: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">Boże Narodzenie</a></li><li><a href="index.html#kategorie" class="mm-h">Chrzest Święty</a></li><li><a href="index.html#kategorie" class="mm-h">I Komunia Święta</a></li><li><a href="index.html#kategorie" class="mm-h">Imieniny</a></li><li><a href="index.html#kategorie" class="mm-h">Kondolencje</a></li><li><a href="index.html#kategorie" class="mm-h">Mama</a></li><li><a href="index.html#kategorie" class="mm-h">Miłość</a></li><li><a href="index.html#kategorie" class="mm-h">Narodziny</a></li><li><a href="index.html#kategorie" class="mm-h">Przyjaźń</a></li><li><a href="index.html#kategorie" class="mm-h">Różne okazje / Brak okazji</a></li><li><a href="index.html#kategorie" class="mm-h">Ślub / Rocznice ślubu</a></li><li><a href="index.html#kategorie" class="mm-h">Tata</a></li><li><a href="index.html#kategorie" class="mm-h">Urodziny</a></li><li><a href="index.html#kategorie" class="mm-h">Urodziny dziecięce</a></li><li><a href="index.html#kategorie" class="mm-h">Urodziny młodzieżowe</a></li><li><a href="index.html#kategorie" class="mm-h">Ze Świętymi</a></li><li><a href="index.html#kategorie" class="mm-h">Pocztówki</a></li></ul></div><div class="mm-p" data-mmp="10" hidden><a href="index.html#kategorie" class="mm-all">Kubki: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">Anioły</a></li><li><a href="index.html#kategorie" class="mm-h">Boże Narodzenie / Mikołaj</a></li><li><a href="index.html#kategorie" class="mm-h">Dla NIEJ</a></li><li><a href="index.html#kategorie" class="mm-h">Dla NIEGO</a></li><li><a href="index.html#kategorie" class="mm-h">ELITE / Urodzinowe</a></li><li><a href="index.html#kategorie" class="mm-h">GIGANT</a></li><li><a href="index.html#kategorie" class="mm-h">Miłość</a></li><li><a href="index.html#kategorie" class="mm-h">PASTELLE</a></li><li><a href="index.html#kategorie" class="mm-h">Premium</a></li><li><a href="index.html#kategorie" class="mm-h">Premium POLSKA</a></li><li><a href="index.html#kategorie" class="mm-h">Ręcznie malowane z tłoczoną ilustracją</a></li><li><a href="index.html#kategorie" class="mm-h">sheepworld</a></li><li><a href="index.html#kategorie" class="mm-h">ShineOn</a></li><li><a href="index.html#kategorie" class="mm-h">Tablicowe</a></li><li><a href="index.html#kategorie" class="mm-h">TOP</a></li><li><a href="index.html#kategorie" class="mm-h">TOP BOSS</a></li><li><a href="index.html#kategorie" class="mm-h">ZESTAW 2 KUBKÓW</a></li></ul></div><div class="mm-p" data-mmp="11" hidden><a href="index.html#kategorie" class="mm-all">Książki: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">Biografie / Wspomnienia</a></li><li><a href="index.html#kategorie" class="mm-h">Dziecięce</a><ul class="mm-l3"><li><a href="index.html#kategorie">JUPI JO!</a></li><li><a href="index.html#kategorie">KAKADU - interaktywne</a></li><li><a href="index.html#kategorie">Bajki i wierszyki</a></li><li><a href="index.html#kategorie">Boże Narodzenie</a></li><li><a href="index.html#kategorie">Chrzest / Narodziny</a></li><li><a href="index.html#kategorie">Historyjki anielskie</a></li><li><a href="index.html#kategorie">Historie biblijne / BIBLIA</a></li><li><a href="index.html#kategorie">Kolorowanki z dodatkami</a></li><li><a href="index.html#kategorie">Komiksy</a></li><li><a href="index.html#kategorie">Modlitwy dla maluchów</a></li></ul></li><li><a href="index.html#kategorie" class="mm-h">Fantasy / Sci-Fi</a></li><li><a href="index.html#kategorie" class="mm-h">Młodzieżowe</a></li><li><a href="index.html#kategorie" class="mm-h">Poradniki</a></li><li><a href="index.html#kategorie" class="mm-h">Powieść</a></li><li><a href="index.html#kategorie" class="mm-h">Religijne</a><ul class="mm-l3"><li><a href="index.html#kategorie">Adwent / Boże Narodzenie</a></li><li><a href="index.html#kategorie">Anielskie</a></li><li><a href="index.html#kategorie">Biblia / Pismo Święte</a><ul class="mm-l4"><li><a href="index.html#kategorie">Pismo Święte</a></li><li><a href="index.html#kategorie">Dodatki do Biblii</a></li><li><a href="index.html#kategorie">Oprawy / Okładki MAKAJUTO (ANIOŁ)</a></li><li><a href="index.html#kategorie">Oprawy / Okładki Edycji św. Pawła</a></li></ul></li><li><a href="index.html#kategorie">Duchowość</a></li><li><a href="index.html#kategorie">Miłość</a></li><li><a href="index.html#kategorie">Modlitewniki</a></li><li><a href="index.html#kategorie">Skuteczni Święci - książki i karty</a></li><li><a href="index.html#kategorie">Warte przeczytania</a></li><li><a href="index.html#kategorie">Wielki Post</a></li><li><a href="index.html#kategorie">Wielkanoc</a></li></ul></li><li><a href="index.html#kategorie" class="mm-h">Upominkowe</a></li><li><a href="index.html#kategorie" class="mm-h">Zakładki do książek</a><ul class="mm-l3"><li><a href="index.html#kategorie">Zakładki kartonowe</a></li><li><a href="index.html#kategorie">Zakładki magnetyczne</a></li></ul></li></ul></div><div class="mm-p" data-mmp="12" hidden><a href="index.html#kategorie" class="mm-all">Muzyka: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">Kolędy / Muzyka CD</a></li></ul></div><div class="mm-p" data-mmp="13" hidden><a href="index.html#kategorie" class="mm-all">Filmy: zobacz wszystko</a><p class="mm-empty">Dział bez podkategorii, wszystkie produkty na jednej liście.</p></div><div class="mm-p" data-mmp="14" hidden><a href="index.html#kategorie" class="mm-all">Pamiątki: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">I Komunia Święta</a></li><li><a href="index.html#kategorie" class="mm-h">Chrzest Święty</a></li><li><a href="index.html#kategorie" class="mm-h">Narodziny / Roczek</a></li><li><a href="index.html#kategorie" class="mm-h">Ślub / Rocznica Ślubu</a></li><li><a href="index.html#kategorie" class="mm-h">Rodzinne</a></li></ul></div><div class="mm-p" data-mmp="15" hidden><a href="index.html#kategorie" class="mm-all">Torby na zakupy: zobacz wszystko</a><p class="mm-empty">Dział bez podkategorii, wszystkie produkty na jednej liście.</p></div><div class="mm-p" data-mmp="16" hidden><a href="index.html#kategorie" class="mm-all">Torby prezentowe: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">Rozmiar S</a></li><li><a href="index.html#kategorie" class="mm-h">Rozmiar M</a></li><li><a href="index.html#kategorie" class="mm-h">Rozmiar L</a></li><li><a href="index.html#kategorie" class="mm-h">Rozmiar XL</a></li><li><a href="index.html#kategorie" class="mm-h">Rozmiar XXL BIG</a></li><li><a href="index.html#kategorie" class="mm-h">Rozmiar B (na butelkę)</a></li></ul></div><div class="mm-p" data-mmp="17" hidden><a href="index.html#kategorie" class="mm-all">Zaproszenia: zobacz wszystko</a><ul class="mm-cols"><li><a href="index.html#kategorie" class="mm-h">Chrzest Święty</a></li><li><a href="index.html#kategorie" class="mm-h">Komunia Święta</a></li><li><a href="index.html#kategorie" class="mm-h">Ogólne / Na różne okazje</a></li><li><a href="index.html#kategorie" class="mm-h">Urodziny</a></li><li><a href="index.html#kategorie" class="mm-h">Ślub / Zaślubiny</a></li></ul></div></div></div></div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu mobilne">
+ <details class="mcat"><summary>Wszystkie kategorie <span>139</span></summary><div class="mcat-in"><a href="index.html#kategorie" class="mk-a">Produkty z ANIOŁAMI</a><details class="mk1"><summary>Boże Narodzenie</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Boże Narodzenie</a><a href="index.html#kategorie" class="mk-a">Karneciki do prezentów</a><a href="index.html#kategorie" class="mk-a">Karnety / Pocztówki</a><a href="index.html#kategorie" class="mk-a">Kolorowanki</a><a href="index.html#kategorie" class="mk-a">Książki</a><a href="index.html#kategorie" class="mk-a">Portfeliki prezentowe</a><a href="index.html#kategorie" class="mk-a">Zawieszki choinkowe Hallmark</a></details><details class="mk1"><summary>Kalendarze 2027</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Kalendarze 2027</a><a href="index.html#kategorie" class="mk-a">EWANGELIA 2027</a><a href="index.html#kategorie" class="mk-a">Biurkowe</a><a href="index.html#kategorie" class="mk-a">Kieszonkowe</a><a href="index.html#kategorie" class="mk-a">Listkowe</a><a href="index.html#kategorie" class="mk-a">Ścienne</a><a href="index.html#kategorie" class="mk-a">Ścienne Planery</a><a href="index.html#kategorie" class="mk-a">Terminarze / Planery A5</a><a href="index.html#kategorie" class="mk-a">Terminarze / Planery B6</a><a href="index.html#kategorie" class="mk-a">Terminarze / Planery B7</a><a href="index.html#kategorie" class="mk-a">Terminarze tygodniowe</a></details><a href="index.html#kategorie" class="mk-a">AUDIOBOOKI</a><a href="index.html#kategorie" class="mk-a">Codzienniki</a><a href="index.html#kategorie" class="mk-a">Czasopisma</a><details class="mk1"><summary>Dekoracje i ozdoby</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Dekoracje i ozdoby</a><a href="index.html#kategorie" class="mk-a">Hallmark ORNAMENTS</a><a href="index.html#kategorie" class="mk-a">Zawieszki ozdobne</a><a href="index.html#kategorie" class="mk-a">Zawieszki ceramiczne</a><a href="index.html#kategorie" class="mk-a">Zawieszki do prezentów Mikołaj/Boże Narodzenie</a></details><details class="mk1"><summary>Gadżety</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Gadżety</a><a href="index.html#kategorie" class="mk-a">Bransoletki</a><a href="index.html#kategorie" class="mk-a">Breloki</a><a href="index.html#kategorie" class="mk-a">Długopisy, ołówki</a><a href="index.html#kategorie" class="mk-a">Herbaty</a><a href="index.html#kategorie" class="mk-a">Kufle</a><a href="index.html#kategorie" class="mk-a">Magnesy na lodówkę</a><a href="index.html#kategorie" class="mk-a">Naszyjniki</a><a href="index.html#kategorie" class="mk-a">Portfeliki prezentowe</a><a href="index.html#kategorie" class="mk-a">Pudełka na banknoty</a><a href="index.html#kategorie" class="mk-a">Pudełka z karteczkami</a><a href="index.html#kategorie" class="mk-a">Ramki na zdjęcia</a><a href="index.html#kategorie" class="mk-a">Skarbonki / Skarbboxy</a><a href="index.html#kategorie" class="mk-a">Skarpetki GiftMeSox</a></details><details class="mk1"><summary>Gry i zabawy</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Gry i zabawy</a><a href="index.html#kategorie" class="mk-a">Gry planszowe</a><a href="index.html#kategorie" class="mk-a">Gry memory</a></details><details class="mk1"><summary>Karnety / Kartki okolicznościowe</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Karnety / Kartki okolicznościowe</a><a href="index.html#kategorie" class="mk-a">Boże Narodzenie</a><a href="index.html#kategorie" class="mk-a">Chrzest Święty</a><a href="index.html#kategorie" class="mk-a">I Komunia Święta</a><a href="index.html#kategorie" class="mk-a">Imieniny</a><a href="index.html#kategorie" class="mk-a">Kondolencje</a><a href="index.html#kategorie" class="mk-a">Mama</a><a href="index.html#kategorie" class="mk-a">Miłość</a><a href="index.html#kategorie" class="mk-a">Narodziny</a><a href="index.html#kategorie" class="mk-a">Przyjaźń</a><a href="index.html#kategorie" class="mk-a">Różne okazje / Brak okazji</a><a href="index.html#kategorie" class="mk-a">Ślub / Rocznice ślubu</a><a href="index.html#kategorie" class="mk-a">Tata</a><a href="index.html#kategorie" class="mk-a">Urodziny</a><a href="index.html#kategorie" class="mk-a">Urodziny dziecięce</a><a href="index.html#kategorie" class="mk-a">Urodziny młodzieżowe</a><a href="index.html#kategorie" class="mk-a">Ze Świętymi</a><a href="index.html#kategorie" class="mk-a">Pocztówki</a></details><details class="mk1"><summary>Kubki</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Kubki</a><a href="index.html#kategorie" class="mk-a">Anioły</a><a href="index.html#kategorie" class="mk-a">Boże Narodzenie / Mikołaj</a><a href="index.html#kategorie" class="mk-a">Dla NIEJ</a><a href="index.html#kategorie" class="mk-a">Dla NIEGO</a><a href="index.html#kategorie" class="mk-a">ELITE / Urodzinowe</a><a href="index.html#kategorie" class="mk-a">GIGANT</a><a href="index.html#kategorie" class="mk-a">Miłość</a><a href="index.html#kategorie" class="mk-a">PASTELLE</a><a href="index.html#kategorie" class="mk-a">Premium</a><a href="index.html#kategorie" class="mk-a">Premium POLSKA</a><a href="index.html#kategorie" class="mk-a">Ręcznie malowane z tłoczoną ilustracją</a><a href="index.html#kategorie" class="mk-a">sheepworld</a><a href="index.html#kategorie" class="mk-a">ShineOn</a><a href="index.html#kategorie" class="mk-a">Tablicowe</a><a href="index.html#kategorie" class="mk-a">TOP</a><a href="index.html#kategorie" class="mk-a">TOP BOSS</a><a href="index.html#kategorie" class="mk-a">ZESTAW 2 KUBKÓW</a></details><details class="mk1"><summary>Książki</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Książki</a><a href="index.html#kategorie" class="mk-a">Biografie / Wspomnienia</a><details class="mk2"><summary>Dziecięce</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Dziecięce</a><a href="index.html#kategorie" class="mk-a">JUPI JO!</a><a href="index.html#kategorie" class="mk-a">KAKADU - interaktywne</a><a href="index.html#kategorie" class="mk-a">Bajki i wierszyki</a><a href="index.html#kategorie" class="mk-a">Boże Narodzenie</a><a href="index.html#kategorie" class="mk-a">Chrzest / Narodziny</a><a href="index.html#kategorie" class="mk-a">Historyjki anielskie</a><a href="index.html#kategorie" class="mk-a">Historie biblijne / BIBLIA</a><a href="index.html#kategorie" class="mk-a">Kolorowanki z dodatkami</a><a href="index.html#kategorie" class="mk-a">Komiksy</a><a href="index.html#kategorie" class="mk-a">Modlitwy dla maluchów</a></details><a href="index.html#kategorie" class="mk-a">Fantasy / Sci-Fi</a><a href="index.html#kategorie" class="mk-a">Młodzieżowe</a><a href="index.html#kategorie" class="mk-a">Poradniki</a><a href="index.html#kategorie" class="mk-a">Powieść</a><details class="mk2"><summary>Religijne</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Religijne</a><a href="index.html#kategorie" class="mk-a">Adwent / Boże Narodzenie</a><a href="index.html#kategorie" class="mk-a">Anielskie</a><details class="mk3"><summary>Biblia / Pismo Święte</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Biblia / Pismo Święte</a><a href="index.html#kategorie" class="mk-a">Pismo Święte</a><a href="index.html#kategorie" class="mk-a">Dodatki do Biblii</a><a href="index.html#kategorie" class="mk-a">Oprawy / Okładki MAKAJUTO (ANIOŁ)</a><a href="index.html#kategorie" class="mk-a">Oprawy / Okładki Edycji św. Pawła</a></details><a href="index.html#kategorie" class="mk-a">Duchowość</a><a href="index.html#kategorie" class="mk-a">Miłość</a><a href="index.html#kategorie" class="mk-a">Modlitewniki</a><a href="index.html#kategorie" class="mk-a">Skuteczni Święci - książki i karty</a><a href="index.html#kategorie" class="mk-a">Warte przeczytania</a><a href="index.html#kategorie" class="mk-a">Wielki Post</a><a href="index.html#kategorie" class="mk-a">Wielkanoc</a></details><a href="index.html#kategorie" class="mk-a">Upominkowe</a><details class="mk2"><summary>Zakładki do książek</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Zakładki do książek</a><a href="index.html#kategorie" class="mk-a">Zakładki kartonowe</a><a href="index.html#kategorie" class="mk-a">Zakładki magnetyczne</a></details></details><details class="mk1"><summary>Muzyka</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Muzyka</a><a href="index.html#kategorie" class="mk-a">Kolędy / Muzyka CD</a></details><a href="index.html#kategorie" class="mk-a">Filmy</a><details class="mk1"><summary>Pamiątki</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Pamiątki</a><a href="index.html#kategorie" class="mk-a">I Komunia Święta</a><a href="index.html#kategorie" class="mk-a">Chrzest Święty</a><a href="index.html#kategorie" class="mk-a">Narodziny / Roczek</a><a href="index.html#kategorie" class="mk-a">Ślub / Rocznica Ślubu</a><a href="index.html#kategorie" class="mk-a">Rodzinne</a></details><a href="index.html#kategorie" class="mk-a">Torby na zakupy</a><details class="mk1"><summary>Torby prezentowe</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Torby prezentowe</a><a href="index.html#kategorie" class="mk-a">Rozmiar S</a><a href="index.html#kategorie" class="mk-a">Rozmiar M</a><a href="index.html#kategorie" class="mk-a">Rozmiar L</a><a href="index.html#kategorie" class="mk-a">Rozmiar XL</a><a href="index.html#kategorie" class="mk-a">Rozmiar XXL BIG</a><a href="index.html#kategorie" class="mk-a">Rozmiar B (na butelkę)</a></details><details class="mk1"><summary>Zaproszenia</summary><a href="index.html#kategorie" class="mk-all">Wszystko: Zaproszenia</a><a href="index.html#kategorie" class="mk-a">Chrzest Święty</a><a href="index.html#kategorie" class="mk-a">Komunia Święta</a><a href="index.html#kategorie" class="mk-a">Ogólne / Na różne okazje</a><a href="index.html#kategorie" class="mk-a">Urodziny</a><a href="index.html#kategorie" class="mk-a">Ślub / Zaślubiny</a></details></div></details>
+ <a href="index.html#anioly">Karnety z aniołami <span>od 5,79 zł</span></a>
+ <a href="index.html#sezon">Na święta i nowy rok</a>
+ <a href="index.html#oprawy">Oprawy MAKAJUTO</a>
+ <a href="index.html#dostawa">Dostawa i odbiór</a>
+ <a href="index.html#o-nas">O nas</a>
+ <a href="index.html#kontakt">Kontakt</a>
+ <div class="mc">Biuro Obsługi Klienta, pn-pt 10:00-18:00<br><a href="tel:+48726733340">726 733 340</a> &middot; <a href="mailto:biuro@makajuto.pl">biuro@makajuto.pl</a></div>
+</nav>
+<script>(function(){var h=document.getElementById("hd");function m(){document.documentElement.style.setProperty("--top",Math.round(h.getBoundingClientRect().bottom+scrollY)+"px")}m();addEventListener("resize",m)})()</script>
+<main id="tresc">
+<div class="wrap">
+ <nav class="bc" aria-label="Okruszki"><a href="index.html">Strona główna</a><span aria-hidden="true">/</span><a href="index.html#kategorie">Książki</a><span aria-hidden="true">/</span><a href="index.html#kategorie">Biblia / Pismo Święte</a><span aria-hidden="true">/</span><a href="index.html#oprawy">Oprawy MAKAJUTO (ANIOŁ)</a></nav>
+ <div class="pp-top">
+  <div class="gal">
+   <div class="stage" id="stage"><button type="button" class="st on" data-var data-i="0" data-lb="prod" data-full="img/o00.webp" data-fw="496" data-fh="699" data-cap="Oprawa MAKAJUTO, kolor ecru" aria-label="Powiększ zdjęcie 1"><img src="img/o00.webp" width="496" height="699" style="max-width:min(100%,546px)" alt="Oprawa MAKAJUTO, kolor ecru" fetchpriority=high decoding="async"></button><button type="button" class="st" data-i="1" data-lb="prod" data-full="img/p01.webp" data-fw="1600" data-fh="1277" data-cap="Oprawa MAKAJUTO z suwakiem, kolor ECRU (zdjęcie poglądowe)" aria-label="Powiększ zdjęcie 2"><img src="img/p01.webp" width="1600" height="1277" style="max-width:min(100%,1760px)" alt="Oprawa MAKAJUTO z suwakiem, kolor ECRU (zdjęcie poglądowe)" loading=lazy decoding="async"></button><button type="button" class="st" data-i="2" data-lb="prod" data-full="img/p02.webp" data-fw="1077" data-fh="740" data-cap="Tłoczony anioł z logo MAKAJUTO, zbliżenie (kolor ECRU)" aria-label="Powiększ zdjęcie 3"><img src="img/p02.webp" width="1077" height="740" style="max-width:min(100%,1185px)" alt="Tłoczony anioł z logo MAKAJUTO, zbliżenie (kolor ECRU)" loading=lazy decoding="async"></button><button type="button" class="st" data-i="3" data-lb="prod" data-full="img/p03.webp" data-fw="700" data-fh="530" data-cap="Wnętrze oprawy po rozpięciu suwaka (kolor ECRU)" aria-label="Powiększ zdjęcie 4"><img src="img/p03.webp" width="700" height="530" style="max-width:min(100%,770px)" alt="Wnętrze oprawy po rozpięciu suwaka (kolor ECRU)" loading=lazy decoding="async"></button><span class="zoom" aria-hidden="true">kliknij, aby powiększyć</span></div>
+   <div class="thumbs" id="thumbs"><button type="button" class="th on" data-i="0" aria-label="Zdjęcie 1" data-var><img src="img/o00.webp" width="496" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="th" data-i="1" aria-label="Zdjęcie 2"><img src="img/p01.webp" width="1600" height="1277" alt="" loading="lazy" decoding="async"></button><button type="button" class="th" data-i="2" aria-label="Zdjęcie 3"><img src="img/p02.webp" width="1077" height="740" alt="" loading="lazy" decoding="async"></button><button type="button" class="th" data-i="3" aria-label="Zdjęcie 4"><img src="img/p03.webp" width="700" height="530" alt="" loading="lazy" decoding="async"></button></div>
+  </div>
+  <div class="buy">
+   <p class="brand">MAKAJUTO &middot; nasza własna oprawa</p>
+   <h1>Oprawa MAKAJUTO z aniołem, z suwakiem</h1>
+   <p class="sub">Ekoskóra odporna na ścieranie, tłoczony anioł z logo MAKAJUTO, uszyta na konkretne wydanie Biblii.</p>
+   <div class="pr"><b id="ppP">67,95&nbsp;zł</b><span class="av" id="ppAv">dostępne: 40 szt</span></div>
+   <fieldset class="opt"><legend>Rozmiar</legend>
+    <div class="sz" id="sz">
+     <button type="button" class="on" data-m="m" aria-pressed="true">na Biblię „z rybką” i „dla kobiet”<span>67,95&nbsp;zł</span></button>
+     <button type="button" data-m="d" aria-pressed="false">na Pismo Święte DUŻE „z gołębicą”<span>74,95&nbsp;zł</span></button>
+    </div>
+   </fieldset>
+   <fieldset class="opt"><legend>Kolor: <span id="ppK">ecru</span></legend>
+    <div class="sws" id="sws"><button type="button" class="sw on" data-v="ecru" data-m="m" aria-pressed="true" aria-label="Kolor ecru" title="ecru"><img src="img/o00.webp" width="496" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="bordowy" data-m="m" aria-pressed="false" aria-label="Kolor bordowy" title="bordowy"><img src="img/o01.webp" width="506" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="ciemny-braz" data-m="m" aria-pressed="false" aria-label="Kolor ciemny brąz" title="ciemny brąz"><img src="img/o02.webp" width="518" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="czarny" data-m="m" aria-pressed="false" aria-label="Kolor czarny" title="czarny"><img src="img/o12.webp" width="500" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="czerwony" data-m="m" aria-pressed="false" aria-label="Kolor czerwony" title="czerwony"><img src="img/o11.webp" width="492" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="fioletowy" data-m="m" aria-pressed="false" aria-label="Kolor fioletowy" title="fioletowy"><img src="img/o03.webp" width="506" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="granatowy" data-m="m" aria-pressed="false" aria-label="Kolor granatowy" title="granatowy"><img src="img/o04.webp" width="520" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="rozowy" data-m="m" aria-pressed="false" aria-label="Kolor różowy" title="różowy"><img src="img/o13.webp" width="509" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="turkusowy" data-m="m" aria-pressed="false" aria-label="Kolor turkusowy" title="turkusowy"><img src="img/o14.webp" width="492" height="700" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="duza-ciemny-braz" data-m="d" aria-pressed="false" aria-label="Kolor ciemny brąz" title="ciemny brąz" hidden><img src="img/o07.webp" width="519" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="duza-czarny" data-m="d" aria-pressed="false" aria-label="Kolor czarny" title="czarny" hidden><img src="img/o08.webp" width="541" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="duza-grafit" data-m="d" aria-pressed="false" aria-label="Kolor grafit" title="grafit" hidden><img src="img/o06.webp" width="543" height="700" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="duza-ivory" data-m="d" aria-pressed="false" aria-label="Kolor ivory" title="ivory" hidden><img src="img/o05.webp" width="531" height="700" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="duza-rozowy" data-m="d" aria-pressed="false" aria-label="Kolor różowy" title="różowy" hidden><img src="img/o09.webp" width="535" height="699" alt="" loading="lazy" decoding="async"></button><button type="button" class="sw" data-v="duza-turkusowy" data-m="d" aria-pressed="false" aria-label="Kolor turkusowy" title="turkusowy" hidden><img src="img/o10.webp" width="525" height="700" alt="" loading="lazy" decoding="async"></button></div>
+   </fieldset>
+   <div class="qr">
+    <div class="qty"><button type="button" id="qm" aria-label="Mniej">&minus;</button><input id="qv" type="number" value="1" min="1" max="99" aria-label="Ilość"><button type="button" id="qp" aria-label="Więcej">+</button></div>
+    <button class="add" type="button" id="ppAdd" data-n="Oprawa MAKAJUTO, kolor ecru" data-p="67.95">Do koszyka</button>
+   </div>
+   <ul class="perks">
+    <li>Darmowa dostawa do Paczkomatów InPost od 150 zł</li>
+    <li>Odbiór osobisty w Poznaniu, ul. Kościańska 30 lok. 3</li>
+    <li>Gwarancja 12 miesięcy, zwrot lub wymiana w 14 dni</li>
+   </ul>
+  </div>
+ </div>
+
+ <div class="pp-info">
+  <section class="desc" aria-labelledby="h-opis">
+   <h2 id="h-opis">Opis</h2>
+   <h3>Skuteczna opieka dla Twojej Biblii na lata</h3>
+   <p>Dzięki naszej oprawie z suwakiem zakupione Pismo Święte będzie skutecznie chronione przed uszkodzeniami, zabrudzeniami i wilgocią.</p>
+   <h3>Wysokiej jakości ekoskóra</h3>
+   <p>Zastosowana tkanina zachwyca nie tylko kolorem, ale również właściwościami. Wyjątkowa odporność na ścieralność i liczne atesty sprawiają, że etui będzie przez długi czas cieszyć czytelnika swoim nienagannym wyglądem.<br>Posiada certyfikat antybakteryjny, jest trudnopalna i nie zawiera niebezpiecznych substancji. Jest łatwa w czyszczeniu i ma ograniczone wchłanianie płynów.</p>
+   <div data-only="m"><h3>Dopasowana do formatu Biblii „z rybką” i „dla kobiet”</h3>
+   <p>To etui idealnie pasuje do formatu Biblii „z rybką” i „dla kobiet”, wydawanej przez Edycję Świętego Pawła. Zostało uszyte tak, aby pasowało zarówno do wersji w miękkiej, jak i w twardej oprawie.</p></div>
+   <div data-only="d" hidden><h3>Uszyta na Pismo Święte DUŻE „z gołębicą”</h3>
+   <p>Ta wersja oprawy jest uszyta na format Pisma Świętego DUŻEGO „z gołębicą”.</p></div>
+   <h3>Delikatne tłoczenie o duchowym charakterze</h3>
+   <p>Etui jest zaprojektowane i produkowane dla naszej firmy MAKAJUTO, a stylu dodaje wytłoczony na froncie znak <strong>ANIOŁA</strong>, logo naszej firmy. Wytłoczony anioł nadaje oprawie subtelny, duchowy charakter, czyniąc ją również idealnym pomysłem na prezent.</p>
+   <h3>Dodatkowe cechy</h3>
+   <ul>
+    <li><strong>Producent:</strong> MAKAJUTO Sp. z o.o., gwarancja jakości i najlepszej ceny</li>
+    <li data-only="m"><strong>Wymiary zewnętrzne:</strong> 14 x 21,7 x 4,5 cm (szer. x wys. x gł.)</li>
+    <li data-only="m"><strong>Wymiary wewnętrzne (otwarta):</strong> 30 x 20,5 cm (szer. x wys.)</li>
+    <li><strong>Gwarancja:</strong> 12 miesięcy z wyłączeniem uszkodzeń mechanicznych lub złego sposobu czyszczenia</li>
+   </ul>
+  </section>
+  <aside class="spec" aria-labelledby="h-spec">
+   <h2 id="h-spec">Szczegóły produktu</h2>
+   <dl>
+    <div><dt>Marka</dt><dd>MAKAJUTO</dd></div>
+    <div data-only="ecru"><dt>Symbol</dt><dd>31250001</dd></div>
+    <div data-only="ecru"><dt>Kod EAN</dt><dd>5907458269704</dd></div>
+    <div data-only="m"><dt>Wymiary</dt><dd>14 x 21,7 x 4,5 cm</dd></div>
+    <div data-only="m"><dt>Waga</dt><dd>158 g</dd></div>
+    <div><dt>Skład ekoskóry</dt><dd>91% PVC, 9% PU</dd></div>
+    <div><dt>Gramatura</dt><dd>690 g/m²</dd></div>
+    <div><dt>Ścieralność</dt><dd>800 000 cykli (Martindale)</dd></div>
+    <div><dt>Gwarancja</dt><dd>12 miesięcy</dd></div>
+   </dl>
+  </aside>
+ </div>
+
+ <div class="acl">
+  <details class="ac">
+   <summary><span>Bezpieczeństwo produktu (GPSR)<small>Wytyczne dotyczące bezpiecznego użytkowania i przechowywania</small></span></summary>
+   <div class="ac-b">
+    <p class="src">Oprawy na książki, Biblie i czasopisma. Dokument opracowany zgodnie z Rozporządzeniem (UE) 2023/988 w sprawie ogólnego bezpieczeństwa produktów.</p>
+    <h3>1. Bezpieczeństwo najmłodszych (małe elementy)</h3>
+    <ul><li><strong>Ryzyko zadławienia:</strong> oprawy mogą mieć drobne elementy konstrukcyjne lub dekoracyjne (np. suwaki zamków błyskawicznych, metalowe okucia, zatrzaski). Produkt nie jest zabawką. Przechowuj go w miejscu niedostępnym dla dzieci poniżej 3. roku życia, aby zapobiec ryzyku połknięcia małych części.</li>
+    <li><strong>Opakowanie foliowe:</strong> jeśli produkt jest dostarczany w osłonie z folii, należy ją niezwłocznie usunąć lub zutylizować. Folia stanowi bezpośrednie zagrożenie uduszeniem dla niemowląt i dzieci.</li></ul>
+    <h3>2. Charakterystyka materiałowa i ogień</h3>
+    <ul><li><strong>Łatwopalność:</strong> produkt wykonany z materiałów syntetycznych (ekoskóra) oraz tekstylnych. Należy trzymać go z dala od otwartego ognia, zapalniczek, świec oraz intensywnych źródeł ciepła, które mogą doprowadzić do stopienia materiału lub zapłonu.</li></ul>
+    <h3>3. Instrukcja bezpiecznej pielęgnacji</h3>
+    <ul><li><strong>Czyszczenie:</strong> stosuj wyłącznie łagodne środki do pielęgnacji ekoskóry. Unikaj agresywnych detergentów, które mogą osłabić strukturę materiału.</li>
+    <li><strong>Nie wybielać (chlorować):</strong> agresywne środki chemiczne mogą trwale uszkodzić warstwę wierzchnią.</li>
+    <li><strong>Nie prasować:</strong> wysoka temperatura żelazka doprowadzi do nieodwracalnego stopienia ekoskóry.</li>
+    <li><strong>Nie suszyć mechanicznie oraz nie czyścić chemicznie:</strong> może to spowodować pękanie i kruszenie się oprawy.</li></ul>
+    <h3>4. Bezpieczeństwo chemiczne i kontakt ze skórą</h3>
+    <ul><li><strong>Użytkowanie:</strong> do produkcji użyto bezpiecznych materiałów syntetycznych. W przypadku osób o bardzo wrażliwej skórze lub skłonnościach do alergii kontaktowych na polimery zaleca się obserwację reakcji przy pierwszym kontakcie. W razie podrażnień należy zaprzestać użytkowania.</li></ul>
+    <h3>5. Identyfikacja produktu i kolorystyka</h3>
+    <ul><li><strong>Zgodność z opisem:</strong> ze względu na różnice w parametrach wyświetlaczy nasycenie i barwa produktu na zdjęciach mogą nieznacznie odbiegać od rzeczywistości. Przy identyfikacji produktu prosimy kierować się kolorem podanym w nazwie oprawy.</li></ul>
+    <h3>6. Warunki przechowywania</h3>
+    <ul><li><strong>Wpływ otoczenia:</strong> aby uniknąć przedwczesnego starzenia się ekoskóry (pękania, łuszczenia), przechowuj oprawy w miejscach suchych, bez długotrwałej ekspozycji na silne promienie słoneczne.</li></ul>
+   </div>
+  </details>
+  <details class="ac">
+   <summary><span>Producent<small>Dane producenta i kontakt w sprawie bezpieczeństwa produktu</small></span></summary>
+   <div class="ac-b"><div class="prod-card"><strong>MAKAJUTO Sp. z o.o.</strong><span>ul. Kościańska 30 lok. 3, 60-112 Poznań</span><span>e-mail: biuro@makajuto.pl, tel. 726 733 340</span></div></div>
+  </details>
+  <details class="ac">
+   <summary><span>Dostawa i zwroty<small>Paczkomaty InPost, ORLEN Paczka, kurier, odbiór osobisty</small></span></summary>
+   <div class="ac-b">
+    <ul><li><strong>Paczkomaty InPost:</strong> od 14,90 zł, przy koszyku od 150 zł dostawa 0 zł</li>
+    <li><strong>ORLEN Paczka:</strong> 11,49 zł</li>
+    <li><strong>Kurier:</strong> InPost od 15,99 zł, DPD 20,99 zł, DHL 21,99 zł</li>
+    <li><strong>Odbiór osobisty:</strong> Poznań, ul. Kościańska 30 lok. 3, pn-pt 10:00-18:00, po wcześniejszym umówieniu</li></ul>
+    <p style="margin-top:10px">Zwrot lub wymiana: formularz online w sklepie, a potwierdzenie przychodzi od razu e-mailem.</p>
+   </div>
+  </details>
+ </div>
+</div>
+
+<section class="rel" aria-labelledby="h-rel">
+ <div class="wrap">
+  <div class="sh"><div><h2 id="h-rel">Do prezentu z oprawą</h2><p>Karnet z aniołem i kopertą, żeby od razu dopisać życzenia.</p></div><div class="ctl"><button class="p" type="button" aria-label="Poprzednie: polecane"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="n" type="button" aria-label="Następne: polecane"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
+  <div class="track" data-track><article class="pc">
+<button class="pc-img" type="button" data-lb="rel" data-full="img/a00.webp" data-fw="416" data-fh="600" data-cap="Posyłam Ci Anioła Obfitości" aria-label="Powiększ: Posyłam Ci Anioła Obfitości"><img src="img/a00.webp" width="416" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 1. Posyłam Ci Anioła Obfitości" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Obfitości</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 1</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 26 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Obfitości" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="rel" data-full="img/a01.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Opiekuna" aria-label="Powiększ: Posyłam Ci Anioła Opiekuna"><img src="img/a01.webp" width="414" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 2. Posyłam Ci Anioła Opiekuna" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Opiekuna</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 2</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 28 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Opiekuna" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="rel" data-full="img/a02.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Mądrości" aria-label="Powiększ: Posyłam Ci Anioła Mądrości"><img src="img/a02.webp" width="414" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 3. Posyłam Ci Anioła Mądrości" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Mądrości</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 3</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 27 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Mądrości" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="rel" data-full="img/a03.webp" data-fw="418" data-fh="600" data-cap="Posyłam Ci Anioła Pocieszenia" aria-label="Powiększ: Posyłam Ci Anioła Pocieszenia"><img src="img/a03.webp" width="418" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 4. Posyłam Ci Anioła Pocieszenia" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Pocieszenia</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 4</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 28 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Pocieszenia" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="rel" data-full="img/a04.webp" data-fw="417" data-fh="600" data-cap="Posyłam Ci Anioła Radości" aria-label="Powiększ: Posyłam Ci Anioła Radości"><img src="img/a04.webp" width="417" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 6. Posyłam Ci Anioła Radości" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Radości</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 6</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 25 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Radości" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="rel" data-full="img/a05.webp" data-fw="413" data-fh="600" data-cap="Posyłam Ci Anioła Nadziei" aria-label="Powiększ: Posyłam Ci Anioła Nadziei"><img src="img/a05.webp" width="413" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 8. Posyłam Ci Anioła Nadziei" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Nadziei</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 8</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 28 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Nadziei" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="rel" data-full="img/a06.webp" data-fw="412" data-fh="600" data-cap="Posyłam Wam Anioła Nowożeńców" aria-label="Powiększ: Posyłam Wam Anioła Nowożeńców"><img src="img/a06.webp" width="412" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 9. Posyłam Wam Anioła Nowożeńców" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Wam Anioła Nowożeńców</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 9</p>
+<div class="pc-b"><b class="pc-p">5,79&nbsp;zł</b><span class="av">dostępne: 20 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Wam Anioła Nowożeńców" data-p="5.79">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="rel" data-full="img/a07.webp" data-fw="415" data-fh="600" data-cap="Posyłam Ci Anioła Wyznania Miłości" aria-label="Powiększ: Posyłam Ci Anioła Wyznania Miłości"><img src="img/a07.webp" width="415" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 11. Posyłam Ci Anioła Wyznania Miłości" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Wyznania Miłości</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 11</p>
+<div class="pc-b"><b class="pc-p">5,79&nbsp;zł</b><span class="av">dostępne: 24 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Wyznania Miłości" data-p="5.79">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="rel" data-full="img/a08.webp" data-fw="416" data-fh="600" data-cap="Posyłam Ci Anioła Powodzenia" aria-label="Powiększ: Posyłam Ci Anioła Powodzenia"><img src="img/a08.webp" width="416" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 13. Posyłam Ci Anioła Powodzenia" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Powodzenia</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 13</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 30 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Powodzenia" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="rel" data-full="img/a09.webp" data-fw="415" data-fh="600" data-cap="Posyłam Ci Anioła Zakochanych" aria-label="Powiększ: Posyłam Ci Anioła Zakochanych"><img src="img/a09.webp" width="415" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 14. Posyłam Ci Anioła Zakochanych" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Zakochanych</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 14</p>
+<div class="pc-b"><b class="pc-p">5,79&nbsp;zł</b><span class="av">dostępne: 26 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Zakochanych" data-p="5.79">Do koszyka</button>
+</article></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+ </div>
+</section>
+</main>
+
+<footer class="ft">
+ <div class="wrap">
+  <div class="ft-g">
+   <div class="fl"><a class="logo" href="index.html" aria-label="MAKAJUTO"><svg viewBox="0 0 250 140" role="img" aria-label="MAKAJUTO">
+<defs><path id="lukb" d="M4,24 A121,113 0 0 0 246,24"/></defs>
+<ellipse cx="125" cy="5" rx="16" ry="3.6" fill="none" stroke="#CC0000" stroke-width="2.4"/>
+<path d="M113,11 A12,12.5 0 1 0 137,11" fill="none" stroke="#1d1d1d" stroke-width="3.2" stroke-linecap="round"/>
+<g fill="#1d1d1d"><g id="skb"><path d="M40.0,12.3 L44.3,12.8 L48.5,13.5 L52.7,14.2 L56.7,15.1 L60.7,16.1 L64.6,17.2 L68.5,18.3 L72.2,19.6 L75.9,21.0 L79.5,22.5 L83.1,24.2 L86.5,25.9 L90.0,27.7 L93.3,29.6 L96.6,31.7 L99.8,33.8 L103.0,36.1 L106.1,38.4 L109.2,40.9 L112.2,43.5 L115.2,46.3 L118.1,49.1 L121.0,52.0 L123.8,55.2 L124.2,54.8 L121.9,51.3 L119.5,47.9 L117.0,44.6 L114.3,41.5 L111.5,38.5 L108.6,35.6 L105.5,32.9 L102.4,30.3 L99.1,27.9 L95.7,25.7 L92.3,23.6 L88.7,21.6 L85.1,19.9 L81.3,18.3 L77.5,16.8 L73.6,15.5 L69.6,14.5 L65.5,13.5 L61.4,12.8 L57.2,12.2 L53.0,11.8 L48.7,11.6 L44.4,11.6 L40.0,11.7Z"/><path d="M45.0,27.3 L48.5,27.7 L52.0,28.2 L55.3,28.8 L58.6,29.4 L61.7,30.0 L64.7,30.7 L67.7,31.5 L70.5,32.2 L73.2,33.1 L75.8,34.0 L78.4,34.9 L80.8,35.9 L83.1,37.0 L85.4,38.1 L87.6,39.3 L89.6,40.5 L91.6,41.8 L93.6,43.2 L95.4,44.6 L97.2,46.1 L99.0,47.7 L100.6,49.4 L102.3,51.2 L103.8,53.1 L104.2,52.9 L103.1,50.6 L101.9,48.4 L100.6,46.4 L99.1,44.4 L97.5,42.5 L95.7,40.6 L93.8,38.9 L91.8,37.4 L89.6,35.9 L87.3,34.5 L85.0,33.2 L82.5,32.1 L79.9,31.0 L77.1,30.1 L74.3,29.3 L71.4,28.6 L68.4,28.0 L65.4,27.5 L62.2,27.1 L58.9,26.8 L55.6,26.6 L52.1,26.6 L48.6,26.7 L45.0,26.7Z"/><path d="M47.0,41.2 L49.1,41.5 L51.1,41.9 L53.2,42.2 L55.1,42.6 L57.0,43.0 L58.9,43.4 L60.8,43.9 L62.6,44.4 L64.4,44.9 L66.1,45.4 L67.8,45.9 L69.5,46.5 L71.1,47.1 L72.8,47.7 L74.3,48.3 L75.9,49.0 L77.5,49.6 L79.0,50.3 L80.5,51.1 L82.0,51.8 L83.5,52.6 L84.9,53.4 L86.4,54.3 L87.8,55.2 L88.2,54.8 L87.0,53.5 L85.9,52.2 L84.7,51.0 L83.3,49.8 L82.0,48.7 L80.5,47.7 L79.0,46.7 L77.5,45.8 L75.9,44.9 L74.2,44.1 L72.5,43.4 L70.8,42.8 L69.0,42.2 L67.1,41.7 L65.3,41.3 L63.3,40.9 L61.4,40.6 L59.4,40.4 L57.4,40.3 L55.4,40.2 L53.3,40.2 L51.2,40.3 L49.1,40.6 L47.0,40.8Z"/><path d="M52.0,53.2 L53.5,53.5 L54.9,53.8 L56.3,54.1 L57.7,54.4 L59.1,54.8 L60.4,55.1 L61.7,55.5 L63.0,55.9 L64.3,56.3 L65.6,56.6 L66.9,57.1 L68.2,57.5 L69.4,57.9 L70.7,58.3 L72.0,58.8 L73.3,59.3 L74.6,59.7 L75.8,60.2 L77.2,60.7 L78.5,61.2 L79.8,61.7 L81.2,62.2 L82.5,62.6 L83.9,63.2 L84.1,62.8 L83.0,61.9 L81.8,60.9 L80.7,60.0 L79.5,59.2 L78.3,58.4 L77.1,57.6 L75.8,56.9 L74.6,56.2 L73.3,55.6 L72.0,55.0 L70.7,54.5 L69.3,54.0 L68.0,53.6 L66.6,53.2 L65.2,52.9 L63.8,52.7 L62.3,52.5 L60.9,52.3 L59.4,52.2 L58.0,52.2 L56.5,52.3 L55.0,52.4 L53.5,52.6 L52.0,52.8Z"/><path d="M58.0,64.2 L59.0,64.4 L59.9,64.7 L60.9,65.0 L61.8,65.2 L62.7,65.5 L63.6,65.8 L64.5,66.1 L65.4,66.3 L66.3,66.6 L67.2,66.9 L68.1,67.2 L69.0,67.5 L69.9,67.8 L70.8,68.1 L71.8,68.4 L72.7,68.8 L73.7,69.1 L74.6,69.4 L75.6,69.7 L76.7,70.0 L77.7,70.3 L78.7,70.6 L79.8,70.9 L80.9,71.2 L81.1,70.8 L80.2,70.2 L79.3,69.5 L78.4,68.8 L77.5,68.2 L76.6,67.6 L75.7,67.1 L74.7,66.5 L73.8,66.1 L72.9,65.6 L71.9,65.2 L71.0,64.8 L70.0,64.5 L69.0,64.2 L68.1,63.9 L67.1,63.7 L66.1,63.5 L65.1,63.4 L64.1,63.3 L63.1,63.2 L62.0,63.3 L61.0,63.3 L60.0,63.4 L59.0,63.6 L58.0,63.8Z"/><path d="M66.0,74.2 L66.6,74.3 L67.2,74.6 L67.8,74.8 L68.4,74.9 L69.0,75.1 L69.6,75.3 L70.2,75.4 L70.8,75.6 L71.4,75.7 L72.0,75.9 L72.6,76.0 L73.2,76.1 L73.8,76.2 L74.4,76.4 L75.1,76.5 L75.7,76.6 L76.3,76.7 L76.9,76.7 L77.6,76.8 L78.2,76.9 L78.9,77.0 L79.6,77.0 L80.3,77.1 L80.9,77.2 L81.1,76.8 L80.5,76.4 L79.9,76.0 L79.4,75.6 L78.8,75.3 L78.2,74.9 L77.6,74.6 L76.9,74.4 L76.3,74.1 L75.7,73.9 L75.1,73.7 L74.4,73.5 L73.8,73.4 L73.1,73.3 L72.5,73.2 L71.8,73.1 L71.2,73.1 L70.5,73.1 L69.9,73.1 L69.2,73.1 L68.6,73.2 L67.9,73.3 L67.3,73.5 L66.6,73.7 L66.0,73.8Z"/><path d="M108.8,58.0 L108.6,59.5 L108.4,61.1 L108.2,62.6 L108.1,64.2 L107.9,65.7 L107.7,67.3 L107.5,68.9 L107.3,70.5 L107.1,72.1 L106.9,73.7 L106.7,75.4 L106.6,77.0 L106.4,78.7 L106.2,80.4 L106.0,82.1 L105.8,83.8 L105.7,85.5 L105.5,87.3 L105.4,89.0 L105.2,90.8 L105.1,92.6 L105.0,94.4 L104.9,96.2 L104.8,98.0 L105.2,98.0 L105.8,96.3 L106.5,94.7 L107.1,92.9 L107.6,91.2 L108.1,89.5 L108.5,87.8 L109.0,86.1 L109.3,84.3 L109.7,82.6 L110.0,80.9 L110.2,79.2 L110.4,77.5 L110.6,75.8 L110.7,74.1 L110.8,72.4 L110.8,70.7 L110.8,69.0 L110.8,67.4 L110.6,65.8 L110.5,64.2 L110.2,62.6 L109.9,61.0 L109.6,59.5 L109.2,58.0Z"/><path d="M114.8,64.0 L114.9,65.1 L114.9,66.1 L115.0,67.1 L115.0,68.1 L115.0,69.1 L115.1,70.1 L115.1,71.1 L115.1,72.1 L115.1,73.1 L115.2,74.1 L115.2,75.1 L115.2,76.0 L115.3,77.0 L115.3,78.0 L115.3,79.0 L115.4,80.0 L115.4,81.0 L115.5,81.9 L115.5,82.9 L115.6,83.9 L115.6,84.9 L115.7,85.9 L115.8,87.0 L115.8,88.0 L116.2,88.0 L116.5,87.0 L116.8,86.1 L117.0,85.1 L117.3,84.1 L117.5,83.1 L117.6,82.1 L117.8,81.0 L117.9,80.0 L118.0,79.0 L118.0,78.0 L118.0,77.0 L118.0,76.0 L118.0,74.9 L117.9,73.9 L117.8,72.9 L117.6,71.9 L117.4,70.9 L117.2,69.9 L117.0,68.9 L116.7,67.9 L116.4,66.9 L116.0,65.9 L115.6,64.9 L115.2,64.0Z"/></g><use href="#skb" transform="translate(250,0) scale(-1,1)"/>
+<path d="M115.1,62.6 L115.4,63.2 L115.8,63.8 L116.2,64.4 L116.6,65.1 L116.9,65.7 L117.3,66.3 L117.7,66.9 L118.1,67.6 L118.4,68.2 L118.8,68.8 L119.2,69.4 L119.6,70.1 L119.9,70.7 L120.3,71.3 L120.7,71.9 L121.1,72.6 L121.4,73.2 L121.8,73.8 L122.2,74.4 L122.6,75.1 L122.9,75.7 L123.3,76.3 L123.7,76.9 L124.1,77.6 L125.9,76.4 L125.6,75.8 L125.2,75.2 L124.8,74.6 L124.4,73.9 L124.1,73.3 L123.7,72.7 L123.3,72.1 L122.9,71.4 L122.6,70.8 L122.2,70.2 L121.8,69.6 L121.4,68.9 L121.1,68.3 L120.7,67.7 L120.3,67.1 L119.9,66.4 L119.6,65.8 L119.2,65.2 L118.8,64.6 L118.4,63.9 L118.1,63.3 L117.7,62.7 L117.3,62.1 L116.9,61.4Z"/><path d="M133.1,61.4 L132.7,62.1 L132.3,62.7 L131.9,63.3 L131.6,63.9 L131.2,64.6 L130.8,65.2 L130.4,65.8 L130.1,66.4 L129.7,67.1 L129.3,67.7 L128.9,68.3 L128.6,68.9 L128.2,69.6 L127.8,70.2 L127.4,70.8 L127.1,71.4 L126.7,72.1 L126.3,72.7 L125.9,73.3 L125.6,73.9 L125.2,74.6 L124.8,75.2 L124.4,75.8 L124.1,76.4 L125.9,77.6 L126.3,76.9 L126.7,76.3 L127.1,75.7 L127.4,75.1 L127.8,74.4 L128.2,73.8 L128.6,73.2 L128.9,72.6 L129.3,71.9 L129.7,71.3 L130.1,70.7 L130.4,70.1 L130.8,69.4 L131.2,68.8 L131.6,68.2 L131.9,67.6 L132.3,66.9 L132.7,66.3 L133.1,65.7 L133.4,65.1 L133.8,64.4 L134.2,63.8 L134.6,63.2 L134.9,62.6Z"/></g>
+<text font-family="Jost,Arial,sans-serif" font-weight="300" font-size="29" fill="#CC0000"><textPath href="#lukb" startOffset="50%" text-anchor="middle" textLength="318" lengthAdjust="spacing">MAKAJUTO</textPath></text>
+</svg></a><p>MAKAJUTO Sp. z o.o.<br>ul. Kościańska 30 lok. 3, 60-112 Poznań<br>NIP 7831918046, KRS 0001141638<br>REGON 540341533, BDO 000653796</p></div>
+   <div><h4>Zakupy</h4><ul><li><a href="index.html#dostawa">Koszty dostaw</a></li><li><a href="index.html#dostawa">Formy płatności</a></li><li><a href="index.html#kontakt">Procedura reklamacyjna</a></li><li><a href="index.html#kontakt">Zwrot i wymiana</a></li></ul></div>
+   <div><h4>Informacje</h4><ul><li><a href="index.html#o-nas">O nas</a></li><li><a href="index.html#sezon">Aktualności</a></li><li><a href="index.html#kontakt">Regulamin</a></li><li><a href="index.html#kontakt">Polityka prywatności</a></li></ul></div>
+   <div><h4>Kontakt</h4><ul><li><a href="tel:+48726733340">726 733 340</a></li><li><a href="mailto:biuro@makajuto.pl">biuro@makajuto.pl</a></li><li>pn-pt 10:00-18:00</li></ul></div>
+  </div>
+  <div class="ft-b"><span>&copy; 2026 MAKAJUTO Sp. z o.o.</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=makajuto.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+ </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+ <button class="x" type="button" aria-label="Zamknij">&times;</button>
+ <button class="pv" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+ <figure><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1" height="1"><figcaption class="cap"></figcaption><span class="cnt"></span></figure>
+ <button class="nx" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>(function(){
+var V={"ecru": {"id": "ecru", "m": "m", "k": "ecru", "p": "67,95 zł", "av": "40 szt", "src": "img/o00.webp", "w": 496, "h": 699}, "bordowy": {"id": "bordowy", "m": "m", "k": "bordowy", "p": "67,95 zł", "av": "39 szt", "src": "img/o01.webp", "w": 506, "h": 699}, "ciemny-braz": {"id": "ciemny-braz", "m": "m", "k": "ciemny brąz", "p": "67,95 zł", "av": "44 szt", "src": "img/o02.webp", "w": 518, "h": 699}, "czarny": {"id": "czarny", "m": "m", "k": "czarny", "p": "67,95 zł", "av": "25 szt", "src": "img/o12.webp", "w": 500, "h": 699}, "czerwony": {"id": "czerwony", "m": "m", "k": "czerwony", "p": "67,95 zł", "av": "25 szt", "src": "img/o11.webp", "w": 492, "h": 699}, "fioletowy": {"id": "fioletowy", "m": "m", "k": "fioletowy", "p": "67,95 zł", "av": "46 szt", "src": "img/o03.webp", "w": 506, "h": 699}, "granatowy": {"id": "granatowy", "m": "m", "k": "granatowy", "p": "67,95 zł", "av": "34 szt", "src": "img/o04.webp", "w": 520, "h": 699}, "rozowy": {"id": "rozowy", "m": "m", "k": "różowy", "p": "67,95 zł", "av": "30 szt", "src": "img/o13.webp", "w": 509, "h": 699}, "turkusowy": {"id": "turkusowy", "m": "m", "k": "turkusowy", "p": "67,95 zł", "av": "30 szt", "src": "img/o14.webp", "w": 492, "h": 700}, "duza-ciemny-braz": {"id": "duza-ciemny-braz", "m": "d", "k": "ciemny brąz", "p": "74,95 zł", "av": "25 szt", "src": "img/o07.webp", "w": 519, "h": 699}, "duza-czarny": {"id": "duza-czarny", "m": "d", "k": "czarny", "p": "74,95 zł", "av": "24 szt", "src": "img/o08.webp", "w": 541, "h": 699}, "duza-grafit": {"id": "duza-grafit", "m": "d", "k": "grafit", "p": "74,95 zł", "av": "26 szt", "src": "img/o06.webp", "w": 543, "h": 700}, "duza-ivory": {"id": "duza-ivory", "m": "d", "k": "ivory", "p": "74,95 zł", "av": "30 szt", "src": "img/o05.webp", "w": 531, "h": 700}, "duza-rozowy": {"id": "duza-rozowy", "m": "d", "k": "różowy", "p": "74,95 zł", "av": "25 szt", "src": "img/o09.webp", "w": 535, "h": 699}, "duza-turkusowy": {"id": "duza-turkusowy", "m": "d", "k": "turkusowy", "p": "74,95 zł", "av": "23 szt", "src": "img/o10.webp", "w": 525, "h": 700}},d=document,$=function(s){return d.querySelector(s)},$$=function(s){return Array.prototype.slice.call(d.querySelectorAll(s))};
+var cur=null,curI=0,DPR=Math.max(1,window.devicePixelRatio||1);
+function fit(img,w){img.style.maxWidth="min(100%,"+Math.round(w*1.1/DPR)+"px)"}
+$$(".st img").forEach(function(i){fit(i,+i.getAttribute("width"))});
+function pick(i){curI=i;$$(".st").forEach(function(s){s.classList.toggle("on",+s.dataset.i===i)});$$(".th").forEach(function(t){t.classList.toggle("on",+t.dataset.i===i)})}
+$$(".th").forEach(function(t){t.addEventListener("click",function(){pick(+t.dataset.i)})});
+var tx=0,st=$("#stage");st.addEventListener("touchstart",function(e){tx=e.touches[0].clientX},{passive:true});
+st.addEventListener("touchend",function(e){var dx=e.changedTouches[0].clientX-tx,n=$$(".st").length;if(Math.abs(dx)>50){e.preventDefault();pick((curI+(dx<0?1:-1)+n)%n)}});
+function setV(id,keepImg){var v=V[id];if(!v)return;cur=v;
+ $$(".sw").forEach(function(s){var on=s.dataset.v===id;s.classList.toggle("on",on);s.setAttribute("aria-pressed",on);s.hidden=s.dataset.m!==v.m});
+ $$("#sz button").forEach(function(b){var on=b.dataset.m===v.m;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
+ $("#ppK").textContent=v.k;$("#ppP").innerHTML=v.p.replace(" zł","&nbsp;zł");$("#ppAv").textContent="dostępne: "+v.av;
+ var s0=$('.st[data-var]'),i0=s0.querySelector("img"),t0=$('.th[data-var] img');
+ i0.src=v.src;i0.width=v.w;i0.height=v.h;fit(i0,v.w);i0.alt="Oprawa MAKAJUTO, kolor "+v.k;
+ s0.dataset.full=v.src;s0.dataset.fw=v.w;s0.dataset.fh=v.h;s0.dataset.cap="Oprawa MAKAJUTO"+(v.m==="d"?" na Pismo Święte DUŻE":"")+", kolor "+v.k+", "+v.p;
+ t0.src=v.src;t0.width=v.w;t0.height=v.h;
+ var a=$("#ppAdd");a.dataset.n="Oprawa MAKAJUTO"+(v.m==="d"?" DUŻA":"")+", kolor "+v.k;a.dataset.p=v.p.replace(" zł","").replace(",",".");
+ $$("[data-only]").forEach(function(x){var o=x.dataset.only;x.hidden=o==="ecru"?id!=="ecru":o!==v.m});
+ if(!keepImg)pick(0);
+ if(history.replaceState)history.replaceState(null,"","#"+id);
+}
+$$(".sw").forEach(function(s){s.addEventListener("click",function(){setV(s.dataset.v)})});
+$$("#sz button").forEach(function(b){b.addEventListener("click",function(){if(cur&&cur.m===b.dataset.m)return;var first=Object.keys(V).filter(function(k){return V[k].m===b.dataset.m})[0];setV(first)})});
+var q=$("#qv");$("#qm").addEventListener("click",function(){q.value=Math.max(1,(+q.value||1)-1)});$("#qp").addEventListener("click",function(){q.value=Math.min(99,(+q.value||1)+1)});
+var h=location.hash.slice(1);setV(V[h]?h:Object.keys(V)[0],true);
+})();</script>
+<script src="app.js" defer></script>
+</body>
+</html>
