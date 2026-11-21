@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MAKAJUTO - upominki z aniołami, karnety, Biblie i książki | Poznań</title>
+<meta name="description" content="Sklep MAKAJUTO z Poznania: karnety Posyłam Ci Anioła, Biblie i oprawy MAKAJUTO, kalendarze 2027, kubki, książki dla dzieci i upominki dla wyjątkowych osób. Wysyłka InPost i ORLEN Paczka.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#CC0000">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/jost-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/lora-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(fonts/jost-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(fonts/jost-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:Lora;font-weight:400 700;font-display:swap;src:url(fonts/lora-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:Lora;font-weight:400 700;font-display:swap;src:url(fonts/lora-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--red:#CC0000;--red-d:#A60000;--ink:#1D1D1F;--txt:#2E3035;--mut:#5D6068;--line:#E2E4E8;--grey:#F2F3F5;--dark:#1C1C1F;--w:1240px;--hd:64px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--hd) + 12px)}
+body{margin:0;font:400 16px/1.6 Jost,"Segoe UI",Arial,sans-serif;color:var(--txt);background:#fff;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}button{font:inherit;color:inherit;cursor:pointer}a{color:inherit}
+h1,h2,h3{font-family:Lora,Georgia,serif;color:var(--ink);font-weight:600;line-height:1.18;margin:0}
+.wrap{width:min(var(--w),100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:8px 12px}
+/* pasek */
+.strip{background:var(--red);color:#fff;font-size:13.5px;line-height:1.3}
+.strip .wrap{display:flex;justify-content:center;gap:28px;padding:7px 0}
+.strip .r{display:none}
+/* naglowek */
+.hd{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:12px;height:var(--hd)}
+.logo{display:block;flex:none;width:92px;color:var(--ink)}.logo svg{width:100%;height:auto;display:block}
+.burger{width:44px;height:44px;border:0;background:none;display:grid;place-content:center;gap:5px;margin-left:-8px}
+.burger i{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .2s}
+.menu-open .burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}.menu-open .burger i:nth-child(2){opacity:0}.menu-open .burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.hd-tools{margin-left:auto;display:flex;align-items:center;gap:4px}
+.ib{width:44px;height:44px;border:0;background:none;display:grid;place-items:center;border-radius:8px;position:relative;text-decoration:none}
+.ib svg{width:24px;height:24px}
+.ib:hover{background:var(--grey)}
+.cart .cnt{position:absolute;top:3px;right:2px;min-width:19px;height:19px;padding:0 4px;border-radius:50%;border:2px solid var(--red);background:#fff;color:var(--red);font:700 11px/15px Jost,sans-serif;text-align:center}
+.cart .sum{display:none}
+.search{display:none}
+.acc{display:none}
+.search.on{display:block;padding:0 0 12px}
+.sf{display:flex;border:2px solid var(--ink);border-radius:8px;overflow:hidden;background:#fff}
+.sf input{flex:1;min-width:0;border:0;padding:10px 14px;font:inherit;font-size:16px;outline:none}
+.sf button{border:0;background:var(--ink);color:#fff;padding:0 18px;font-weight:600}
+.nav{display:none}
+/* menu mobilne */
+.mnav{position:fixed;inset:var(--top,95px) 0 0 0;background:#fff;z-index:39;padding:8px 16px 32px;overflow:auto;transform:translateX(-100%);transition:transform .28s ease;visibility:hidden}
+.menu-open .mnav{transform:none;visibility:visible}
+.menu-open{overflow:hidden}
+.mnav a{display:flex;justify-content:space-between;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line);text-decoration:none;font-size:18px;color:var(--ink)}
+.mnav a span{color:var(--mut);font-size:14px}
+.mnav .mc{margin-top:20px;font-size:15px;line-height:1.7;color:var(--mut)}
+.mnav .mc a{display:inline;border:0;padding:0;font-size:15px;color:var(--red);font-weight:600}
+/* hero */
+.hero{position:relative;display:flex;flex-direction:column;min-height:calc(100svh - var(--top,95px));overflow:hidden;background:#fff}
+.arc{position:relative;flex:1 1 auto;min-height:190px}
+.hc{position:absolute;left:0;top:0;padding:0;border:0;background:#fff;width:var(--cw,120px);border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.12),0 8px 22px rgba(20,20,30,.16);transform:translate(var(--x,0),var(--y,0)) rotate(var(--r,0deg));transform-origin:50% 50%;opacity:0;transition:transform .7s cubic-bezier(.2,.75,.25,1),opacity .5s;will-change:transform}
+.hc img{width:100%;height:auto;border-radius:3px}
+.hc.on{opacity:1}.hc.off{display:none}
+.hc:hover{z-index:20!important}
+.hc:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.hero-in{flex:0 0 auto;text-align:center;padding:14px 16px 22px;position:relative;z-index:5}
+.halo{display:block;width:70px;height:16px;margin:0 auto 10px;border:2.5px solid var(--red);border-radius:50%}
+.hero h1{font-size:clamp(27px,7.6vw,36px);letter-spacing:-.01em;text-wrap:balance}
+.hero h1 .s{display:block;font-family:Jost,sans-serif;font-weight:500;font-size:.52em;line-height:1.3;color:var(--txt);margin-top:8px;letter-spacing:0;text-wrap:balance}
+.hero .lead{text-wrap:pretty;margin:12px auto 0;max-width:600px;font-size:15.5px;line-height:1.5;color:var(--mut)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:6px;background:var(--red);color:#fff;font-weight:600;font-size:17px;text-decoration:none;border:0;transition:background .2s}
+.btn:hover{background:var(--red-d)}
+.hero .btn{margin-top:20px}
+/* sekcje */
+.sec{padding:56px 0}
+.sec.g{background:var(--grey)}
+#o-nas{overflow:hidden}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px}
+.sh h2,.op-txt h2{font-size:clamp(25px,6.4vw,38px)}
+.sh p{margin:8px 0 0;color:var(--mut);max-width:640px}
+/* kafle kategorii */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.tile{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 8px 12px;text-align:center;position:relative;transition:border-color .2s,transform .2s}
+.tile-i{display:grid;place-items:center;aspect-ratio:1;position:relative}
+.tile-i img{position:absolute;inset:0;margin:auto;max-height:100%;max-width:100%;width:auto;height:auto}
+.tile-i::before{content:"";position:absolute;left:50%;top:-6px;width:44px;height:10px;margin-left:-22px;border:2px solid var(--red);border-radius:50%;opacity:0;transform:translateY(4px);transition:opacity .2s,transform .2s}
+.tile:hover{border-color:var(--ink)}.tile:hover .tile-i::before{opacity:1;transform:none}
+.tile-n{margin-top:8px;font-weight:600;font-size:14px;line-height:1.25;color:var(--ink)}
+.tile-c{font-size:12.5px;color:var(--mut);margin-top:2px}
+/* karuzele */
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:var(--cardw,46%);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 16px 6px;margin:0 -16px;scroll-padding:0 16px;cursor:grab}
+.track::-webkit-scrollbar{display:none}
+.track.drag{cursor:grabbing;scroll-snap-type:none}.track.drag *{pointer-events:none}
+.track>*{scroll-snap-align:start;min-width:0}
+.ctl{display:none;gap:8px}
+.ctl button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--ink);background:#fff;display:grid;place-items:center;transition:background .2s,color .2s}
+.ctl button svg{width:18px;height:18px}.ctl .p svg{transform:scaleX(-1)}
+.ctl button:hover:not(:disabled){background:var(--ink);color:#fff}
+.ctl button:disabled{opacity:.3;cursor:default}
+.bar{height:3px;background:var(--line);border-radius:3px;margin-top:16px;overflow:hidden}.bar i{display:block;height:100%;width:20%;background:var(--red);border-radius:3px;transition:transform .15s linear}
+/* karta produktu */
+.pc{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;height:100%}
+.pc-img{display:block;position:relative;aspect-ratio:4/5;border:0;padding:0;background:#fff;border-radius:6px;overflow:hidden;width:100%}
+.pc-img img{position:absolute;inset:0;margin:auto;max-height:100%;max-width:100%;width:auto;height:auto;transition:transform .35s}
+.pc-img:hover img{transform:scale(1.03)}
+.pc-t{font-family:Jost,sans-serif;font-size:15px;font-weight:600;line-height:1.3;margin:10px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--ink)}
+.pc-s{margin:3px 0 0;font-size:13px;line-height:1.35;color:var(--mut)}
+.pc-b{display:flex;align-items:baseline;justify-content:space-between;gap:6px;margin-top:auto;padding-top:10px;flex-wrap:wrap}
+.pc-p{font-size:18px;color:var(--ink)}
+.av{font-size:12.5px;color:#2C7A3F}.av0{color:var(--mut)}
+.add{margin-top:10px;min-height:42px;border:1.5px solid var(--red);background:#fff;color:var(--red);border-radius:6px;font-weight:600;transition:background .2s,color .2s}
+.add:hover,.add.ok{background:var(--red);color:#fff}
+.anioly .pc-img{aspect-ratio:415/600;background:var(--grey)}
+.anioly .pc-img img{width:100%;height:100%;object-fit:cover}
+/* intro aniolow */
+.ai{display:grid;gap:18px;margin-bottom:24px;grid-template-columns:minmax(0,1fr)}
+.ai p{margin:0;color:var(--mut)}
+.ai .facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:4px;font-size:14.5px;color:var(--ink)}
+.ai .facts b{color:var(--red)}
+/* ciemna sekcja opraw */
+.dark{background:var(--dark);color:#D9DADD}
+.dark h2{color:#fff}.dark .sh p{color:#B5B7BC}
+.dark .ctl button{background:transparent;border-color:#fff;color:#fff}.dark .ctl button:hover:not(:disabled){background:#fff;color:var(--dark)}
+.dark .bar{background:#3A3A40}
+.op{display:grid;gap:26px;grid-template-columns:minmax(0,1fr)}
+.op>*,.ai>*,.dv>*,.ab>*,.ct>*{min-width:0}
+.op-txt p{margin:0 0 14px}
+.op-sz{display:grid;gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.op-sz li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid #36363C}
+.op-sz b{color:#fff;font-weight:600}.op-sz span{white-space:nowrap;color:#fff;font-weight:600}
+.op-mark{display:flex;align-items:center;gap:14px;margin-top:22px;color:#fff}
+.op-mark svg{width:96px;flex:none}
+.op-mark p{margin:0;font-size:14px;color:#B5B7BC;line-height:1.45}
+.cov{margin:0;background:#fff;border-radius:10px;padding:10px 10px 12px;color:var(--ink)}
+.cov-i{display:block;position:relative;aspect-ratio:5/7;border:0;padding:0;background:#fff;width:100%}
+.cov-i img{position:absolute;inset:0;margin:auto;max-height:100%;max-width:100%;width:auto;height:auto}
+.cov figcaption{display:flex;justify-content:space-between;gap:8px;margin-top:8px;font-size:14px}
+.cov figcaption b{font-weight:600;text-transform:capitalize}
+.oprawy-t{--cardw:40%}
+/* dostawa */
+.dv{display:grid;gap:26px;grid-template-columns:minmax(0,1fr)}
+.tbl{width:100%;border-collapse:collapse;font-size:15.5px;background:#fff;border-radius:10px;overflow:hidden}
+.tbl caption{text-align:left;font-weight:600;color:var(--ink);padding:0 0 10px;font-size:17px}
+.tbl th,.tbl td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line)}
+.tbl th{font-weight:600;color:var(--mut);font-size:13.5px;background:#fff}
+.tbl td:last-child{text-align:right;font-weight:600;color:var(--ink);white-space:nowrap}
+.tbl tr.free td:last-child{color:var(--red)}
+.dl{list-style:none;margin:0;padding:0;background:#fff;border-radius:10px}
+.dl li{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.dl li:last-child{border:0}.dl b{color:var(--ink);font-weight:600;white-space:nowrap}
+.dl small{display:block;color:var(--mut);font-size:13px;line-height:1.35;margin-top:2px}
+.pickup{margin-top:16px;padding:16px;border-radius:10px;background:#fff;border-left:3px solid var(--red)}
+.pickup h3{font-family:Jost,sans-serif;font-size:17px}
+.pickup p{margin:6px 0 0;color:var(--mut);font-size:15px}
+/* o nas */
+.ab{display:grid;gap:28px;align-items:center;grid-template-columns:minmax(0,1fr)}
+.ab blockquote{margin:0 0 18px;font-family:Lora,Georgia,serif;font-size:clamp(22px,5.4vw,30px);line-height:1.3;color:var(--ink)}
+.ab p{margin:0 0 14px}
+.pubs{display:flex;flex-wrap:wrap;gap:8px 10px;margin:18px 0 0;padding:0;list-style:none}
+.pubs li{border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:14px;color:var(--ink)}
+.ab-g{display:flex;justify-content:center;padding:18px 0 10px;position:relative}
+.ab-g::before{content:"";position:absolute;left:50%;top:0;width:120px;height:26px;margin-left:-60px;border:3px solid var(--red);border-radius:50%}
+.ab-g button{border:0;padding:0;background:#fff;border-radius:3px;width:min(32%,190px);margin:0 -4%;box-shadow:0 1px 2px rgba(0,0,0,.12),0 10px 26px rgba(20,20,30,.18);transition:transform .3s}
+.ab-g button img{width:100%;height:auto;border-radius:3px}
+.ab-g button:nth-child(1){transform:rotate(-9deg) translateY(18px)}.ab-g button:nth-child(2){transform:rotate(-3deg);z-index:2}.ab-g button:nth-child(3){transform:rotate(3deg);z-index:2}.ab-g button:nth-child(4){transform:rotate(9deg) translateY(18px)}
+.ab-g button:hover{z-index:3}
+/* kontakt */
+.ct{display:grid;gap:26px;grid-template-columns:minmax(0,1fr)}
+.ci{font-size:16px;line-height:1.7}
+.ci p{margin:0 0 14px}.ci a{color:var(--red);font-weight:600;text-decoration:none}
+.ci .row{display:flex;gap:10px;align-items:flex-start}
+.ci .row svg{width:18px;height:18px;flex:none;margin-top:5px;color:var(--red)}
+.map{text-align:center;margin-top:10px;aspect-ratio:16/10;border-radius:10px;overflow:hidden;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--mut);font-size:14px}
+.map iframe{width:100%;height:100%;border:0}
+form.f{display:grid;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.f h3{font-size:22px}
+.f label{display:grid;gap:5px;font-size:14px;font-weight:600;color:var(--ink)}
+.f input,.f textarea,.f select{font:inherit;font-size:16px;font-weight:400;padding:11px 12px;border:1.5px solid #C9CCD2;border-radius:6px;background:#fff;color:var(--ink);width:100%}
+.f input:focus,.f textarea:focus,.f select:focus{outline:2px solid var(--red);outline-offset:1px;border-color:var(--red)}
+.f textarea{min-height:110px;resize:vertical}
+.f .ok{display:none;padding:12px 14px;border-radius:6px;background:#EDF7EF;color:#1F5F30;font-size:15px}
+.f.sent .ok{display:block}
+.f .btn{width:100%}
+.nl{margin-top:20px;padding:18px;border-radius:12px;background:var(--grey)}
+.nl h3{font-family:Jost,sans-serif;font-size:17px}
+.nl p{margin:4px 0 10px;font-size:14.5px;color:var(--mut)}
+.nl .sf{border-color:#C9CCD2}
+.nl .sf button{background:var(--red)}
+/* stopka */
+.ft{background:#fff;border-top:1px solid var(--line);padding:40px 0 26px;font-size:14.5px;color:var(--mut)}
+.ft-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}
+.ft h4{margin:0 0 8px;font-size:14px;color:var(--ink);font-weight:600}
+.ft ul{list-style:none;margin:0;padding:0;line-height:1.95}
+.ft a{text-decoration:none}.ft a:hover{color:var(--red)}
+.ft .fl{grid-column:1/-1}
+.ft .fl .logo{width:110px}
+.ft .fl p{margin:10px 0 0;line-height:1.6}
+.ft-b{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(18,18,22,.94);display:none;align-items:center;justify-content:center;touch-action:pan-y}
+.lb.on{display:flex}
+.lb figure{margin:0;display:flex;flex-direction:column;align-items:center;max-width:calc(100vw - 24px)}
+.lb img{max-width:calc(100vw - 24px);max-height:calc(100svh - 130px);width:auto;height:auto;border-radius:4px;background:#fff}
+.lb .cap{color:#fff;margin-top:12px;font-size:15px;text-align:center;max-width:640px;line-height:1.4;padding:0 10px}
+.lb .cnt{color:#B5B7BC;font-size:13px;margin-top:4px}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;width:48px;height:48px;border-radius:50%;display:grid;place-items:center}
+.lb button svg{width:20px;height:20px}
+.lb .x{top:12px;right:12px;font-size:28px;line-height:1}
+.lb .pv{left:10px;top:50%;margin-top:-24px}.lb .pv svg{transform:scaleX(-1)}
+.lb .nx{right:10px;top:50%;margin-top:-24px}
+/* toast */
+.toast{position:fixed;left:50%;bottom:18px;z-index:80;transform:translate(-50%,calc(100% + 40px));visibility:hidden;background:var(--ink);color:#fff;padding:12px 18px;border-radius:8px;font-size:15px;max-width:calc(100vw - 32px);transition:transform .3s;box-shadow:0 8px 26px rgba(0,0,0,.25)}
+.toast.on{transform:translate(-50%,0);visibility:visible}
+.toast b{color:#FF8A8A;font-weight:600}
+.note{font-size:13px;color:var(--mut);margin-top:14px}
+@media (min-width:560px){
+ .track{--cardw:31%}.oprawy-t{--cardw:28%}
+ .tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .ft-g{grid-template-columns:repeat(4,minmax(0,1fr))}.ft .fl{grid-column:auto}
+}
+@media (min-width:900px){
+ :root{--hd:84px}
+ .strip .wrap{justify-content:space-between}.strip .r{display:block}
+ .logo{width:132px}
+ .burger,.ib.sbtn{display:none}
+ .search{display:block!important;flex:1;max-width:560px;margin:0 auto;padding:0!important}
+ .hd-tools{margin-left:0}
+ .cart .sum{display:block;font-size:14px;font-weight:600;color:var(--ink);white-space:nowrap}
+ .cart{width:auto;padding:0 10px 0 6px;gap:8px;display:flex}
+ .cart .cnt{left:24px;right:auto;top:2px}
+ .cart .sum{margin-left:14px}
+ .acc{display:block;font-size:14px;font-weight:500;text-decoration:none;padding:0 10px;white-space:nowrap}
+ .nav{display:block;border-top:1px solid var(--line)}
+ .nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;justify-content:center}
+ .nav a{display:block;position:relative;padding:12px 13px;font-size:15px;font-weight:500;text-decoration:none;color:var(--ink);white-space:nowrap}
+ .nav a::before{content:"";position:absolute;left:50%;top:3px;width:30px;height:7px;margin-left:-15px;border:2px solid var(--red);border-radius:50%;opacity:0;transition:opacity .2s}
+ .nav a:hover::before,.nav a[aria-current]::before{opacity:1}
+ .nav a.promo{color:var(--red)}
+ .mnav{display:none}
+ .hero{display:block}
+ .arc{position:absolute;inset:0;min-height:0}
+ .hero-in{position:absolute;left:50%;top:var(--ty,26%);transform:translateX(-50%);width:min(620px,40vw);padding:0}
+ .hero h1{font-size:clamp(34px,3.3vw,58px)}
+ .hero .lead{font-size:clamp(16px,1.15vw,20px);margin-top:16px}
+ .halo{width:96px;height:22px;margin-bottom:18px;border-width:3px}
+ .hero .btn{margin-top:28px}
+ .sec{padding:84px 0}
+ .sh h2,.op-txt h2{font-size:clamp(32px,2.6vw,44px)}
+ .ctl{display:flex}
+ .track{--cardw:calc((100% - 4*16px)/5);gap:16px;margin:0;padding:4px 0 6px;scroll-padding:0}
+ .anioly{--cardw:calc((100% - 5*16px)/6)}
+ .tiles{grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+ .tile{padding:14px 12px 16px}
+ .ai{max-width:860px}
+ .op{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:56px;align-items:center}
+ .oprawy-t{--cardw:calc((100% - 3*16px)/4)}
+ .dv{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+ .ab{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:64px}
+ .ct{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+ .lb .pv{left:24px}.lb .nx{right:24px}
+}
+@media (min-width:1600px){.logo{width:150px}:root{--w:1440px}.anioly{--cardw:calc((100% - 6*16px)/7)}}
+@media (min-width:2200px){:root{--w:1720px}body{font-size:17px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}</style>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<div class="strip"><div class="wrap"><span>Darmowa dostawa do Paczkomatów InPost od 150 zł</span><span class="r">Odbiór osobisty: Poznań, ul. Kościańska 30 lok. 3 &middot; tel. 726 733 340</span></div></div>
+<header class="hd" id="hd">
+ <div class="wrap hd-in">
+  <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button>
+  <a class="logo" href="#" aria-label="MAKAJUTO - strona główna"><svg viewBox="0 0 250 140" role="img" aria-label="MAKAJUTO">
+<defs><path id="luka" d="M4,24 A121,113 0 0 0 246,24"/></defs>
+<ellipse cx="125" cy="5" rx="16" ry="3.6" fill="none" stroke="#CC0000" stroke-width="2.4"/>
+<path d="M113,11 A12,12.5 0 1 0 137,11" fill="none" stroke="#1d1d1d" stroke-width="3.2" stroke-linecap="round"/>
+<g fill="#1d1d1d"><g id="ska"><path d="M40.0,12.3 L44.3,12.8 L48.5,13.5 L52.7,14.2 L56.7,15.1 L60.7,16.1 L64.6,17.2 L68.5,18.3 L72.2,19.6 L75.9,21.0 L79.5,22.5 L83.1,24.2 L86.5,25.9 L90.0,27.7 L93.3,29.6 L96.6,31.7 L99.8,33.8 L103.0,36.1 L106.1,38.4 L109.2,40.9 L112.2,43.5 L115.2,46.3 L118.1,49.1 L121.0,52.0 L123.8,55.2 L124.2,54.8 L121.9,51.3 L119.5,47.9 L117.0,44.6 L114.3,41.5 L111.5,38.5 L108.6,35.6 L105.5,32.9 L102.4,30.3 L99.1,27.9 L95.7,25.7 L92.3,23.6 L88.7,21.6 L85.1,19.9 L81.3,18.3 L77.5,16.8 L73.6,15.5 L69.6,14.5 L65.5,13.5 L61.4,12.8 L57.2,12.2 L53.0,11.8 L48.7,11.6 L44.4,11.6 L40.0,11.7Z"/><path d="M45.0,27.3 L48.5,27.7 L52.0,28.2 L55.3,28.8 L58.6,29.4 L61.7,30.0 L64.7,30.7 L67.7,31.5 L70.5,32.2 L73.2,33.1 L75.8,34.0 L78.4,34.9 L80.8,35.9 L83.1,37.0 L85.4,38.1 L87.6,39.3 L89.6,40.5 L91.6,41.8 L93.6,43.2 L95.4,44.6 L97.2,46.1 L99.0,47.7 L100.6,49.4 L102.3,51.2 L103.8,53.1 L104.2,52.9 L103.1,50.6 L101.9,48.4 L100.6,46.4 L99.1,44.4 L97.5,42.5 L95.7,40.6 L93.8,38.9 L91.8,37.4 L89.6,35.9 L87.3,34.5 L85.0,33.2 L82.5,32.1 L79.9,31.0 L77.1,30.1 L74.3,29.3 L71.4,28.6 L68.4,28.0 L65.4,27.5 L62.2,27.1 L58.9,26.8 L55.6,26.6 L52.1,26.6 L48.6,26.7 L45.0,26.7Z"/><path d="M47.0,41.2 L49.1,41.5 L51.1,41.9 L53.2,42.2 L55.1,42.6 L57.0,43.0 L58.9,43.4 L60.8,43.9 L62.6,44.4 L64.4,44.9 L66.1,45.4 L67.8,45.9 L69.5,46.5 L71.1,47.1 L72.8,47.7 L74.3,48.3 L75.9,49.0 L77.5,49.6 L79.0,50.3 L80.5,51.1 L82.0,51.8 L83.5,52.6 L84.9,53.4 L86.4,54.3 L87.8,55.2 L88.2,54.8 L87.0,53.5 L85.9,52.2 L84.7,51.0 L83.3,49.8 L82.0,48.7 L80.5,47.7 L79.0,46.7 L77.5,45.8 L75.9,44.9 L74.2,44.1 L72.5,43.4 L70.8,42.8 L69.0,42.2 L67.1,41.7 L65.3,41.3 L63.3,40.9 L61.4,40.6 L59.4,40.4 L57.4,40.3 L55.4,40.2 L53.3,40.2 L51.2,40.3 L49.1,40.6 L47.0,40.8Z"/><path d="M52.0,53.2 L53.5,53.5 L54.9,53.8 L56.3,54.1 L57.7,54.4 L59.1,54.8 L60.4,55.1 L61.7,55.5 L63.0,55.9 L64.3,56.3 L65.6,56.6 L66.9,57.1 L68.2,57.5 L69.4,57.9 L70.7,58.3 L72.0,58.8 L73.3,59.3 L74.6,59.7 L75.8,60.2 L77.2,60.7 L78.5,61.2 L79.8,61.7 L81.2,62.2 L82.5,62.6 L83.9,63.2 L84.1,62.8 L83.0,61.9 L81.8,60.9 L80.7,60.0 L79.5,59.2 L78.3,58.4 L77.1,57.6 L75.8,56.9 L74.6,56.2 L73.3,55.6 L72.0,55.0 L70.7,54.5 L69.3,54.0 L68.0,53.6 L66.6,53.2 L65.2,52.9 L63.8,52.7 L62.3,52.5 L60.9,52.3 L59.4,52.2 L58.0,52.2 L56.5,52.3 L55.0,52.4 L53.5,52.6 L52.0,52.8Z"/><path d="M58.0,64.2 L59.0,64.4 L59.9,64.7 L60.9,65.0 L61.8,65.2 L62.7,65.5 L63.6,65.8 L64.5,66.1 L65.4,66.3 L66.3,66.6 L67.2,66.9 L68.1,67.2 L69.0,67.5 L69.9,67.8 L70.8,68.1 L71.8,68.4 L72.7,68.8 L73.7,69.1 L74.6,69.4 L75.6,69.7 L76.7,70.0 L77.7,70.3 L78.7,70.6 L79.8,70.9 L80.9,71.2 L81.1,70.8 L80.2,70.2 L79.3,69.5 L78.4,68.8 L77.5,68.2 L76.6,67.6 L75.7,67.1 L74.7,66.5 L73.8,66.1 L72.9,65.6 L71.9,65.2 L71.0,64.8 L70.0,64.5 L69.0,64.2 L68.1,63.9 L67.1,63.7 L66.1,63.5 L65.1,63.4 L64.1,63.3 L63.1,63.2 L62.0,63.3 L61.0,63.3 L60.0,63.4 L59.0,63.6 L58.0,63.8Z"/><path d="M66.0,74.2 L66.6,74.3 L67.2,74.6 L67.8,74.8 L68.4,74.9 L69.0,75.1 L69.6,75.3 L70.2,75.4 L70.8,75.6 L71.4,75.7 L72.0,75.9 L72.6,76.0 L73.2,76.1 L73.8,76.2 L74.4,76.4 L75.1,76.5 L75.7,76.6 L76.3,76.7 L76.9,76.7 L77.6,76.8 L78.2,76.9 L78.9,77.0 L79.6,77.0 L80.3,77.1 L80.9,77.2 L81.1,76.8 L80.5,76.4 L79.9,76.0 L79.4,75.6 L78.8,75.3 L78.2,74.9 L77.6,74.6 L76.9,74.4 L76.3,74.1 L75.7,73.9 L75.1,73.7 L74.4,73.5 L73.8,73.4 L73.1,73.3 L72.5,73.2 L71.8,73.1 L71.2,73.1 L70.5,73.1 L69.9,73.1 L69.2,73.1 L68.6,73.2 L67.9,73.3 L67.3,73.5 L66.6,73.7 L66.0,73.8Z"/><path d="M108.8,58.0 L108.6,59.5 L108.4,61.1 L108.2,62.6 L108.1,64.2 L107.9,65.7 L107.7,67.3 L107.5,68.9 L107.3,70.5 L107.1,72.1 L106.9,73.7 L106.7,75.4 L106.6,77.0 L106.4,78.7 L106.2,80.4 L106.0,82.1 L105.8,83.8 L105.7,85.5 L105.5,87.3 L105.4,89.0 L105.2,90.8 L105.1,92.6 L105.0,94.4 L104.9,96.2 L104.8,98.0 L105.2,98.0 L105.8,96.3 L106.5,94.7 L107.1,92.9 L107.6,91.2 L108.1,89.5 L108.5,87.8 L109.0,86.1 L109.3,84.3 L109.7,82.6 L110.0,80.9 L110.2,79.2 L110.4,77.5 L110.6,75.8 L110.7,74.1 L110.8,72.4 L110.8,70.7 L110.8,69.0 L110.8,67.4 L110.6,65.8 L110.5,64.2 L110.2,62.6 L109.9,61.0 L109.6,59.5 L109.2,58.0Z"/><path d="M114.8,64.0 L114.9,65.1 L114.9,66.1 L115.0,67.1 L115.0,68.1 L115.0,69.1 L115.1,70.1 L115.1,71.1 L115.1,72.1 L115.1,73.1 L115.2,74.1 L115.2,75.1 L115.2,76.0 L115.3,77.0 L115.3,78.0 L115.3,79.0 L115.4,80.0 L115.4,81.0 L115.5,81.9 L115.5,82.9 L115.6,83.9 L115.6,84.9 L115.7,85.9 L115.8,87.0 L115.8,88.0 L116.2,88.0 L116.5,87.0 L116.8,86.1 L117.0,85.1 L117.3,84.1 L117.5,83.1 L117.6,82.1 L117.8,81.0 L117.9,80.0 L118.0,79.0 L118.0,78.0 L118.0,77.0 L118.0,76.0 L118.0,74.9 L117.9,73.9 L117.8,72.9 L117.6,71.9 L117.4,70.9 L117.2,69.9 L117.0,68.9 L116.7,67.9 L116.4,66.9 L116.0,65.9 L115.6,64.9 L115.2,64.0Z"/></g><use href="#ska" transform="translate(250,0) scale(-1,1)"/>
+<path d="M115.1,62.6 L115.4,63.2 L115.8,63.8 L116.2,64.4 L116.6,65.1 L116.9,65.7 L117.3,66.3 L117.7,66.9 L118.1,67.6 L118.4,68.2 L118.8,68.8 L119.2,69.4 L119.6,70.1 L119.9,70.7 L120.3,71.3 L120.7,71.9 L121.1,72.6 L121.4,73.2 L121.8,73.8 L122.2,74.4 L122.6,75.1 L122.9,75.7 L123.3,76.3 L123.7,76.9 L124.1,77.6 L125.9,76.4 L125.6,75.8 L125.2,75.2 L124.8,74.6 L124.4,73.9 L124.1,73.3 L123.7,72.7 L123.3,72.1 L122.9,71.4 L122.6,70.8 L122.2,70.2 L121.8,69.6 L121.4,68.9 L121.1,68.3 L120.7,67.7 L120.3,67.1 L119.9,66.4 L119.6,65.8 L119.2,65.2 L118.8,64.6 L118.4,63.9 L118.1,63.3 L117.7,62.7 L117.3,62.1 L116.9,61.4Z"/><path d="M133.1,61.4 L132.7,62.1 L132.3,62.7 L131.9,63.3 L131.6,63.9 L131.2,64.6 L130.8,65.2 L130.4,65.8 L130.1,66.4 L129.7,67.1 L129.3,67.7 L128.9,68.3 L128.6,68.9 L128.2,69.6 L127.8,70.2 L127.4,70.8 L127.1,71.4 L126.7,72.1 L126.3,72.7 L125.9,73.3 L125.6,73.9 L125.2,74.6 L124.8,75.2 L124.4,75.8 L124.1,76.4 L125.9,77.6 L126.3,76.9 L126.7,76.3 L127.1,75.7 L127.4,75.1 L127.8,74.4 L128.2,73.8 L128.6,73.2 L128.9,72.6 L129.3,71.9 L129.7,71.3 L130.1,70.7 L130.4,70.1 L130.8,69.4 L131.2,68.8 L131.6,68.2 L131.9,67.6 L132.3,66.9 L132.7,66.3 L133.1,65.7 L133.4,65.1 L133.8,64.4 L134.2,63.8 L134.6,63.2 L134.9,62.6Z"/></g>
+<text font-family="Jost,Arial,sans-serif" font-weight="300" font-size="29" fill="#CC0000"><textPath href="#luka" startOffset="50%" text-anchor="middle" textLength="318" lengthAdjust="spacing">MAKAJUTO</textPath></text>
+</svg></a>
+  <div class="search" id="search"><form class="sf" role="search" data-search><input type="search" name="q" placeholder="Czego dziś szukasz? np. anioł, Biblia, kalendarz" aria-label="Szukaj w sklepie"><button type="submit">Szukaj</button></form></div>
+  <div class="hd-tools">
+   <button class="ib sbtn" id="sbtn" type="button" aria-label="Szukaj" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5l5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+   <a class="acc" href="#kontakt">Zaloguj</a>
+   <a class="ib cart" href="#" id="cart" aria-label="Koszyk"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M5 9h16l-1.4 12.2a1.6 1.6 0 0 1-1.6 1.4H8a1.6 1.6 0 0 1-1.6-1.4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9.5 11V7.6a3.5 3.5 0 0 1 7 0V11" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span class="cnt" id="cnt">0</span><span class="sum" id="sum">0,00 zł</span></a>
+  </div>
+ </div>
+ <nav class="nav" aria-label="Główne menu"><ul>
+  <li><a href="#kategorie" aria-current="page">Wszystkie produkty</a></li>
+  <li><a href="#anioly">Karnety z aniołami</a></li>
+  <li><a href="#sezon">Na święta</a></li>
+  <li><a href="#oprawy">Oprawy MAKAJUTO</a></li>
+  <li><a href="#kategorie">Książki</a></li>
+  <li><a href="#kategorie">Kalendarze 2027</a></li>
+  <li><a href="#dostawa">Dostawa</a></li>
+  <li><a href="#o-nas">O nas</a></li>
+  <li><a href="#kontakt">Kontakt</a></li>
+  <li><a href="#sezon" class="promo">Promocje</a></li>
+ </ul></nav>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu mobilne">
+ <a href="#kategorie">Wszystkie produkty <span>ponad 2 700</span></a>
+ <a href="#anioly">Karnety z aniołami <span>od 5,79 zł</span></a>
+ <a href="#sezon">Na święta i nowy rok</a>
+ <a href="#oprawy">Oprawy MAKAJUTO</a>
+ <a href="#dostawa">Dostawa i odbiór</a>
+ <a href="#o-nas">O nas</a>
+ <a href="#kontakt">Kontakt</a>
+ <div class="mc">Biuro Obsługi Klienta, pn-pt 10:00-18:00<br><a href="tel:+48726733340">726 733 340</a> &middot; <a href="mailto:biuro@makajuto.pl">biuro@makajuto.pl</a></div>
+</nav>
+<script>(function(){var h=document.getElementById("hd");function m(){document.documentElement.style.setProperty("--top",Math.round(h.getBoundingClientRect().bottom+scrollY)+"px")}m();addEventListener("resize",m)})()</script>
+<main id="tresc">
+<section class="hero" aria-label="Powitanie">
+ <div class="arc" id="arc"><button class="hc" type="button" data-lb="hero" data-full="img/h00.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Opiekuna - karnet z kopertą, 5,95 zł" style="--i:0"><img src="img/h00.webp" width="414" height="600" alt="Karnet Posyłam Ci Anioła Opiekuna"  decoding="async"></button><button class="hc" type="button" data-lb="hero" data-full="img/h01.webp" data-fw="439" data-fh="637" data-cap="Posyłam Ci Anioła Świątecznej Radości - karnet z kopertą, 5,95 zł" style="--i:1"><img src="img/h01.webp" width="439" height="637" alt="Karnet Posyłam Ci Anioła Świątecznej Radości"  decoding="async"></button><button class="hc" type="button" data-lb="hero" data-full="img/h02.webp" data-fw="415" data-fh="600" data-cap="Posyłam Ci Anioła Zakochanych - karnet z kopertą, 5,79 zł" style="--i:2"><img src="img/h02.webp" width="415" height="600" alt="Karnet Posyłam Ci Anioła Zakochanych"  decoding="async"></button><button class="hc" type="button" data-lb="hero" data-full="img/h03.webp" data-fw="443" data-fh="636" data-cap="Posyłam Ci Anioła Betlejemskiej Nocy - karnet z kopertą, 5,95 zł" style="--i:3"><img src="img/h03.webp" width="443" height="636" alt="Karnet Posyłam Ci Anioła Betlejemskiej Nocy"  decoding="async"></button><button class="hc" type="button" data-lb="hero" data-full="img/h04.webp" data-fw="419" data-fh="600" data-cap="Posyłam Ci Anioła Spełnionych Marzeń - karnet z kopertą, 5,95 zł" style="--i:4"><img src="img/h04.webp" width="419" height="600" alt="Karnet Posyłam Ci Anioła Spełnionych Marzeń" fetchpriority=high decoding="async"></button><button class="hc" type="button" data-lb="hero" data-full="img/h05.webp" data-fw="441" data-fh="636" data-cap="Posyłam Ci Anioła Narodzenia Pana - karnet z kopertą, 5,95 zł" style="--i:5"><img src="img/h05.webp" width="441" height="636" alt="Karnet Posyłam Ci Anioła Narodzenia Pana" fetchpriority=high decoding="async"></button><button class="hc" type="button" data-lb="hero" data-full="img/h06.webp" data-fw="417" data-fh="600" data-cap="Posyłam Ci Anioła Radości - karnet z kopertą, 5,95 zł" style="--i:6"><img src="img/h06.webp" width="417" height="600" alt="Karnet Posyłam Ci Anioła Radości" fetchpriority=high decoding="async"></button><button class="hc" type="button" data-lb="hero" data-full="img/h07.webp" data-fw="442" data-fh="637" data-cap="Posyłam Ci Anioła Bożonarodzeniowej Nowiny - karnet z kopertą, 5,95 zł" style="--i:7"><img src="img/h07.webp" width="442" height="637" alt="Karnet Posyłam Ci Anioła Bożonarodzeniowej Nowiny"  decoding="async"></button><button class="hc" type="button" data-lb="hero" data-full="img/h08.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Wdzięczności - karnet z kopertą, 5,95 zł" style="--i:8"><img src="img/h08.webp" width="414" height="600" alt="Karnet Posyłam Ci Anioła Wdzięczności"  decoding="async"></button><button class="hc" type="button" data-lb="hero" data-full="img/h09.webp" data-fw="443" data-fh="638" data-cap="Posyłam Ci Anioła Gwiazdy Betlejemskiej - karnet z kopertą, 5,95 zł" style="--i:9"><img src="img/h09.webp" width="443" height="638" alt="Karnet Posyłam Ci Anioła Gwiazdy Betlejemskiej"  decoding="async"></button><button class="hc" type="button" data-lb="hero" data-full="img/h10.webp" data-fw="412" data-fh="600" data-cap="Posyłam Wam Anioła Nowożeńców - karnet z kopertą, 5,79 zł" style="--i:10"><img src="img/h10.webp" width="412" height="600" alt="Karnet Posyłam Wam Anioła Nowożeńców"  decoding="async"></button></div>
+ <div class="hero-in" id="heroIn">
+  <span class="halo" aria-hidden="true"></span>
+  <h1>Anioły są wśród nas<span class="s">Upominki, karnety i książki dla wyjątkowych osób</span></h1>
+  <p class="lead">Karnety „Posyłam Ci Anioła”, Biblie i oprawy MAKAJUTO, kalendarze 2027, kubki i książki dla dzieci. Wysyłamy InPostem i ORLEN Paczką, a w Poznaniu można odebrać osobiście.</p>
+  <a class="btn" href="#anioly">Wybierz anioła</a>
+ </div>
+</section>
+
+<section class="sec g" id="kategorie">
+ <div class="wrap">
+  <div class="sh"><div><h2>Czego dziś szukasz?</h2><p>Ponad 2 700 produktów w kilkunastu działach, od karnetu za kilka złotych po Pismo Święte w skórzanej oprawie.</p></div></div>
+  <div class="tiles"><a class="tile" href="#anioly" data-cat="Karnety i kartki"><span class="tile-i"><img src="img/k00.webp" width="418" height="600" alt="Karnety i kartki - Karnet z kopertą: Z ANIOŁAMI 4. Posyłam Ci Anioła Pocieszenia" loading="lazy" decoding="async"></span><span class="tile-n">Karnety i kartki</span><span class="tile-c">632 produkty</span></a><a class="tile" href="#anioly" data-cat="Książki"><span class="tile-i"><img src="img/k01.webp" width="525" height="600" alt="Książki - Aniołek 1: &quot;Urodziny z Aniołem&quot; - ks. Bogusław Zeman SSP" loading="lazy" decoding="async"></span><span class="tile-n">Książki</span><span class="tile-c">914 produktów</span></a><a class="tile" href="#anioly" data-cat="Gadżety"><span class="tile-i"><img src="img/k02.webp" width="604" height="600" alt="Gadżety - Skarbonka SKARBBOXY &quot;nasza RODZINKA to największy SKARB!&quot; SBB-020" loading="lazy" decoding="async"></span><span class="tile-n">Gadżety</span><span class="tile-c">401 produktów</span></a><a class="tile" href="#anioly" data-cat="Torby prezentowe"><span class="tile-i"><img src="img/k03.webp" width="517" height="596" alt="Torby prezentowe - Torba prezentowa ZŁOTE SERDUSZKA (biała, duże serca) 17,7x22,8x9,8 cm QM-350" loading="lazy" decoding="async"></span><span class="tile-n">Torby prezentowe</span><span class="tile-c">206 produktów</span></a><a class="tile" href="#anioly" data-cat="Kubki"><span class="tile-i"><img src="img/k04.webp" width="561" height="600" alt="Kubki - Kubek sheepworld &quot;Łąka pełna kwiatów... Tylko dla Ciebie!&quot; 330 ml" loading="lazy" decoding="async"></span><span class="tile-n">Kubki</span><span class="tile-c">139 produktów</span></a><a class="tile" href="#anioly" data-cat="Kalendarze 2027"><span class="tile-i"><img src="img/k05.webp" width="697" height="695" alt="Kalendarze 2027 - Kalendarz 2027 kukartka ŚCIENNY - DOBRE ANIOŁY (30x60 cm)" loading="lazy" decoding="async"></span><span class="tile-n">Kalendarze 2027</span><span class="tile-c">127 produktów</span></a><a class="tile" href="#anioly" data-cat="Produkty z aniołami"><span class="tile-i"><img src="img/k06.webp" width="655" height="600" alt="Produkty z aniołami - Kubek Anioł &quot;Rozwiń skrzydła&quot; 290 ml" loading="lazy" decoding="async"></span><span class="tile-n">Produkty z aniołami</span><span class="tile-c">118 produktów</span></a><a class="tile" href="#anioly" data-cat="Pamiątki"><span class="tile-i"><img src="img/k07.webp" width="600" height="600" alt="Pamiątki - Zawieszka PREMIUM Chrzest &quot;ANIOŁEK NA PAMIĄTKĘ Chrztu Świętego&quot; ZOP-006" loading="lazy" decoding="async"></span><span class="tile-n">Pamiątki</span><span class="tile-c">83 produkty</span></a><a class="tile" href="#anioly" data-cat="Boże Narodzenie"><span class="tile-i"><img src="img/k08.webp" width="490" height="700" alt="Boże Narodzenie - Kartka Pocztówka WIGILIJNA 11 - GLORIA IN EXCELSIS DEO!" loading="lazy" decoding="async"></span><span class="tile-n">Boże Narodzenie</span><span class="tile-c">65 produktów</span></a><a class="tile" href="#anioly" data-cat="Pismo Święte"><span class="tile-i"><img src="img/k09.webp" width="464" height="600" alt="Pismo Święte - BIBLIA STARY i NOWY TESTAMENT Tabor - flex, turkusowy" loading="lazy" decoding="async"></span><span class="tile-n">Pismo Święte</span><span class="tile-c">60 produktów</span></a><a class="tile" href="#anioly" data-cat="Codzienniki"><span class="tile-i"><img src="img/k10.webp" width="682" height="600" alt="Codzienniki - CODZIENNIK: Z aniołami przez cały rok" loading="lazy" decoding="async"></span><span class="tile-n">Codzienniki</span><span class="tile-c">46 produktów</span></a><a class="tile" href="#anioly" data-cat="Zawieszki Hallmark"><span class="tile-i"><img src="img/k11.webp" width="527" height="700" alt="Zawieszki Hallmark - Zawieszka choinkowa Hallmark ORNAMENTS: KUBUŚ PUCHATEK" loading="lazy" decoding="async"></span><span class="tile-n">Zawieszki Hallmark</span><span class="tile-c">20 produktów</span></a></div>
+ </div>
+</section>
+
+<section class="sec" id="anioly">
+ <div class="wrap">
+  <div class="sh"><div><h2>Posyłam Ci Anioła</h2></div><div class="ctl"><button class="p" type="button" aria-label="Poprzednie: karnety"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="n" type="button" aria-label="Następne: karnety"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
+  <div class="ai">
+   <div><p>Karnety z kopertą z serii Z ANIOŁAMI: każdy anioł ma swoje imię i okazję. Anioł Urodzin, Anioł Wdzięczności, Anioł Nowożeńców, a na święta Anioł Betlejemskiej Nocy. Mały gest dla kogoś, kto jest dla nas aniołem.</p>
+   <div class="facts"><span><b>5,79-5,95 zł</b> za karnet</span><span><b>118</b> produktów z aniołami</span><span>do każdego koperta</span></div></div>
+  </div>
+  <div class="track anioly" data-track><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a00.webp" data-fw="416" data-fh="600" data-cap="Posyłam Ci Anioła Obfitości" aria-label="Powiększ: Posyłam Ci Anioła Obfitości"><img src="img/a00.webp" width="416" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 1. Posyłam Ci Anioła Obfitości" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Obfitości</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 1</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 26 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Obfitości" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a01.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Opiekuna" aria-label="Powiększ: Posyłam Ci Anioła Opiekuna"><img src="img/a01.webp" width="414" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 2. Posyłam Ci Anioła Opiekuna" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Opiekuna</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 2</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 28 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Opiekuna" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a02.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Mądrości" aria-label="Powiększ: Posyłam Ci Anioła Mądrości"><img src="img/a02.webp" width="414" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 3. Posyłam Ci Anioła Mądrości" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Mądrości</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 3</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 27 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Mądrości" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a03.webp" data-fw="418" data-fh="600" data-cap="Posyłam Ci Anioła Pocieszenia" aria-label="Powiększ: Posyłam Ci Anioła Pocieszenia"><img src="img/a03.webp" width="418" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 4. Posyłam Ci Anioła Pocieszenia" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Pocieszenia</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 4</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 28 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Pocieszenia" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a04.webp" data-fw="417" data-fh="600" data-cap="Posyłam Ci Anioła Radości" aria-label="Powiększ: Posyłam Ci Anioła Radości"><img src="img/a04.webp" width="417" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 6. Posyłam Ci Anioła Radości" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Radości</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 6</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 25 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Radości" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a05.webp" data-fw="413" data-fh="600" data-cap="Posyłam Ci Anioła Nadziei" aria-label="Powiększ: Posyłam Ci Anioła Nadziei"><img src="img/a05.webp" width="413" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 8. Posyłam Ci Anioła Nadziei" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Nadziei</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 8</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 28 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Nadziei" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a06.webp" data-fw="412" data-fh="600" data-cap="Posyłam Wam Anioła Nowożeńców" aria-label="Powiększ: Posyłam Wam Anioła Nowożeńców"><img src="img/a06.webp" width="412" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 9. Posyłam Wam Anioła Nowożeńców" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Wam Anioła Nowożeńców</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 9</p>
+<div class="pc-b"><b class="pc-p">5,79&nbsp;zł</b><span class="av">dostępne: 20 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Wam Anioła Nowożeńców" data-p="5.79">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a07.webp" data-fw="415" data-fh="600" data-cap="Posyłam Ci Anioła Wyznania Miłości" aria-label="Powiększ: Posyłam Ci Anioła Wyznania Miłości"><img src="img/a07.webp" width="415" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 11. Posyłam Ci Anioła Wyznania Miłości" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Wyznania Miłości</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 11</p>
+<div class="pc-b"><b class="pc-p">5,79&nbsp;zł</b><span class="av">dostępne: 24 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Wyznania Miłości" data-p="5.79">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a08.webp" data-fw="416" data-fh="600" data-cap="Posyłam Ci Anioła Powodzenia" aria-label="Powiększ: Posyłam Ci Anioła Powodzenia"><img src="img/a08.webp" width="416" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 13. Posyłam Ci Anioła Powodzenia" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Powodzenia</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 13</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 30 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Powodzenia" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a09.webp" data-fw="415" data-fh="600" data-cap="Posyłam Ci Anioła Zakochanych" aria-label="Powiększ: Posyłam Ci Anioła Zakochanych"><img src="img/a09.webp" width="415" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 14. Posyłam Ci Anioła Zakochanych" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Zakochanych</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 14</p>
+<div class="pc-b"><b class="pc-p">5,79&nbsp;zł</b><span class="av">dostępne: 26 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Zakochanych" data-p="5.79">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a10.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Wdzięczności" aria-label="Powiększ: Posyłam Ci Anioła Wdzięczności"><img src="img/a10.webp" width="414" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 15. Posyłam Ci Anioła Wdzięczności" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Wdzięczności</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 15</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 28 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Wdzięczności" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a11.webp" data-fw="415" data-fh="600" data-cap="Posyłam Ci Anioła Urodzin" aria-label="Powiększ: Posyłam Ci Anioła Urodzin"><img src="img/a11.webp" width="415" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 16. Posyłam Ci Anioła Urodzin" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Urodzin</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 16</p>
+<div class="pc-b"><b class="pc-p">5,79&nbsp;zł</b><span class="av">dostępne: 26 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Urodzin" data-p="5.79">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a12.webp" data-fw="415" data-fh="600" data-cap="Posyłam Ci Anioła Pełni Szczęścia" aria-label="Powiększ: Posyłam Ci Anioła Pełni Szczęścia"><img src="img/a12.webp" width="415" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 17. Posyłam Ci Anioła Pełni Szczęścia" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Pełni Szczęścia</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 17</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 4 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Pełni Szczęścia" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a13.webp" data-fw="419" data-fh="600" data-cap="Posyłam Ci Anioła Spełnionych Marzeń" aria-label="Powiększ: Posyłam Ci Anioła Spełnionych Marzeń"><img src="img/a13.webp" width="419" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 18. Posyłam Ci Anioła Spełnionych Marzeń" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Spełnionych Marzeń</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 18</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 30 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Spełnionych Marzeń" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a14.webp" data-fw="415" data-fh="600" data-cap="Posyłam Ci Anioła Szczęśliwego Życia" aria-label="Powiększ: Posyłam Ci Anioła Szczęśliwego Życia"><img src="img/a14.webp" width="415" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 19. Posyłam Ci Anioła Szczęśliwego Życia" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Szczęśliwego Życia</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 19</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 27 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Szczęśliwego Życia" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a15.webp" data-fw="415" data-fh="600" data-cap="Posyłam Ci Anioła Radosnych Życzeń" aria-label="Powiększ: Posyłam Ci Anioła Radosnych Życzeń"><img src="img/a15.webp" width="415" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 20. Posyłam Ci Anioła Radosnych Życzeń" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Radosnych Życzeń</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 20</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 30 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Radosnych Życzeń" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a16.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Najlepszego Taty" aria-label="Powiększ: Posyłam Ci Anioła Najlepszego Taty"><img src="img/a16.webp" width="414" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 22. Posyłam Ci Anioła Najlepszego Taty" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Najlepszego Taty</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 22</p>
+<div class="pc-b"><b class="pc-p">5,79&nbsp;zł</b><span class="av">dostępne: 18 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Najlepszego Taty" data-p="5.79">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a17.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Sukcesu" aria-label="Powiększ: Posyłam Ci Anioła Sukcesu"><img src="img/a17.webp" width="414" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 23. Posyłam Ci Anioła Sukcesu" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Sukcesu</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 23</p>
+<div class="pc-b"><b class="pc-p">5,79&nbsp;zł</b><span class="av">dostępne: 29 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Sukcesu" data-p="5.79">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a18.webp" data-fw="416" data-fh="600" data-cap="Posyłam Ci Anioła Pomyślności" aria-label="Powiększ: Posyłam Ci Anioła Pomyślności"><img src="img/a18.webp" width="416" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 25. Posyłam Ci Anioła Pomyślności" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Pomyślności</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 25</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 30 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Pomyślności" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a19.webp" data-fw="416" data-fh="600" data-cap="Posyłam Ci Anioła Spełnienia" aria-label="Powiększ: Posyłam Ci Anioła Spełnienia"><img src="img/a19.webp" width="416" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 26. Posyłam Ci Anioła Spełnienia" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Spełnienia</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 26</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 29 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Spełnienia" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a20.webp" data-fw="416" data-fh="600" data-cap="Posyłam Ci Anioła Uśmiechu" aria-label="Powiększ: Posyłam Ci Anioła Uśmiechu"><img src="img/a20.webp" width="416" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 27. Posyłam Ci Anioła Uśmiechu" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Uśmiechu</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 27</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 29 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Uśmiechu" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a21.webp" data-fw="416" data-fh="600" data-cap="Posyłam Ci Anioła Odwagi" aria-label="Powiększ: Posyłam Ci Anioła Odwagi"><img src="img/a21.webp" width="416" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 28. Posyłam Ci Anioła Odwagi" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Odwagi</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 28</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 27 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Odwagi" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a22.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Zgody" aria-label="Powiększ: Posyłam Ci Anioła Zgody"><img src="img/a22.webp" width="414" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 29. Posyłam Ci Anioła Zgody" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Zgody</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 29</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 28 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Zgody" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="anioly" data-full="img/a23.webp" data-fw="416" data-fh="600" data-cap="Posyłam Ci Anioła Spokoju" aria-label="Powiększ: Posyłam Ci Anioła Spokoju"><img src="img/a23.webp" width="416" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 30. Posyłam Ci Anioła Spokoju" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Spokoju</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 30</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 30 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Spokoju" data-p="5.95">Do koszyka</button>
+</article></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+ </div>
+</section>
+
+<section class="sec g" id="sezon">
+ <div class="wrap">
+  <div class="sh"><div><h2>Na święta i na nowy rok</h2><p>Zawieszki choinkowe Hallmark, Ewangelia na 2027 rok, kalendarze i świąteczne anioły.</p></div><div class="ctl"><button class="p" type="button" aria-label="Poprzednie: nowości"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="n" type="button" aria-label="Następne: nowości"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
+  <div class="track" data-track><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s00-d.webp" data-fw="1400" data-fh="1332" data-cap="Zawieszka choinkowa Funko POP Hallmark: BABY YODA (GROGU)" aria-label="Powiększ: Baby Yoda (Grogu)"><img src="img/s00.webp" width="700" height="666" alt="Zawieszka choinkowa Funko POP Hallmark: BABY YODA (GROGU)" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Baby Yoda (Grogu)</h3><p class="pc-s">zawieszka choinkowa Funko POP Hallmark</p>
+<div class="pc-b"><b class="pc-p">84,95&nbsp;zł</b><span class="av">dostępne: 9 szt</span></div>
+<button class="add" type="button" data-n="Baby Yoda (Grogu)" data-p="84.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s01-d.webp" data-fw="1400" data-fh="1400" data-cap="Zawieszka choinkowa Funko POP Hallmark: STITCH" aria-label="Powiększ: Stitch"><img src="img/s01.webp" width="700" height="700" alt="Zawieszka choinkowa Funko POP Hallmark: STITCH" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Stitch</h3><p class="pc-s">zawieszka choinkowa Funko POP Hallmark</p>
+<div class="pc-b"><b class="pc-p">84,95&nbsp;zł</b><span class="av">dostępne: 7 szt</span></div>
+<button class="add" type="button" data-n="Stitch" data-p="84.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s02.webp" data-fw="438" data-fh="637" data-cap="Karnet z kopertą: Z ANIOŁAMI 45. Posyłam Ci Anioła Bożego Narodzenia" aria-label="Powiększ: Posyłam Ci Anioła Bożego Narodzenia"><img src="img/s02.webp" width="438" height="637" alt="Karnet z kopertą: Z ANIOŁAMI 45. Posyłam Ci Anioła Bożego Narodzenia" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Posyłam Ci Anioła Bożego Narodzenia</h3><p class="pc-s">karnet z kopertą, seria Z ANIOŁAMI nr 45</p>
+<div class="pc-b"><b class="pc-p">5,95&nbsp;zł</b><span class="av">dostępne: 20 szt</span></div>
+<button class="add" type="button" data-n="Posyłam Ci Anioła Bożego Narodzenia" data-p="5.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s03.webp" data-fw="453" data-fh="640" data-cap="Słowo na każdy dzień: EWANGELIA 2027 - oprawa mała, miękka - ks. Łukasz Dyktyński" aria-label="Powiększ: Słowo na każdy dzień: EWANGELIA 2027 - oprawa mała, miękka - ks. Łukasz Dyktyński"><img src="img/s03.webp" width="453" height="640" alt="Słowo na każdy dzień: EWANGELIA 2027 - oprawa mała, miękka - ks. Łukasz Dyktyński" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Słowo na każdy dzień: EWANGELIA 2027 - oprawa mała, miękka - ks. Łukasz Dyktyński</h3>
+<div class="pc-b"><b class="pc-p">14,95&nbsp;zł</b><span class="av">dostępne: 152 szt</span></div>
+<button class="add" type="button" data-n="Słowo na każdy dzień: EWANGELIA 2027 - oprawa mała, miękka - ks. Łukasz Dyktyński" data-p="14.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s04-d.webp" data-fw="1010" data-fh="1400" data-cap="Zawieszka choinkowa Hallmark ORNAMENTS: OLAF" aria-label="Powiększ: Olaf"><img src="img/s04.webp" width="505" height="700" alt="Zawieszka choinkowa Hallmark ORNAMENTS: OLAF" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Olaf</h3><p class="pc-s">zawieszka choinkowa Hallmark ORNAMENTS</p>
+<div class="pc-b"><b class="pc-p">59,95&nbsp;zł</b><span class="av">dostępne: 6 szt</span></div>
+<button class="add" type="button" data-n="Olaf" data-p="59.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s05.webp" data-fw="444" data-fh="635" data-cap="EWANGELIA dla dzieci 2027 - ks. Radosław Rychlik" aria-label="Powiększ: EWANGELIA dla dzieci 2027 - ks. Radosław Rychlik"><img src="img/s05.webp" width="444" height="635" alt="EWANGELIA dla dzieci 2027 - ks. Radosław Rychlik" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">EWANGELIA dla dzieci 2027 - ks. Radosław Rychlik</h3>
+<div class="pc-b"><b class="pc-p">39,90&nbsp;zł</b><span class="av">dostępne: 109 szt</span></div>
+<button class="add" type="button" data-n="EWANGELIA dla dzieci 2027 - ks. Radosław Rychlik" data-p="39.90">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s06-d.webp" data-fw="1053" data-fh="1400" data-cap="Zawieszka choinkowa Hallmark ORNAMENTS: KUBUŚ PUCHATEK" aria-label="Powiększ: Kubuś Puchatek"><img src="img/s06.webp" width="527" height="700" alt="Zawieszka choinkowa Hallmark ORNAMENTS: KUBUŚ PUCHATEK" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Kubuś Puchatek</h3><p class="pc-s">zawieszka choinkowa Hallmark ORNAMENTS</p>
+<div class="pc-b"><b class="pc-p">59,95&nbsp;zł</b><span class="av">dostępne: 2 szt</span></div>
+<button class="add" type="button" data-n="Kubuś Puchatek" data-p="59.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s07.webp" data-fw="697" data-fh="695" data-cap="Kalendarz 2027 kukartka ŚCIENNY - DOBRE ANIOŁY (30x60 cm)" aria-label="Powiększ: Kalendarz 2027 kukartka ŚCIENNY - DOBRE ANIOŁY (30x60 cm)"><img src="img/s07.webp" width="697" height="695" alt="Kalendarz 2027 kukartka ŚCIENNY - DOBRE ANIOŁY (30x60 cm)" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Kalendarz 2027 kukartka ŚCIENNY - DOBRE ANIOŁY (30x60 cm)</h3>
+<div class="pc-b"><b class="pc-p">29,95&nbsp;zł</b><span class="av">dostępne: 25 szt</span></div>
+<button class="add" type="button" data-n="Kalendarz 2027 kukartka ŚCIENNY - DOBRE ANIOŁY (30x60 cm)" data-p="29.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s08-d.webp" data-fw="1050" data-fh="1400" data-cap="Zawieszka choinkowa Hallmark ORNAMENTS: PSI PATROL CHASE" aria-label="Powiększ: Psi Patrol Chase"><img src="img/s08.webp" width="525" height="700" alt="Zawieszka choinkowa Hallmark ORNAMENTS: PSI PATROL CHASE" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Psi Patrol Chase</h3><p class="pc-s">zawieszka choinkowa Hallmark ORNAMENTS</p>
+<div class="pc-b"><b class="pc-p">59,95&nbsp;zł</b><span class="av">dostępne: 5 szt</span></div>
+<button class="add" type="button" data-n="Psi Patrol Chase" data-p="59.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s09.webp" data-fw="682" data-fh="600" data-cap="CODZIENNIK: Z aniołami przez cały rok" aria-label="Powiększ: CODZIENNIK: Z aniołami przez cały rok"><img src="img/s09.webp" width="682" height="600" alt="CODZIENNIK: Z aniołami przez cały rok" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">CODZIENNIK: Z aniołami przez cały rok</h3>
+<div class="pc-b"><b class="pc-p">49,95&nbsp;zł</b><span class="av">dostępne: 11 szt</span></div>
+<button class="add" type="button" data-n="CODZIENNIK: Z aniołami przez cały rok" data-p="49.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s10-d.webp" data-fw="944" data-fh="1400" data-cap="Zawieszka choinkowa Hallmark ORNAMENTS: MICKEY" aria-label="Powiększ: Mickey"><img src="img/s10.webp" width="472" height="700" alt="Zawieszka choinkowa Hallmark ORNAMENTS: MICKEY" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Mickey</h3><p class="pc-s">zawieszka choinkowa Hallmark ORNAMENTS</p>
+<div class="pc-b"><b class="pc-p">59,95&nbsp;zł</b><span class="av">dostępne: 7 szt</span></div>
+<button class="add" type="button" data-n="Mickey" data-p="59.95">Do koszyka</button>
+</article><article class="pc">
+<button class="pc-img" type="button" data-lb="sezon" data-full="img/s11.webp" data-fw="383" data-fh="599" data-cap="Kalendarz / Terminarz PLANER 2026/2027 miętowy" aria-label="Powiększ: Kalendarz / Terminarz PLANER 2026/2027 miętowy"><img src="img/s11.webp" width="383" height="599" alt="Kalendarz / Terminarz PLANER 2026/2027 miętowy" loading="lazy" decoding="async"></button>
+<h3 class="pc-t">Kalendarz / Terminarz PLANER 2026/2027 miętowy</h3>
+<div class="pc-b"><b class="pc-p">37,95&nbsp;zł</b><span class="av">dostępne: 17 szt</span></div>
+<button class="add" type="button" data-n="Kalendarz / Terminarz PLANER 2026/2027 miętowy" data-p="37.95">Do koszyka</button>
+</article></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+ </div>
+</section>
+
+<section class="sec dark" id="oprawy">
+ <div class="wrap op">
+  <div class="op-txt">
+   <h2>Oprawy MAKAJUTO z aniołem</h2>
+   <p style="margin-top:16px">Nasza własna okładka z suwakiem. Na przodzie tłoczony anioł, ten sam co w logo MAKAJUTO.</p>
+   <ul class="op-sz">
+    <li><b>na Biblię „z rybką” i „dla kobiet”</b><span>67,95&nbsp;zł</span></li>
+    <li><b>na Pismo Święte DUŻE „z gołębicą”</b><span>74,95&nbsp;zł</span></li>
+   </ul>
+   <p style="margin-top:16px">15 wersji kolorystycznych: od ecru i ivory, przez turkus i róż, po grafit i czerń.</p>
+  </div>
+  <div>
+   <div class="sh" style="margin-bottom:14px;justify-content:flex-end"><div class="ctl"><button class="p" type="button" aria-label="Poprzednie: oprawy"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="n" type="button" aria-label="Następne: oprawy"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
+   <div class="track oprawy-t" data-track><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o00.webp" data-fw="496" data-fh="699" data-cap="Oprawa MAKAJUTO na Biblię „z rybką” i „dla kobiet” - kolor ecru, 67,95 zł" aria-label="Powiększ oprawę w kolorze ecru"><img src="img/o00.webp" width="496" height="699" alt="Oprawa MAKAJUTO z aniołem, kolor ecru" loading="lazy" decoding="async"></button><figcaption><b>ecru</b><span>67,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o01.webp" data-fw="506" data-fh="699" data-cap="Oprawa MAKAJUTO na Biblię „z rybką” i „dla kobiet” - kolor bordowy, 67,95 zł" aria-label="Powiększ oprawę w kolorze bordowy"><img src="img/o01.webp" width="506" height="699" alt="Oprawa MAKAJUTO z aniołem, kolor bordowy" loading="lazy" decoding="async"></button><figcaption><b>bordowy</b><span>67,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o02.webp" data-fw="518" data-fh="699" data-cap="Oprawa MAKAJUTO na Biblię „z rybką” i „dla kobiet” - kolor ciemny brąz, 67,95 zł" aria-label="Powiększ oprawę w kolorze ciemny brąz"><img src="img/o02.webp" width="518" height="699" alt="Oprawa MAKAJUTO z aniołem, kolor ciemny brąz" loading="lazy" decoding="async"></button><figcaption><b>ciemny brąz</b><span>67,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o12.webp" data-fw="500" data-fh="699" data-cap="Oprawa MAKAJUTO na Biblię „z rybką” i „dla kobiet” - kolor czarny, 67,95 zł" aria-label="Powiększ oprawę w kolorze czarny"><img src="img/o12.webp" width="500" height="699" alt="Oprawa MAKAJUTO z aniołem, kolor czarny" loading="lazy" decoding="async"></button><figcaption><b>czarny</b><span>67,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o11.webp" data-fw="492" data-fh="699" data-cap="Oprawa MAKAJUTO na Biblię „z rybką” i „dla kobiet” - kolor czerwony, 67,95 zł" aria-label="Powiększ oprawę w kolorze czerwony"><img src="img/o11.webp" width="492" height="699" alt="Oprawa MAKAJUTO z aniołem, kolor czerwony" loading="lazy" decoding="async"></button><figcaption><b>czerwony</b><span>67,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o03.webp" data-fw="506" data-fh="699" data-cap="Oprawa MAKAJUTO na Biblię „z rybką” i „dla kobiet” - kolor fioletowy, 67,95 zł" aria-label="Powiększ oprawę w kolorze fioletowy"><img src="img/o03.webp" width="506" height="699" alt="Oprawa MAKAJUTO z aniołem, kolor fioletowy" loading="lazy" decoding="async"></button><figcaption><b>fioletowy</b><span>67,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o04.webp" data-fw="520" data-fh="699" data-cap="Oprawa MAKAJUTO na Biblię „z rybką” i „dla kobiet” - kolor granatowy, 67,95 zł" aria-label="Powiększ oprawę w kolorze granatowy"><img src="img/o04.webp" width="520" height="699" alt="Oprawa MAKAJUTO z aniołem, kolor granatowy" loading="lazy" decoding="async"></button><figcaption><b>granatowy</b><span>67,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o13.webp" data-fw="509" data-fh="699" data-cap="Oprawa MAKAJUTO na Biblię „z rybką” i „dla kobiet” - kolor różowy, 67,95 zł" aria-label="Powiększ oprawę w kolorze różowy"><img src="img/o13.webp" width="509" height="699" alt="Oprawa MAKAJUTO z aniołem, kolor różowy" loading="lazy" decoding="async"></button><figcaption><b>różowy</b><span>67,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o14.webp" data-fw="492" data-fh="700" data-cap="Oprawa MAKAJUTO na Biblię „z rybką” i „dla kobiet” - kolor turkusowy, 67,95 zł" aria-label="Powiększ oprawę w kolorze turkusowy"><img src="img/o14.webp" width="492" height="700" alt="Oprawa MAKAJUTO z aniołem, kolor turkusowy" loading="lazy" decoding="async"></button><figcaption><b>turkusowy</b><span>67,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o07.webp" data-fw="519" data-fh="699" data-cap="Oprawa MAKAJUTO na Pismo Święte DUŻE „z gołębicą” - kolor ciemny brąz, 74,95 zł" aria-label="Powiększ oprawę w kolorze ciemny brąz"><img src="img/o07.webp" width="519" height="699" alt="Oprawa MAKAJUTO z aniołem, kolor ciemny brąz" loading="lazy" decoding="async"></button><figcaption><b>ciemny brąz</b><span>74,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o08.webp" data-fw="541" data-fh="699" data-cap="Oprawa MAKAJUTO na Pismo Święte DUŻE „z gołębicą” - kolor czarny, 74,95 zł" aria-label="Powiększ oprawę w kolorze czarny"><img src="img/o08.webp" width="541" height="699" alt="Oprawa MAKAJUTO z aniołem, kolor czarny" loading="lazy" decoding="async"></button><figcaption><b>czarny</b><span>74,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o06.webp" data-fw="543" data-fh="700" data-cap="Oprawa MAKAJUTO na Pismo Święte DUŻE „z gołębicą” - kolor grafit, 74,95 zł" aria-label="Powiększ oprawę w kolorze grafit"><img src="img/o06.webp" width="543" height="700" alt="Oprawa MAKAJUTO z aniołem, kolor grafit" loading="lazy" decoding="async"></button><figcaption><b>grafit</b><span>74,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o05.webp" data-fw="531" data-fh="700" data-cap="Oprawa MAKAJUTO na Pismo Święte DUŻE „z gołębicą” - kolor ivory, 74,95 zł" aria-label="Powiększ oprawę w kolorze ivory"><img src="img/o05.webp" width="531" height="700" alt="Oprawa MAKAJUTO z aniołem, kolor ivory" loading="lazy" decoding="async"></button><figcaption><b>ivory</b><span>74,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o09.webp" data-fw="535" data-fh="699" data-cap="Oprawa MAKAJUTO na Pismo Święte DUŻE „z gołębicą” - kolor różowy, 74,95 zł" aria-label="Powiększ oprawę w kolorze różowy"><img src="img/o09.webp" width="535" height="699" alt="Oprawa MAKAJUTO z aniołem, kolor różowy" loading="lazy" decoding="async"></button><figcaption><b>różowy</b><span>74,95&nbsp;zł</span></figcaption></figure><figure class="cov"><button type="button" class="cov-i" data-lb="oprawy" data-full="img/o10.webp" data-fw="525" data-fh="700" data-cap="Oprawa MAKAJUTO na Pismo Święte DUŻE „z gołębicą” - kolor turkusowy, 74,95 zł" aria-label="Powiększ oprawę w kolorze turkusowy"><img src="img/o10.webp" width="525" height="700" alt="Oprawa MAKAJUTO z aniołem, kolor turkusowy" loading="lazy" decoding="async"></button><figcaption><b>turkusowy</b><span>74,95&nbsp;zł</span></figcaption></figure></div>
+   <div class="bar" aria-hidden="true"><i></i></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec g" id="dostawa">
+ <div class="wrap">
+  <div class="sh"><div><h2>Dostawa i odbiór</h2><p>Im większy koszyk, tym tańsza wysyłka do Paczkomatu. Wszystkie przesyłki są ubezpieczone w cenie.</p></div></div>
+  <div class="dv">
+   <table class="tbl"><caption>Paczkomaty InPost</caption>
+    <thead><tr><th>Wartość koszyka</th><th style="text-align:right">Dostawa</th></tr></thead>
+    <tbody><tr><td>do 49,99 zł</td><td>14,90 zł</td></tr><tr><td>50-99,99 zł</td><td>11,99 zł</td></tr><tr><td>100-149,99 zł</td><td>9,99 zł</td></tr><tr class="free"><td>od 150 zł</td><td>0 zł</td></tr></tbody>
+   </table>
+   <div>
+    <ul class="dl">
+     <li><span>ORLEN Paczka<small>automaty, stacje ORLEN, kioski RUCH; punkt wybierany na mapie przy zamówieniu</small></span><b>11,49 zł</b></li>
+     <li><span>Kurier InPost</span><b>od 15,99 zł</b></li>
+     <li><span>Kurier DPD</span><b>20,99 zł</b></li>
+     <li><span>Kurier DHL</span><b>21,99 zł</b></li>
+    </ul>
+    <div class="pickup"><h3>Odbiór osobisty w Poznaniu</h3><p>ul. Kościańska 30 lok. 3, poniedziałek-piątek 10:00-18:00, po wcześniejszym umówieniu. Płatność gotówką lub kartą.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="o-nas">
+ <div class="wrap ab">
+  <div>
+   <h2 style="font-size:0;position:absolute;left:-9999px">O nas</h2>
+   <blockquote>„Anioły są wśród nas”</blockquote>
+   <p>To dewiza MAKAJUTO. Aniołami nazywamy ludzi, którzy wspierają nas w różnych chwilach życia. Dobro, którym się dzielą, zasługuje choćby na drobne odwzajemnienie, dlatego wybieramy produkty, którymi można podziękować swojemu aniołowi za jego obecność.</p>
+   <p>W sklepie są produkty z aniołami (karnety, kubki, ozdoby), książki dla każdego wieku, Biblie, kalendarze i upominki. Współpracujemy z wydawnictwami Edycja Świętego Pawła, Paulistki, Misericordia i Wydawnictwo JEDNOŚĆ.</p>
+  </div>
+  <div class="ab-g"><button type="button" data-lb="onas" data-full="img/a10.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Wdzięczności - karnet z kopertą, 5,95 zł"><img src="img/a10.webp" width="414" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 15. Posyłam Ci Anioła Wdzięczności" loading="lazy" decoding="async"></button><button type="button" data-lb="onas" data-full="img/a01.webp" data-fw="414" data-fh="600" data-cap="Posyłam Ci Anioła Opiekuna - karnet z kopertą, 5,95 zł"><img src="img/a01.webp" width="414" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 2. Posyłam Ci Anioła Opiekuna" loading="lazy" decoding="async"></button><button type="button" data-lb="onas" data-full="img/a03.webp" data-fw="418" data-fh="600" data-cap="Posyłam Ci Anioła Pocieszenia - karnet z kopertą, 5,95 zł"><img src="img/a03.webp" width="418" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 4. Posyłam Ci Anioła Pocieszenia" loading="lazy" decoding="async"></button><button type="button" data-lb="onas" data-full="img/a20.webp" data-fw="416" data-fh="600" data-cap="Posyłam Ci Anioła Uśmiechu - karnet z kopertą, 5,95 zł"><img src="img/a20.webp" width="416" height="600" alt="Karnet z kopertą: Z ANIOŁAMI 27. Posyłam Ci Anioła Uśmiechu" loading="lazy" decoding="async"></button></div>
+ </div>
+</section>
+
+<section class="sec g" id="kontakt">
+ <div class="wrap ct">
+  <div class="ci">
+   <div class="sh" style="margin-bottom:16px"><div><h2>Kontakt</h2></div></div>
+   <p><b style="color:var(--ink)">MAKAJUTO Sp. z o.o.</b><br>Biuro Obsługi Klienta i punkt odbioru</p>
+   <p class="row"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18s6-5.6 6-10.2A6 6 0 0 0 4 7.8C4 12.4 10 18 10 18z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8" r="2.2" fill="currentColor"/></svg><span>ul. Kościańska 30 lok. 3, 60-112 Poznań<br>pn-pt 10:00-18:00, po wcześniejszym umówieniu</span></p>
+   <p class="row"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.2 2.8l2.4 0 1.2 3.6-1.7 1.2a9 9 0 0 0 5.3 5.3l1.2-1.7 3.6 1.2v2.4a1.6 1.6 0 0 1-1.7 1.6A14.6 14.6 0 0 1 3.6 4.5a1.6 1.6 0 0 1 1.6-1.7z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="tel:+48726733340">726 733 340</a></p>
+   <p class="row"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 5.5l7 5.5 7-5.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg><a href="mailto:biuro@makajuto.pl">biuro@makajuto.pl</a></p>
+   <div class="map" id="map" data-src="https://www.google.com/maps?q=Ko%C5%9Bcia%C5%84ska+30,+60-112+Pozna%C5%84&amp;output=embed"><span>ul. Kościańska 30, Poznań<br>mapa Google wczytuje się automatycznie</span></div>
+  </div>
+  <div>
+   <form class="f" id="form" novalidate>
+    <h3>Napisz do nas</h3>
+    <label>Adres e-mail<input type="email" name="email" required autocomplete="email" placeholder="np. jan@poczta.pl"></label>
+    <label>Temat<select name="temat"><option>Pytanie o produkt</option><option>Zamówienie i dostawa</option><option>Odbiór osobisty</option><option>Zwrot lub wymiana</option><option>Inne</option></select></label>
+    <label>Wiadomość<textarea name="tresc" required placeholder="W czym możemy pomóc?"></textarea></label>
+    <button class="btn" type="submit">Wyślij wiadomość</button>
+    <p class="ok" role="status">Dziękujemy, wiadomość została przyjęta. (W podglądzie formularz niczego nie wysyła.)</p>
+   </form>
+   <div class="nl"><h3>Newsletter</h3><p>Nowości i promocje, np. zniżki na Dzień Kobiet czy gadżety.</p><form class="sf" data-nl><input type="email" placeholder="Twój adres e-mail" aria-label="Adres e-mail do newslettera"><button type="submit">Zapisz</button></form></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="ft">
+ <div class="wrap">
+  <div class="ft-g">
+   <div class="fl"><a class="logo" href="#" aria-label="MAKAJUTO"><svg viewBox="0 0 250 140" role="img" aria-label="MAKAJUTO">
+<defs><path id="lukb" d="M4,24 A121,113 0 0 0 246,24"/></defs>
+<ellipse cx="125" cy="5" rx="16" ry="3.6" fill="none" stroke="#CC0000" stroke-width="2.4"/>
+<path d="M113,11 A12,12.5 0 1 0 137,11" fill="none" stroke="#1d1d1d" stroke-width="3.2" stroke-linecap="round"/>
+<g fill="#1d1d1d"><g id="skb"><path d="M40.0,12.3 L44.3,12.8 L48.5,13.5 L52.7,14.2 L56.7,15.1 L60.7,16.1 L64.6,17.2 L68.5,18.3 L72.2,19.6 L75.9,21.0 L79.5,22.5 L83.1,24.2 L86.5,25.9 L90.0,27.7 L93.3,29.6 L96.6,31.7 L99.8,33.8 L103.0,36.1 L106.1,38.4 L109.2,40.9 L112.2,43.5 L115.2,46.3 L118.1,49.1 L121.0,52.0 L123.8,55.2 L124.2,54.8 L121.9,51.3 L119.5,47.9 L117.0,44.6 L114.3,41.5 L111.5,38.5 L108.6,35.6 L105.5,32.9 L102.4,30.3 L99.1,27.9 L95.7,25.7 L92.3,23.6 L88.7,21.6 L85.1,19.9 L81.3,18.3 L77.5,16.8 L73.6,15.5 L69.6,14.5 L65.5,13.5 L61.4,12.8 L57.2,12.2 L53.0,11.8 L48.7,11.6 L44.4,11.6 L40.0,11.7Z"/><path d="M45.0,27.3 L48.5,27.7 L52.0,28.2 L55.3,28.8 L58.6,29.4 L61.7,30.0 L64.7,30.7 L67.7,31.5 L70.5,32.2 L73.2,33.1 L75.8,34.0 L78.4,34.9 L80.8,35.9 L83.1,37.0 L85.4,38.1 L87.6,39.3 L89.6,40.5 L91.6,41.8 L93.6,43.2 L95.4,44.6 L97.2,46.1 L99.0,47.7 L100.6,49.4 L102.3,51.2 L103.8,53.1 L104.2,52.9 L103.1,50.6 L101.9,48.4 L100.6,46.4 L99.1,44.4 L97.5,42.5 L95.7,40.6 L93.8,38.9 L91.8,37.4 L89.6,35.9 L87.3,34.5 L85.0,33.2 L82.5,32.1 L79.9,31.0 L77.1,30.1 L74.3,29.3 L71.4,28.6 L68.4,28.0 L65.4,27.5 L62.2,27.1 L58.9,26.8 L55.6,26.6 L52.1,26.6 L48.6,26.7 L45.0,26.7Z"/><path d="M47.0,41.2 L49.1,41.5 L51.1,41.9 L53.2,42.2 L55.1,42.6 L57.0,43.0 L58.9,43.4 L60.8,43.9 L62.6,44.4 L64.4,44.9 L66.1,45.4 L67.8,45.9 L69.5,46.5 L71.1,47.1 L72.8,47.7 L74.3,48.3 L75.9,49.0 L77.5,49.6 L79.0,50.3 L80.5,51.1 L82.0,51.8 L83.5,52.6 L84.9,53.4 L86.4,54.3 L87.8,55.2 L88.2,54.8 L87.0,53.5 L85.9,52.2 L84.7,51.0 L83.3,49.8 L82.0,48.7 L80.5,47.7 L79.0,46.7 L77.5,45.8 L75.9,44.9 L74.2,44.1 L72.5,43.4 L70.8,42.8 L69.0,42.2 L67.1,41.7 L65.3,41.3 L63.3,40.9 L61.4,40.6 L59.4,40.4 L57.4,40.3 L55.4,40.2 L53.3,40.2 L51.2,40.3 L49.1,40.6 L47.0,40.8Z"/><path d="M52.0,53.2 L53.5,53.5 L54.9,53.8 L56.3,54.1 L57.7,54.4 L59.1,54.8 L60.4,55.1 L61.7,55.5 L63.0,55.9 L64.3,56.3 L65.6,56.6 L66.9,57.1 L68.2,57.5 L69.4,57.9 L70.7,58.3 L72.0,58.8 L73.3,59.3 L74.6,59.7 L75.8,60.2 L77.2,60.7 L78.5,61.2 L79.8,61.7 L81.2,62.2 L82.5,62.6 L83.9,63.2 L84.1,62.8 L83.0,61.9 L81.8,60.9 L80.7,60.0 L79.5,59.2 L78.3,58.4 L77.1,57.6 L75.8,56.9 L74.6,56.2 L73.3,55.6 L72.0,55.0 L70.7,54.5 L69.3,54.0 L68.0,53.6 L66.6,53.2 L65.2,52.9 L63.8,52.7 L62.3,52.5 L60.9,52.3 L59.4,52.2 L58.0,52.2 L56.5,52.3 L55.0,52.4 L53.5,52.6 L52.0,52.8Z"/><path d="M58.0,64.2 L59.0,64.4 L59.9,64.7 L60.9,65.0 L61.8,65.2 L62.7,65.5 L63.6,65.8 L64.5,66.1 L65.4,66.3 L66.3,66.6 L67.2,66.9 L68.1,67.2 L69.0,67.5 L69.9,67.8 L70.8,68.1 L71.8,68.4 L72.7,68.8 L73.7,69.1 L74.6,69.4 L75.6,69.7 L76.7,70.0 L77.7,70.3 L78.7,70.6 L79.8,70.9 L80.9,71.2 L81.1,70.8 L80.2,70.2 L79.3,69.5 L78.4,68.8 L77.5,68.2 L76.6,67.6 L75.7,67.1 L74.7,66.5 L73.8,66.1 L72.9,65.6 L71.9,65.2 L71.0,64.8 L70.0,64.5 L69.0,64.2 L68.1,63.9 L67.1,63.7 L66.1,63.5 L65.1,63.4 L64.1,63.3 L63.1,63.2 L62.0,63.3 L61.0,63.3 L60.0,63.4 L59.0,63.6 L58.0,63.8Z"/><path d="M66.0,74.2 L66.6,74.3 L67.2,74.6 L67.8,74.8 L68.4,74.9 L69.0,75.1 L69.6,75.3 L70.2,75.4 L70.8,75.6 L71.4,75.7 L72.0,75.9 L72.6,76.0 L73.2,76.1 L73.8,76.2 L74.4,76.4 L75.1,76.5 L75.7,76.6 L76.3,76.7 L76.9,76.7 L77.6,76.8 L78.2,76.9 L78.9,77.0 L79.6,77.0 L80.3,77.1 L80.9,77.2 L81.1,76.8 L80.5,76.4 L79.9,76.0 L79.4,75.6 L78.8,75.3 L78.2,74.9 L77.6,74.6 L76.9,74.4 L76.3,74.1 L75.7,73.9 L75.1,73.7 L74.4,73.5 L73.8,73.4 L73.1,73.3 L72.5,73.2 L71.8,73.1 L71.2,73.1 L70.5,73.1 L69.9,73.1 L69.2,73.1 L68.6,73.2 L67.9,73.3 L67.3,73.5 L66.6,73.7 L66.0,73.8Z"/><path d="M108.8,58.0 L108.6,59.5 L108.4,61.1 L108.2,62.6 L108.1,64.2 L107.9,65.7 L107.7,67.3 L107.5,68.9 L107.3,70.5 L107.1,72.1 L106.9,73.7 L106.7,75.4 L106.6,77.0 L106.4,78.7 L106.2,80.4 L106.0,82.1 L105.8,83.8 L105.7,85.5 L105.5,87.3 L105.4,89.0 L105.2,90.8 L105.1,92.6 L105.0,94.4 L104.9,96.2 L104.8,98.0 L105.2,98.0 L105.8,96.3 L106.5,94.7 L107.1,92.9 L107.6,91.2 L108.1,89.5 L108.5,87.8 L109.0,86.1 L109.3,84.3 L109.7,82.6 L110.0,80.9 L110.2,79.2 L110.4,77.5 L110.6,75.8 L110.7,74.1 L110.8,72.4 L110.8,70.7 L110.8,69.0 L110.8,67.4 L110.6,65.8 L110.5,64.2 L110.2,62.6 L109.9,61.0 L109.6,59.5 L109.2,58.0Z"/><path d="M114.8,64.0 L114.9,65.1 L114.9,66.1 L115.0,67.1 L115.0,68.1 L115.0,69.1 L115.1,70.1 L115.1,71.1 L115.1,72.1 L115.1,73.1 L115.2,74.1 L115.2,75.1 L115.2,76.0 L115.3,77.0 L115.3,78.0 L115.3,79.0 L115.4,80.0 L115.4,81.0 L115.5,81.9 L115.5,82.9 L115.6,83.9 L115.6,84.9 L115.7,85.9 L115.8,87.0 L115.8,88.0 L116.2,88.0 L116.5,87.0 L116.8,86.1 L117.0,85.1 L117.3,84.1 L117.5,83.1 L117.6,82.1 L117.8,81.0 L117.9,80.0 L118.0,79.0 L118.0,78.0 L118.0,77.0 L118.0,76.0 L118.0,74.9 L117.9,73.9 L117.8,72.9 L117.6,71.9 L117.4,70.9 L117.2,69.9 L117.0,68.9 L116.7,67.9 L116.4,66.9 L116.0,65.9 L115.6,64.9 L115.2,64.0Z"/></g><use href="#skb" transform="translate(250,0) scale(-1,1)"/>
+<path d="M115.1,62.6 L115.4,63.2 L115.8,63.8 L116.2,64.4 L116.6,65.1 L116.9,65.7 L117.3,66.3 L117.7,66.9 L118.1,67.6 L118.4,68.2 L118.8,68.8 L119.2,69.4 L119.6,70.1 L119.9,70.7 L120.3,71.3 L120.7,71.9 L121.1,72.6 L121.4,73.2 L121.8,73.8 L122.2,74.4 L122.6,75.1 L122.9,75.7 L123.3,76.3 L123.7,76.9 L124.1,77.6 L125.9,76.4 L125.6,75.8 L125.2,75.2 L124.8,74.6 L124.4,73.9 L124.1,73.3 L123.7,72.7 L123.3,72.1 L122.9,71.4 L122.6,70.8 L122.2,70.2 L121.8,69.6 L121.4,68.9 L121.1,68.3 L120.7,67.7 L120.3,67.1 L119.9,66.4 L119.6,65.8 L119.2,65.2 L118.8,64.6 L118.4,63.9 L118.1,63.3 L117.7,62.7 L117.3,62.1 L116.9,61.4Z"/><path d="M133.1,61.4 L132.7,62.1 L132.3,62.7 L131.9,63.3 L131.6,63.9 L131.2,64.6 L130.8,65.2 L130.4,65.8 L130.1,66.4 L129.7,67.1 L129.3,67.7 L128.9,68.3 L128.6,68.9 L128.2,69.6 L127.8,70.2 L127.4,70.8 L127.1,71.4 L126.7,72.1 L126.3,72.7 L125.9,73.3 L125.6,73.9 L125.2,74.6 L124.8,75.2 L124.4,75.8 L124.1,76.4 L125.9,77.6 L126.3,76.9 L126.7,76.3 L127.1,75.7 L127.4,75.1 L127.8,74.4 L128.2,73.8 L128.6,73.2 L128.9,72.6 L129.3,71.9 L129.7,71.3 L130.1,70.7 L130.4,70.1 L130.8,69.4 L131.2,68.8 L131.6,68.2 L131.9,67.6 L132.3,66.9 L132.7,66.3 L133.1,65.7 L133.4,65.1 L133.8,64.4 L134.2,63.8 L134.6,63.2 L134.9,62.6Z"/></g>
+<text font-family="Jost,Arial,sans-serif" font-weight="300" font-size="29" fill="#CC0000"><textPath href="#lukb" startOffset="50%" text-anchor="middle" textLength="318" lengthAdjust="spacing">MAKAJUTO</textPath></text>
+</svg></a><p>MAKAJUTO Sp. z o.o.<br>ul. Kościańska 30 lok. 3, 60-112 Poznań<br>NIP 7831918046, KRS 0001141638<br>REGON 540341533, BDO 000653796</p></div>
+   <div><h4>Zakupy</h4><ul><li><a href="#dostawa">Koszty dostaw</a></li><li><a href="#dostawa">Formy płatności</a></li><li><a href="#kontakt">Procedura reklamacyjna</a></li><li><a href="#kontakt">Zwrot i wymiana</a></li></ul></div>
+   <div><h4>Informacje</h4><ul><li><a href="#o-nas">O nas</a></li><li><a href="#sezon">Aktualności</a></li><li><a href="#kontakt">Regulamin</a></li><li><a href="#kontakt">Polityka prywatności</a></li></ul></div>
+   <div><h4>Kontakt</h4><ul><li><a href="tel:+48726733340">726 733 340</a></li><li><a href="mailto:biuro@makajuto.pl">biuro@makajuto.pl</a></li><li>pn-pt 10:00-18:00</li></ul></div>
+  </div>
+  <div class="ft-b"><span>&copy; 2026 MAKAJUTO Sp. z o.o.</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=makajuto.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+ </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+ <button class="x" type="button" aria-label="Zamknij">&times;</button>
+ <button class="pv" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+ <figure><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1" height="1"><figcaption class="cap"></figcaption><span class="cnt"></span></figure>
+ <button class="nx" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
