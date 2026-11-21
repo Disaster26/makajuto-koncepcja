@@ -17,9 +17,10 @@ function place(){
     heroIn.style.setProperty("--ty",Math.round(top)+"px");
   }else{
     list=W<520?cards.slice(3,8):cards.slice(2,9); n=list.length;
-    ch=Math.min(H*0.74,230); cw=ch/RATIO;
-    if(cw>W*0.34){cw=W*0.34;ch=cw*RATIO}
-    cx=W/2; rx=W*0.50; ry=Math.min(H*0.26,64); cy=H-ch*0.5-ry-10; span=1.0;
+    ch=Math.min(H*0.74,228); cw=ch/RATIO;
+    var cmax=Math.min(W*0.38,158); if(cw>cmax){cw=cmax;ch=cw*RATIO}
+    span=1.0; cx=W/2; rx=W*0.50; ry=Math.max(20,Math.min((H-ch)*0.55,90));
+    cy=H/2-ry*(1+Math.cos(span))/2;
   }
   cards.forEach(function(c){c.classList.toggle("off",list.indexOf(c)<0)});
   list.forEach(function(c,i){
