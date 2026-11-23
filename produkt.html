@@ -62,20 +62,22 @@ h1,h2,h3{font-family:Lora,Georgia,serif;color:var(--ink);font-weight:600;line-he
 .mnav .mcat .mk-all{color:var(--red);font-weight:600;font-size:15px}
 .nav .mm-btn{display:none}
 .mm{display:none}
-/* banery promocyjne */
-.bn{padding:40px 0 0}
-.bn-g{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
-.ban{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:14px;min-height:150px;border-radius:12px;padding:18px 18px 18px 22px;text-decoration:none;overflow:hidden;position:relative}
-.ban>*{position:relative;z-index:1}
-.ban h3{font-size:clamp(22px,5.6vw,30px)}
-.ban p{margin:6px 0 12px;font-size:15px;line-height:1.45}
-.ban .go{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px}
-.ban .go svg{width:14px;height:14px;transition:transform .2s}
-.ban:hover .go svg{transform:translateX(3px)}
-.ban img{height:auto;max-height:150px;width:auto;max-width:120px;border-radius:4px;box-shadow:0 6px 18px rgba(0,0,0,.18);background:#fff}
-.ban-r{background:var(--red);color:#fff}.ban-r h3{color:#fff}.ban-r p{color:#FBE3E3}
-.ban-r::after{content:"";position:absolute;right:-50px;top:-26px;width:200px;height:46px;border:3px solid rgba(255,255,255,.3);border-radius:50%;transform:rotate(-10deg);z-index:0}
-.ban-d{background:var(--grey);color:var(--ink)}.ban-d p{color:var(--mut)}.ban-d .go{color:var(--red)}
+/* karuzela banerów sklepu (pliki 1600x360, wersja na telefon opcjonalnie 1080x1080) */
+.bs{padding:16px 0 0}
+.bs-in{width:min(1600px,100% - 32px);margin-inline:auto;position:relative}
+.bs-pas{display:none;margin:0 0 10px;border-radius:10px;overflow:hidden}
+.bs-pas img{display:block;width:100%;height:auto;max-width:1602px}
+.bs-tr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:10px;aspect-ratio:1600/360;background:var(--grey)}
+.bs-tr::-webkit-scrollbar{display:none}
+.bs-s{flex:0 0 100%;scroll-snap-align:center;display:block}
+.bs-s img{display:block;width:100%;height:100%;object-fit:cover}
+.bs-ar{display:none}
+.bs-d{display:flex;justify-content:center;gap:4px;margin-top:6px}
+.bs-d button{width:28px;height:28px;border:0;background:none;padding:0;display:grid;place-items:center;cursor:pointer}
+.bs-d button::before{content:"";width:9px;height:9px;border-radius:50%;background:#C9CBD0;transition:background .2s,transform .2s}
+.bs-d button[aria-current=true]::before{background:var(--red);transform:scale(1.2)}
+@media (max-width:767px){.bs-tr.m{aspect-ratio:1/1}}
+@media (min-width:900px){.bs-pas{display:block}}
 /* menu mobilne */
 .mnav{position:fixed;inset:var(--top,95px) 0 0 0;background:#fff;z-index:39;padding:8px 16px 32px;overflow:auto;transform:translateX(-100%);transition:transform .28s ease;visibility:hidden}
 .menu-open .mnav{transform:none;visibility:visible}
@@ -270,12 +272,12 @@ form.f{display:grid;gap:12px;background:#fff;border:1px solid var(--line);border
  .nav a.promo{color:var(--red)}
  .mnav{display:none}
 
- .bn{padding:56px 0 0}
- .bn-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
- .ban{min-height:210px;padding:26px 30px 26px 36px;gap:24px}
- .ban h3{font-size:clamp(26px,2vw,34px)}
- .ban p{font-size:16px;max-width:420px}
- .ban img{max-height:180px;max-width:180px}
+ .bs{padding:20px 0 0}
+ .bs-ar{display:grid;place-items:center;position:absolute;top:50%;width:44px;height:44px;margin-top:-22px;border:0;border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 4px 14px rgba(0,0,0,.18);color:var(--ink);cursor:pointer;opacity:0;transition:opacity .2s}
+ .bs-ar svg{width:18px;height:18px}
+ .bs-ar.l{left:14px}.bs-ar.l svg{transform:scaleX(-1)}.bs-ar.r{right:14px}
+ .bs-in:hover .bs-ar,.bs-ar:focus-visible{opacity:1}
+ .bs-ar:hover{color:var(--red)}
  .nav .mm-btn{display:flex;align-items:center;gap:9px;border:0;background:var(--ink);color:#fff;font-size:15px;font-weight:600;padding:8px 16px;margin:5px 10px 5px 0;border-radius:6px;white-space:nowrap}
  .nav .mm-btn i{display:grid;gap:3px}.nav .mm-btn i b{display:block;width:14px;height:2px;background:#fff;border-radius:2px}
  .nav .mm-btn[aria-expanded=true]{background:var(--red)}

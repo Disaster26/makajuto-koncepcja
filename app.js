@@ -115,3 +115,25 @@ if(f)f.addEventListener("submit",function(e){e.preventDefault();var ok=true;$$("
 var map=$("#map");
 if(map&&"IntersectionObserver" in window){var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){var i=d.createElement("iframe");i.src=map.getAttribute("data-src");i.title="Mapa: MAKAJUTO, Kościańska 30, Poznań";i.loading="lazy";i.referrerPolicy="no-referrer-when-downgrade";map.textContent="";map.appendChild(i);io.disconnect()}},{rootMargin:"300px"});io.observe(map)}
 })();
+
+/* ---- karuzela banerów: kropki, strzałki, przewijanie co 6 s ---- */
+(function(){
+var tr=document.getElementById("bsTr"),dw=document.getElementById("bsD");if(!tr||!dw)return;
+var sl=Array.prototype.slice.call(tr.children),n=sl.length,cur=0,t=null,stop=false;
+var red=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+var dots=sl.map(function(s,i){var b=document.createElement("button");b.type="button";b.setAttribute("aria-label","Baner "+(i+1));b.addEventListener("click",function(){go(i);hold()});dw.appendChild(b);return b});
+function mark(i){cur=i;dots.forEach(function(b,j){b.setAttribute("aria-current",j===i?"true":"false")})}
+function go(i){i=(i+n)%n;tr.scrollTo({left:i*tr.clientWidth,behavior:red?"auto":"smooth"});mark(i)}
+function tick(){if(!stop&&!document.hidden)go(cur+1)}
+function run(){clearInterval(t);if(!red)t=setInterval(tick,6000)}
+function hold(){run()}
+var raf=0;tr.addEventListener("scroll",function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(function(){var i=Math.round(tr.scrollLeft/Math.max(1,tr.clientWidth));if(i!==cur)mark(i)})},{passive:true});
+var box=tr.parentNode,l=box.querySelector(".bs-ar.l"),r=box.querySelector(".bs-ar.r");
+if(l)l.addEventListener("click",function(){go(cur-1);hold()});
+if(r)r.addEventListener("click",function(){go(cur+1);hold()});
+box.addEventListener("mouseenter",function(){stop=true});box.addEventListener("mouseleave",function(){stop=false});
+box.addEventListener("focusin",function(){stop=true});box.addEventListener("focusout",function(){stop=false});
+tr.addEventListener("touchstart",function(){hold()},{passive:true});
+addEventListener("resize",function(){tr.scrollLeft=cur*tr.clientWidth});
+mark(0);run();
+})();
