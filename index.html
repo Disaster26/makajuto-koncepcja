@@ -62,6 +62,20 @@ h1,h2,h3{font-family:Lora,Georgia,serif;color:var(--ink);font-weight:600;line-he
 .mnav .mcat .mk-all{color:var(--red);font-weight:600;font-size:15px}
 .nav .mm-btn{display:none}
 .mm{display:none}
+/* telefon: zamiast szerokich banerów wyszukiwarka i czytelny kafel promocji */
+.mq{padding:18px 0 0}
+.mq .sf{margin-bottom:12px}
+.mq-pr{display:grid;grid-template-columns:minmax(0,1fr) 92px;align-items:center;gap:14px;background:var(--red);color:#fff;border-radius:12px;padding:16px 16px 16px 18px;text-decoration:none;position:relative;overflow:hidden}
+.mq-pr::after{content:"";position:absolute;right:-40px;top:-22px;width:170px;height:40px;border:3px solid rgba(255,255,255,.3);border-radius:50%;transform:rotate(-10deg)}
+.mq-pr>*{position:relative;z-index:1}
+.mq-pr small{display:block;font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#FBE3E3}
+.mq-pr b{display:block;font-size:24px;line-height:1.15;margin:2px 0 4px;color:#fff}
+.mq-pr span{display:block;font-size:14.5px;line-height:1.4;color:#FBE3E3}
+.mq-pr em{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-style:normal;font-weight:600;font-size:15px;color:#fff}
+.mq-pr em svg{width:13px;height:13px}
+.mq-pr img{width:92px;height:auto;border-radius:4px;box-shadow:0 6px 16px rgba(0,0,0,.2);background:#fff}
+@media (max-width:767px){.bs{display:none}}
+@media (min-width:768px){.mq{display:none}}
 /* karuzela banerów sklepu (pliki 1600x360, wersja na telefon opcjonalnie 1080x1080) */
 .bs{padding:16px 0 0}
 .bs-in{width:min(1600px,100% - 32px);margin-inline:auto;position:relative}
@@ -393,11 +407,18 @@ form.f{display:grid;gap:12px;background:#fff;border:1px solid var(--line);border
  </div>
 </section>
 
+<section class="mq" aria-label="Szukaj i promocja">
+ <div class="wrap">
+  <form class="sf" role="search" data-search><input type="search" name="q" placeholder="Czego szukasz? np. anioł, Biblia" aria-label="Szukaj w sklepie"><button type="submit">Szukaj</button></form>
+  <a class="mq-pr" href="#sezon"><div><small>Już są</small><b>Kalendarze 2027</b><span>127 wzorów: ścienne, biurkowe, kieszonkowe, planery i EWANGELIA 2027.</span><em>Wybierz kalendarz <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></em></div><img src="img/k05.webp" width="697" height="695" alt="Kalendarz 2027" loading="lazy" decoding="async"></a>
+ </div>
+</section>
+
 <section class="bs" aria-label="Promocje" aria-roledescription="karuzela">
  <div class="bs-in">
   <a class="bs-pas" href="#sezon"><img src="img/bn-pas.webp" width="1602" height="74" alt="Już są! Kalendarze 2027" loading="lazy" decoding="async"></a>
   <div class="bs-tr" id="bsTr">
-  <a class="bs-s" href="#sezon" aria-label="1 z 4: Kalendarze i terminarze 2027"><img src="img/bn1.webp" srcset="img/bn1-s.webp 800w, img/bn1.webp 1600w" sizes="(min-width:1632px) 1600px, calc(100vw - 32px)" width="1600" height="360" alt="Kalendarze i terminarze 2027" fetchpriority="high" decoding="async"></a>
+  <a class="bs-s" href="#sezon" aria-label="1 z 4: Kalendarze i terminarze 2027"><img src="img/bn1.webp" srcset="img/bn1-s.webp 800w, img/bn1.webp 1600w" sizes="(min-width:1632px) 1600px, calc(100vw - 32px)" width="1600" height="360" alt="Kalendarze i terminarze 2027" loading="lazy" decoding="async"></a>
   <a class="bs-s" href="#sezon" aria-label="2 z 4: Ewangelia 2027 - słowo na każdy dzień"><img src="img/bn2.webp" srcset="img/bn2-s.webp 800w, img/bn2.webp 1600w" sizes="(min-width:1632px) 1600px, calc(100vw - 32px)" width="1600" height="360" alt="Ewangelia 2027 - słowo na każdy dzień" loading="lazy" decoding="async"></a>
   <a class="bs-s" href="#sezon" aria-label="3 z 4: Codzienniki"><img src="img/bn3.webp" srcset="img/bn3-s.webp 800w, img/bn3.webp 1600w" sizes="(min-width:1632px) 1600px, calc(100vw - 32px)" width="1600" height="360" alt="Codzienniki" loading="lazy" decoding="async"></a>
   <a class="bs-s" href="#kategorie" aria-label="4 z 4: Kubki Premium POLSKA"><img src="img/bn4.webp" srcset="img/bn4-s.webp 800w, img/bn4.webp 1600w" sizes="(min-width:1632px) 1600px, calc(100vw - 32px)" width="1600" height="360" alt="Kubki Premium POLSKA" loading="lazy" decoding="async"></a>
